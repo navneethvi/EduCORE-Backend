@@ -1,4 +1,3 @@
-// src/core/logger.ts
 import { createLogger, format, transports } from 'winston';
 
 const { combine, label, timestamp, printf } = format;
