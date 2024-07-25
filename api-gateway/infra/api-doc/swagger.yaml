@@ -1,0 +1,46 @@
+openapi: 3.0.0
+info:
+  title: EduCORE API Gateway
+  description: API Gateway for the EduCORE application, which proxies requests to the authentication service.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local server
+paths:
+  /:
+    get:
+      summary: Welcome message
+      description: Returns a welcome message
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello, TypeScript with Express!
+  /api/users:
+    get:
+      summary: Proxy to auth service
+      description: Routes the request to the authentication service to retrieve user data.
+      responses:
+        '200':
+          description: Successfully proxied request to the auth service.
+        '502':
+          description: Bad gateway error if the request to the auth service fails.
+        '500':
+          description: Internal server error if something goes wrong in the gateway.
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The user's ID
+        name:
+          type: string
+          description: The user's name
+      required:
+        - id
+        - name
