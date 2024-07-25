@@ -1,26 +1,30 @@
+// src/app.ts
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
-import YAML from 'yamljs'
-
-import cors from 'cors'
-import userRoute from './routes/user-routes';
+import YAML from 'yamljs';
+import cors from 'cors';
+import { createProxyService } from './middleware/proxy-middleware';
+import logger from './core/logger';
 
 const app = express();
 const port = 3000;
 
-app.use(cors())
+// Set up the Swagger UI for serving the API documentation
+const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml'); // Adjust path as needed
 
-//* Set up the Swagger UI for serving the API documentation
+app.use(cors());
 
-const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml')
+// Proxy route
+app.use('/api/users', createProxyService('auth'));
 
-app.use('/api/users', userRoute)
+// Serve Swagger API docs
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
-
-
-
+// Start the server
 app.listen(port, () => {
-  console.log(`API Gateway is running on http://localhost:${port}`);
+  logger.info(`API Gateway is running on http://localhost:${port}`);
   console.log(`Swagger API running on http://localhost:${port}/api-docs`);
 });
+
+
+  // const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml')
