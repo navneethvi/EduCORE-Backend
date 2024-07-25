@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2016",                                  
-    "module": "commonjs",                                
-    "esModuleInterop": true,                             
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,            
-    "skipLibCheck": true,
-    "outDir": "/build",
-    "rootDir": "./",                                 
-  }
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*.ts"]
 }
