@@ -19,7 +19,7 @@ paths:
               schema:
                 type: string
                 example: Hello, TypeScript with Express!
-  /api/users:
+  /api/students:
     get:
       summary: Proxy to auth service
       description: Routes the request to the authentication service to retrieve user data.

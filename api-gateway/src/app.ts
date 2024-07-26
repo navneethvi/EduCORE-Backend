@@ -14,7 +14,7 @@ const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml');
 app.use(cors());
 
 //* Proxy route
-app.use('/api/users', createProxyService('auth'));
+app.use('/api/auth', createProxyService('auth'));
 
 //* Serve Swagger API docs
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));

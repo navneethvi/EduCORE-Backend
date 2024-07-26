@@ -1,4 +1,4 @@
-import { createProxyMiddleware } from 'http-proxy-middleware';
+import { createProxyMiddleware, Options, RequestHandler } from 'http-proxy-middleware';
 import { config } from '@/config/config';
 
 interface Services {
@@ -9,6 +9,10 @@ const services: Services = {
   auth: config.USER_SERVICE_API,
 };
 
+interface ExtendedOptions extends Options {
+    onProxyReq?: (proxyReq: any, req: any, res: any) => void;
+  }
+
 export function createProxyService(serviceName: string) {
   const target = services[serviceName as keyof Services];
 
@@ -16,11 +20,16 @@ export function createProxyService(serviceName: string) {
     throw new Error(`Service ${serviceName} not found`);
   }
 
-  return createProxyMiddleware({
+  const options: ExtendedOptions = {
     target,
     changeOrigin: true,
     pathRewrite: {
-      [`^/${serviceName}`]: '',
+      [`^/api/auth`]: '',
     },
-  });
+    onProxyReq: (proxyReq, req, res) => {
+      console.log(`Proxying request to ${target}`);
+    },
+  };
+
+  return createProxyMiddleware(options);
 }
