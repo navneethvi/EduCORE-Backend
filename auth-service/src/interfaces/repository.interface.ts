@@ -1,3 +1,4 @@
 export interface IRepository<T, U> {
-    createStudent(data : U) : Promise<T>
+  findUser(email: string): Promise<T | null>;
+  createStudent(data: U): Promise<T>;
 }

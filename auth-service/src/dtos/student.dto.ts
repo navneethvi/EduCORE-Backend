@@ -1,4 +1,4 @@
-import { IsEmail, IsString, MinLength, MaxLength, IsArray } from 'class-validator';
+import { IsEmail, IsString, MinLength, MaxLength, IsArray, Length } from 'class-validator';
 
 export class CreateStudentDto {
     @IsString()
@@ -7,15 +7,20 @@ export class CreateStudentDto {
     @IsEmail()
     public email!: string;
 
-    @MinLength(10)
-    @MaxLength(10)
+    @Length(10,10)
     public phone!: number;
 
     @IsString()
     @MinLength(6)
     public password!: string;
 
+    @IsString()
+    @MinLength(6)
+    public confirmPassword!: string;
+
     @IsArray()
     @IsString({ each: true })
     public interests!: string[];
+
+    public role!: 'student' | 'tutor' | 'admin';
 }
