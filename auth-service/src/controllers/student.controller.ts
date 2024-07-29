@@ -1,27 +1,44 @@
 import { Request, Response, NextFunction } from "express";
 import StudentService from "../services/student.service";
-import { CreateStudentDto } from "../dtos/student.dto";
+import { OtpService } from "../services/otp.service";
+import { CreateStudentDto, VerifyOtpDto } from "../dtos/student.dto";
 
 class StudentController {
-    private studentService = new StudentService()
+  private studentService = new StudentService();
+  private otpService = new OtpService()
 
-    public signup = async (req : Request, res : Response, next : NextFunction) => {
-        try {
-            const {name, email, phone, password, confirmPassword, interests, role } : CreateStudentDto = req.body
-            
-            if(password !== confirmPassword){
-                return res.status(400).json({ message: "Passwords do not match" });
-            }
+  public signup = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const studentData: CreateStudentDto = req.body;
 
-            const studentData : CreateStudentDto = {name, email, phone, password, confirmPassword, interests, role}
+      if (studentData.password !== studentData.confirmPassword) {
+        return res.status(400).json({ message: "Passwords do not match" });
+      }
 
-            const newStudent = await this.studentService.signup(studentData)
-            console.log("Student Created :" ,newStudent);
-            res.status(201).json({data : newStudent, message : "Student Created"})
-        } catch (error) {
-            next(error)
-        }
+      const otp = await this.otpService.generateOtp(studentData.email)
+
+      await this.otpService.storeUserDataWithOtp(studentData, otp)
+
+      res.status(200).json({ message: "OTP sent successfully" });
+    } catch (error) {
+      next(error);
     }
+  };
+
+  public verifyOtp = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const verifyOtpData : VerifyOtpDto = req.body
+
+        const isOtpValid = await this.otpService.verifyOtp(verifyOtpData.email, verifyOtpData.otp)
+
+        if(isOtpValid){
+            const studentData = await this.otpService.getUserDataByOtp(verifyOtpData.email, verifyOtpData.otp)
+            const newStudent = await this.studentService
+        }
+    } catch (error) {
+        next(error)
+    }
+  }
 }
 
-export default StudentController
+export default StudentController;

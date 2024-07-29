@@ -4,24 +4,20 @@ import { CreateStudentDto } from "../dtos/student.dto";
 
 import bcryptjs from "bcryptjs";
 import { generateToken } from "../common/jwt";
-import { config } from "../config/config";
+
 
 class StudentService {
   private studentRepository = new StudentRepository();
 
-  public async signup(studentData: CreateStudentDto): Promise<IStudent> {
+  public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
+    const existingUser = await this.studentRepository.findUser(studentData.email);
 
-    const findUser = await this.studentRepository.findUser(studentData.email)
-
-    console.log("findUser from service: ",findUser);
-
-    if(findUser){
+    if (existingUser) {
       throw new Error("User already exists");
     }
     
-
     const hashedPassword = await bcryptjs.hash(studentData.password, 10);
-
+    
     const studentInput: INewStudent = {
       name: studentData.name,
       email: studentData.email,
@@ -29,14 +25,13 @@ class StudentService {
       password: hashedPassword,
       interests: studentData.interests || [],
       following: [],
-      role: 'student'
+      role: studentData.role || 'student',
     };
 
-    const student = await this.studentRepository.createStudent(studentInput);
+    const newStudent = await this.studentRepository.createStudent(studentInput);
+    const token = generateToken({ id: newStudent._id, email: newStudent.email });
 
-    let token = generateToken({id: student._id, email: student.email})
-
-    return { ...student.toObject(), token };
+    return { ...newStudent.toObject(), token };
   }
 }
 

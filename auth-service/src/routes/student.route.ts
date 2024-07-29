@@ -9,5 +9,6 @@ const studentController = new StudentController();
 //* Student Routes
 
 router.post("/signup", validateRegisterUser, studentController.signup);
+router.post("/verify-otp", studentController.verifyOtp);
 
 export default router;

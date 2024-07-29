@@ -24,3 +24,8 @@ export class CreateStudentDto {
 
     public role!: 'student' | 'tutor' | 'admin';
 }
+
+export interface VerifyOtpDto {
+    email: string;
+    otp: string;
+  }
