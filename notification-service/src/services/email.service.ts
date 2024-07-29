@@ -8,7 +8,7 @@ export class EmailService {
         to: email,
         subject: "Verify Your Account ✔",
         text: `Your OTP is ${otp}`,
-        html: `<b><h4>Your OTP: ${otp}</h4><br><a href="">Click here</a></b>`,
+        html: `<b><h4>Your OTP: ${otp}</h4></b>`,
       });
 
       console.log(
@@ -31,7 +31,7 @@ export class EmailService {
       });
 
       console.log(
-        "Email verification OTP sent successfully:",
+        "Welcome message sent successfully:",
         message.messageId
       );
     } catch (error) {

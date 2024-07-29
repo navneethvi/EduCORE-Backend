@@ -4,17 +4,14 @@ import { CreateStudentDto } from "../dtos/student.dto";
 
 import bcryptjs from "bcryptjs";
 import { generateToken } from "../common/jwt";
+import { sendMessage } from "../events/kafkaClient";
 
 
 class StudentService {
   private studentRepository = new StudentRepository();
 
   public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
-    const existingUser = await this.studentRepository.findUser(studentData.email);
 
-    if (existingUser) {
-      throw new Error("User already exists");
-    }
     
     const hashedPassword = await bcryptjs.hash(studentData.password, 10);
     
@@ -29,6 +26,9 @@ class StudentService {
     };
 
     const newStudent = await this.studentRepository.createStudent(studentInput);
+
+    await sendMessage('user-created', {email: newStudent.email})
+
     const token = generateToken({ id: newStudent._id, email: newStudent.email });
 
     return { ...newStudent.toObject(), token };

@@ -11,9 +11,6 @@ class StudentRepository implements IRepository<IStudent, INewStudent> {
     return Student.create(student);
   }
 
-  public async saveOtp(email: string, otp: string): Promise<void>{
-    await Student.updateOne({email}, {otp}).exec()
-  }
 }
 
 export default StudentRepository;
