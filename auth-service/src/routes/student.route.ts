@@ -11,5 +11,6 @@ const studentController = new StudentController();
 router.post("/signup", validateRegisterUser, studentController.signup);
 router.post("/verify-otp", studentController.verifyOtp);
 router.post("/resend-otp", studentController.resendOtp)
+router.post("/set-interests", studentController.updateInterests)
 
 export default router;

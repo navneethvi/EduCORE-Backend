@@ -50,10 +50,34 @@ export class OtpService {
     throw new Error("User data not found");
   }
 
+  async storeVerifiedUserData(
+    email: string,
+    userData: CreateStudentDto
+  ): Promise<void> {
+    await redis.setex(
+      `verifiedUserData:${email}`,
+      300,
+      JSON.stringify(userData)
+    );
+  }
+
+  async getVerifiedUserData(email: string): Promise<CreateStudentDto> {
+    const userData = await redis.get(`verifiedUserData:${email}`);
+    if (userData) {
+      return JSON.parse(userData);
+    }
+    throw new Error("Verified user data not found");
+  }
+
   async deleteUserOtpAndData(email: string, otp: string): Promise<void> {
     await redis.del(`otp:${email}`);
     await redis.del(`user:${email}:${otp}`);
     await redis.del(`userData:${email}`);
     console.log(`Deleted OTP and user data keys for email: ${email}`);
+  }
+
+  async deleteVerifiedUserData(email: string): Promise<void> {
+    await redis.del(`verifiedUserData:${email}`);
+    console.log(`Deleted verified user data key for email: ${email}`);
   }
 }
