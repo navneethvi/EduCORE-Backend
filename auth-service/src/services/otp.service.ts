@@ -3,7 +3,7 @@ import { CreateStudentDto } from "../dtos/student.dto";
 import { sendMessage } from "../events/kafkaClient";
 
 const redis = new Redis({
-  host: process.env.REDIS_HOST || 'localhost',
+  host: process.env.REDIS_HOST || "localhost",
   port: Number(process.env.REDIS_PORT) || 6379,
 });
 
@@ -25,6 +25,11 @@ export class OtpService {
       300,
       JSON.stringify(userData)
     );
+    await redis.setex(
+      `userData:${userData.email}`,
+      300,
+      JSON.stringify(userData)
+    );
     await sendMessage("email-verification", { email: userData.email, otp });
   }
 
@@ -35,12 +40,20 @@ export class OtpService {
 
   async getUserDataByOtp(
     email: string,
-    otp: string
+    otp?: string
   ): Promise<CreateStudentDto> {
-    const userData = await redis.get(`user:${email}:${otp}`);
+    const key = otp ? `user:${email}:${otp}` : `userData:${email}`;
+    const userData = await redis.get(key);
     if (userData) {
       return JSON.parse(userData);
     }
     throw new Error("User data not found");
+  }
+
+  async deleteUserOtpAndData(email: string, otp: string): Promise<void> {
+    await redis.del(`otp:${email}`);
+    await redis.del(`user:${email}:${otp}`);
+    await redis.del(`userData:${email}`);
+    console.log(`Deleted OTP and user data keys for email: ${email}`);
   }
 }

@@ -59,15 +59,45 @@ class StudentController {
 
         const newStudent = await this.studentService.createStudent(studentData);
 
-        res
-          .status(201)
-          .json({
-            message: "Student registered successfully",
-            student: newStudent,
-          });
+        await this.otpService.deleteUserOtpAndData(
+          verifyOtpData.email,
+          verifyOtpData.otp
+        );
+
+        res.status(201).json({
+          message: "Student registered successfully",
+          student: newStudent,
+        });
       } else {
         res.status(400).json({ message: "Invalid OTP" });
       }
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public resendOtp = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { email } = req.body;
+      console.log(email, "==> email");
+
+      const existingStudent = await this.otpService.getUserDataByOtp(email);
+      console.log(existingStudent, "==> userdata from redis");
+      if (!existingStudent) {
+        return res.status(400).json({
+          message: "User with this email does not exist or OTP expired",
+        });
+      }
+
+      const otp = await this.otpService.generateOtp(email);
+
+      await this.otpService.storeUserDataWithOtp(existingStudent, otp);
+
+      res.status(200).json({ message: "OTP resent successfully" });
     } catch (error) {
       next(error);
     }
