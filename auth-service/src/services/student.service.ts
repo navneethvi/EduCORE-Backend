@@ -5,10 +5,12 @@ import { CreateStudentDto } from "../dtos/student.dto";
 import bcryptjs from "bcryptjs";
 import { generateToken } from "../common/jwt";
 import { sendMessage } from "../events/kafkaClient";
+import { OtpService } from "./otp.service";
 
 
 class StudentService {
   private studentRepository = new StudentRepository();
+  private otpService = new OtpService()
 
   public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
 
@@ -31,7 +33,61 @@ class StudentService {
 
     const token = generateToken({ id: newStudent._id, email: newStudent.email });
 
-    return { ...newStudent.toObject(), token };
+    const studentWithToken = { ...newStudent.toObject(), token };
+
+    return studentWithToken;
+  }
+
+  public async signinStudent(email: string, password: string): Promise<IStudent | null> {
+
+    const student = await this.studentRepository.findUser(email)
+    
+    if (!student) {
+      throw new Error('Invalid email or password.');
+    }
+
+    const isPasswordMatch = await bcryptjs.compare(password, student.password)
+
+    console.log("passmatch : ", isPasswordMatch);
+    
+
+    if(!isPasswordMatch){
+      throw new Error('Invalid password.');
+    } 
+
+    const token = generateToken({id: student._id, email: student.email})
+
+    const studentWithToken = { ...student.toObject(), token };
+
+    return studentWithToken;
+  }
+
+  public async recoverAccount(email: string): Promise<void> {
+
+    const student = await this.studentRepository.findUser(email)
+
+    if(!student){
+      throw new Error('User not found.');
+    }
+
+    await this.otpService.generateAccRecoverOtp(email)
+  }
+
+  public async updatePassword(email: string, newPassword: string): Promise<void> {
+
+    const student = await this.studentRepository.findUser(email)
+
+    if (!student) {
+      throw new Error("User not found.");
+    }
+
+    const hashedPassword = await bcryptjs.hash(newPassword, 10);
+
+    student.password = hashedPassword;
+
+    await student.save();
+
+    await this.otpService.deleteOtp(email)
   }
 }
 

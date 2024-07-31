@@ -80,4 +80,16 @@ export class OtpService {
     await redis.del(`verifiedUserData:${email}`);
     console.log(`Deleted verified user data key for email: ${email}`);
   }
+
+  async generateAccRecoverOtp(email: string): Promise<string> {
+    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    await redis.setex(`otp:${email}`, 300, otp);
+    console.log("Otp generated and seted in redis : ", otp);
+    await sendMessage("email-verification", { email, otp });
+    return otp;
+  }
+
+  async deleteOtp(email: string): Promise<void> {
+    await redis.del(`otp:${email}`);
+  }
 }

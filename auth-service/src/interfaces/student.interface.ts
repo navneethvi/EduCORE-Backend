@@ -1,5 +1,7 @@
-export interface IStudent {
-  toObject(): IStudent | PromiseLike<IStudent>;
+// src/interfaces/student.interface.ts
+import { Document } from "mongoose";
+
+export interface IStudent extends Document {
   _id: string;
   name: string;
   email: string;
