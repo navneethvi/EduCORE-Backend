@@ -9,7 +9,7 @@ authRouter.use(
     target: config.USER_SERVICE_API,
     changeOrigin: true,
     pathRewrite: {
-      "^/api/auth/signup": "/api/users/signup",
+      "^/api/auth/": "",
     },
   })
 );
