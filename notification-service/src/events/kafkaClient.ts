@@ -2,7 +2,7 @@ import { Kafka, logLevel } from "kafkajs";
 
 const kafka = new Kafka({
   clientId: "notification-service",
-  brokers: ["kafka:9092"],
+  brokers: ["localhost:9092"],
   logLevel: logLevel.INFO,
 });
 
