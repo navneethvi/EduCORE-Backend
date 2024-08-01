@@ -2,7 +2,7 @@ import { Kafka } from "kafkajs";
 
 const kafka = new Kafka({
   clientId: "auth-service",
-  brokers: ["kafka:9092"],
+  brokers: ["127.0.0.1:9092"],
 });
 
 export const producer = kafka.producer();
