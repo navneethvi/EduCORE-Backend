@@ -19,73 +19,18 @@ services:
       - "9092:9092" # Kafka's external port
     restart: always
     environment:
+      KAFKA_BROKER_ID: 1
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      ALLOW_PLAINTEXT_LISTENER: yes
+      KAFKAJS_NO_PARTITIONER_WARNING: 1
     depends_on:
       - zookeeper
     networks:
       - app_network
 
-  # Redis
-  redis:
-    image: "redis:alpine"
-    container_name: redis
-    ports:
-      - "6379:6379"
-    networks:
-      - app_network
-
-  # MongoDB
-  mongo:
-    image: mongo:latest
-    container_name: mongo
-    ports:
-      - "27017:27017"
-    networks:
-      - app_network
-
-  # API Gateway
-  api-gateway:
-    build: ./api-gateway
-    container_name: api-gateway
-    ports:
-      - "3000:3000"
-    networks:
-      - app_network
-    depends_on:
-      - auth-service
-      - notification-service
-
-  # Auth Service
-  auth-service:
-    build: ./auth-service
-    container_name: auth-service
-    ports:
-      - "3001:3001"
-    networks:
-      - app_network
-    environment:
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - KAFKA_BROKER=kafka:9092 # Corrected Kafka broker port
-      - MONGO_URI=mongodb://mongo:27017/Auth
-
-  # Notification Service
-  notification-service:
-    build: ./notification-service
-    container_name: notification-service
-    depends_on:
-      - kafka
-    ports:
-      - "3006:3006"
-    networks:
-      - app_network
-    environment:
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - KAFKA_BROKER=kafka:9092 # Corrected Kafka broker port
 
 networks:
   app_network:
