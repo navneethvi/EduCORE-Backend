@@ -10,11 +10,11 @@ export const validateRegisterUser = [
     .withMessage("Phone is required and must be exactly 10 digits"),
   body("password")
     .isString()
-    .isLength({ min: 4 })
+    .isLength({ min: 8 })
     .withMessage("Password is required and must be at least 4 characters long"),
   body("confirmPassword")
     .isString()
-    .isLength({ min: 4 })
+    .isLength({ min: 8 })
     .withMessage("Confirm password is required and must be at least 4 characters long"),
   body("role")
     .isIn(["student", "tutor", "admin"])

@@ -23,7 +23,7 @@ class StudentController {
       if (existingStudent) {
         return res
           .status(400)
-          .json({ message: "User with this email already exists" });
+          .json({ message: "Student with this email already exists" });
       }
 
       const otp = await this.otpService.generateOtp(studentData.email);
@@ -43,6 +43,9 @@ class StudentController {
   ) => {
     try {
       const verifyOtpData: VerifyOtpDto = req.body;
+
+      console.log("verifyotpdata ===>", verifyOtpData);
+      
 
       const isOtpValid = await this.otpService.verifyOtp(
         verifyOtpData.email,
@@ -116,7 +119,7 @@ class StudentController {
       const studentData = await this.otpService.getVerifiedUserData(email);
 
       if (!studentData) {
-        return res.status(400).json({ message: "User data not found" });
+        return res.status(400).json({ message: "Student data not found" });
       }
 
       studentData.interests = interests;
@@ -127,7 +130,7 @@ class StudentController {
 
       res.status(201).json({
         message: "Student registered successfully",
-        student: newStudent,
+        studentData: newStudent,
       });
     } catch (error) {
       next(error);
@@ -158,7 +161,7 @@ class StudentController {
   public recoverAccount = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const {email} = req.body
-      
+
       await this.studentService.recoverAccount(email)
       
       res.status(200).json({ message: 'OTP sent to your email.' });

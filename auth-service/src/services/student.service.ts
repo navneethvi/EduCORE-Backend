@@ -14,7 +14,6 @@ class StudentService {
 
   public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
 
-    
     const hashedPassword = await bcryptjs.hash(studentData.password, 10);
     
     const studentInput: INewStudent = {
@@ -29,7 +28,7 @@ class StudentService {
 
     const newStudent = await this.studentRepository.createStudent(studentInput);
 
-    await sendMessage('user-created', {email: newStudent.email})
+    await sendMessage('student-created', {email: newStudent.email})
 
     const token = generateToken({ id: newStudent._id, email: newStudent.email });
 
@@ -63,7 +62,8 @@ class StudentService {
   }
 
   public async recoverAccount(email: string): Promise<void> {
-
+    console.log("email in service : ", email);
+    
     const student = await this.studentRepository.findUser(email)
 
     if(!student){

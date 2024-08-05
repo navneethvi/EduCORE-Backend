@@ -4,7 +4,7 @@ import cors from 'cors'
 // import swaggerUi from 'swagger-ui-express';
 // import YAML from 'yamljs'
 
-import userRouter from './routes/student.route';
+import userRouter from './routes/user.route';
 
 import { ErrorHandler } from './common/middlewares/errorMiddleware';
 

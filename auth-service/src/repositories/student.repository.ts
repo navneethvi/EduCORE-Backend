@@ -1,6 +1,5 @@
-import Student from "../models/user.model";
+import Student from "../models/student.model";
 import { IStudent, INewStudent } from "../interfaces/student.interface";
-import { IRepository } from "../interfaces/repository.interface";
 
 class StudentRepository {
   public async createStudent(studentData: INewStudent): Promise<IStudent> {

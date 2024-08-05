@@ -1,6 +1,7 @@
 import Redis from "ioredis";
 import { CreateStudentDto } from "../dtos/student.dto";
 import { sendMessage } from "../events/kafkaClient";
+import { CreateTutorDto } from "../dtos/tutor.dto";
 
 const redis = new Redis({
   host: process.env.REDIS_HOST || "localhost",
@@ -12,12 +13,11 @@ export class OtpService {
     const otp = Math.floor(1000 + Math.random() * 9000).toString();
     await redis.setex(`otp:${email}`, 300, otp);
     console.log("Otp generated and seted in redis : ", otp);
-
     return otp;
   }
 
   async storeUserDataWithOtp(
-    userData: CreateStudentDto,
+    userData: CreateStudentDto | CreateTutorDto,
     otp: string
   ): Promise<void> {
     await redis.setex(
@@ -93,3 +93,4 @@ export class OtpService {
     await redis.del(`otp:${email}`);
   }
 }
+
