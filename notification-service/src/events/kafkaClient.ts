@@ -13,5 +13,6 @@ export const connectConsumer = async () => {
   console.log("Connected to Kafka consumer");
 
   await consumer.subscribe({ topic: "email-verification", fromBeginning: true });
-  await consumer.subscribe({ topic: "user-created", fromBeginning: true });
+  await consumer.subscribe({ topic: "student-created", fromBeginning: true });
+  await consumer.subscribe({ topic: "tutor-created", fromBeginning: true });
 };

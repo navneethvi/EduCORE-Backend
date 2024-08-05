@@ -13,8 +13,11 @@ export const notificationConsumer = async () => {
         case "email-verification":
           await emailService.sentOtpEmail(email, otp);
           break;
-        case "user-created":
-          await emailService.sentWelcomeEmail(email);
+        case "student-created":
+          await emailService.sentWelcomeEmailForStudent(email);
+          break;
+        case "tutor-created":
+          await emailService.sentWelcomeEmailForTutor(email);
           break;
         default:
           console.warn(`Unhandled topic: ${topic}`);
