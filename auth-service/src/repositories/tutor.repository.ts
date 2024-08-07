@@ -1,7 +1,9 @@
 import { INewTutor, ITutor } from "../interfaces/tutor.interface";
 import Tutor from "../models/tutor.model";
 
-class TutorRepository {
+import { ITutorRepository } from "../interfaces/tutor.repository.interface";
+
+class TutorRepository implements ITutorRepository {
   public async findTutor(email: string): Promise<ITutor | null> {
     return await Tutor.findOne({ email }).exec();
   }

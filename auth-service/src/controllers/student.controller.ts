@@ -152,7 +152,7 @@ class StudentController {
 
       console.log("Student in controller: ", student);
       
-      res.status(200).json({ message: "Signin successful", student });
+      res.status(200).json({ message: "Signin successful", studentData : student });
     } catch (error) {
       next(error);
     }

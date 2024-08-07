@@ -3,12 +3,14 @@ import { CreateStudentDto } from "../dtos/student.dto";
 import { sendMessage } from "../events/kafkaClient";
 import { CreateTutorDto } from "../dtos/tutor.dto";
 
+import { IOtpService } from "../interfaces/otp.service.interface";
+
 const redis = new Redis({
   host: process.env.REDIS_HOST || "localhost",
   port: Number(process.env.REDIS_PORT) || 6379,
 });
 
-export class OtpService {
+export class OtpService implements IOtpService{
   async generateOtp(email: string): Promise<string> {
     const otp = Math.floor(1000 + Math.random() * 9000).toString();
     await redis.setex(`otp:${email}`, 300, otp);

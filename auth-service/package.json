@@ -22,6 +22,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@envy-core/common": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",

@@ -3,12 +3,14 @@ import StudentRepository from "../repositories/student.repository";
 import { CreateStudentDto } from "../dtos/student.dto";
 
 import bcryptjs from "bcryptjs";
-import { generateToken } from "../common/jwt";
+import { generateToken } from "../utils/jwt";
 import { sendMessage } from "../events/kafkaClient";
 import { OtpService } from "./otp.service";
 
+import { IStudentService } from "../interfaces/student.service.interface";
 
-class StudentService {
+
+class StudentService implements IStudentService{
   private studentRepository = new StudentRepository();
   private otpService = new OtpService()
 

@@ -6,6 +6,7 @@ import { CreateTutorDto } from "../dtos/tutor.dto";
 import { OtpService } from "../services/otp.service";
 import { VerifyOtpDto } from "../dtos/student.dto";
 
+
 class TutorController {
   private tutorService = new TutotService();
   private tutorRepository = new TutorRepository();
@@ -129,7 +130,7 @@ class TutorController {
 
         console.log("Tutor in controller : ", tutor);
         
-        res.status(200).json({ message: "Signin successful", tutor });
+        res.status(200).json({ message: "Signin successful", tutorData: tutor });
     } catch (error) {
         next(error)
     }

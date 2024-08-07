@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { config } from "../config/config";
 
-export const verifyToken = (token: string) => {
+export const verifyAccessToken = (token: string) => {
   try {
     return jwt.verify(token, config.JWT_SECRET) as { id: string; role: string };
   } catch (error) {

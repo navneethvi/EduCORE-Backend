@@ -6,7 +6,7 @@ import cors from 'cors'
 
 import userRouter from './routes/user.route';
 
-import { ErrorHandler } from './common/middlewares/errorMiddleware';
+import { ErrorHandler } from '@envy-core/common';
 
 const app = express()
 

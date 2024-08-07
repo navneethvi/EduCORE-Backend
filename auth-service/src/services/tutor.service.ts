@@ -3,11 +3,12 @@ import { INewTutor, ITutor } from "../interfaces/tutor.interface";
 import TutorRepository from "../repositories/tutor.repository";
 import { sendMessage } from "../events/kafkaClient";
 import bcryptjs from "bcryptjs";
-import { generateToken } from "../common/jwt";
+import { generateToken } from "../utils/jwt";
 import { OtpService } from "./otp.service";
 
+import { ITutorService } from "../interfaces/tutor.service.interface";
 
-class TutotService {
+class TutotService implements ITutorService {
   private tutorRepository = new TutorRepository();
   private otpService = new OtpService();
 
@@ -70,21 +71,23 @@ class TutotService {
     await this.otpService.generateAccRecoverOtp(email);
   }
 
-  public async updatePassword(email: string, newPassword: string): Promise<void> {
-    
-    const tutor = await this.tutorRepository.findTutor(email)
+  public async updatePassword(
+    email: string,
+    newPassword: string
+  ): Promise<void> {
+    const tutor = await this.tutorRepository.findTutor(email);
 
-    if(!tutor){
+    if (!tutor) {
       throw new Error("User not found.");
     }
 
     const hashedPassword = await bcryptjs.hash(newPassword, 10);
 
-    tutor.password = hashedPassword
+    tutor.password = hashedPassword;
 
-    await tutor.save()
+    await tutor.save();
 
-    await this.otpService.deleteOtp(email)
+    await this.otpService.deleteOtp(email);
   }
 }
 
