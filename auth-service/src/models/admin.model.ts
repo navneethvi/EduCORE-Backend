@@ -1,6 +1,7 @@
-import mongoose, { Document, Schema, model } from "mongoose";
+import { Document, Schema, model } from "mongoose";
 
 interface AdminDocument extends Document {
+  _id: string;
   email: string;
   name: string;
   password: string;

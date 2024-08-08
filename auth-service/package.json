@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.8.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
@@ -16,10 +17,13 @@
     "@types/nodemailer": "^6.4.15",
     "@types/swagger-ui-express": "^4.1.6",
     "@types/yamljs": "^0.2.34",
+    "eslint": "^9.8.0",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.0.1"
   },
   "dependencies": {
     "@envy-core/common": "^1.0.3",

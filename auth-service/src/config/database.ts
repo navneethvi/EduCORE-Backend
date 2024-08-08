@@ -1,13 +1,17 @@
 import mongoose from 'mongoose';
 import { config } from './config';
 
+import { logger } from '@envy-core/common';
+
 
 const connectDB = async () => {
   try {
     await mongoose.connect(config.mongo.uri)
-    console.log('Auth Database connected');
+    logger.info("Auth Database connected")
   } catch (error) {
-    console.log("MongoDB connection error", error);
+    logger.error("MongoDB connection error");
+    console.log(error);
+    
     
   }
 };
