@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import logger from "./core/logger";
+
+import { logger } from "@envy-core/common";
 
 const app = express();
 const port = 3000;
@@ -14,6 +15,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.json("Hellooooooo");
 });
+
 
 app.use("/api/auth", authRouter);
 
