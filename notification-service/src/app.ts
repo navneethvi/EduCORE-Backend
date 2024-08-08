@@ -2,6 +2,8 @@ import express from "express";
 import { connectConsumer } from "events/kafkaClient";
 import { notificationConsumer } from "events/consumers/notification.consumer";
 
+import { logger } from "@envy-core/common";
+
 const app = express();
 app.use(express.json());
 
@@ -12,11 +14,13 @@ connectConsumer()
     notificationConsumer();
   })
   .catch((error) => {
-    console.error("Kafka consumer connection error:", error);
+    logger.error("Kafka consumer connection error:");
+    console.log(error);
+    
   });
 
 app.listen(port, () => {
-  console.log(`Notification Service is running on http://localhost:${port}`);
+  logger.info(`Notification Service is running on http://localhost:${port}`);
 });
 
 export default app;

@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-"start": "nodemon -r tsconfig-paths/register src/app.ts"  },
+    "start": "nodemon -r tsconfig-paths/register src/app.ts"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -15,6 +16,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@envy-core/common": "^1.0.10",
     "express": "^4.19.2",
     "kafkajs": "^2.2.4",
     "nodemailer": "^6.9.14",

@@ -1,3 +1,4 @@
+import { logger } from "@envy-core/common";
 import { transporter } from "../config/nodemailer";
 
 export class EmailService {
@@ -81,13 +82,12 @@ The Educore Team
 </html>
         `,
       });
-
-      console.log(
-        "Email verification OTP sent successfully:",
-        message.messageId
+      logger.info(
+        `Email verification OTP sent successfully:: ${message.messageId}`
       );
     } catch (error) {
-      console.error("Failed to send OTP email:", error);
+      logger.error("Failed to send OTP email:");
+      console.log(error);
     }
   }
 
@@ -172,9 +172,10 @@ The Educore Team
         `,
       });
 
-      console.log("Welcome message sent successfully:", message.messageId);
+      logger.info(`Welcome message sent successfully: ${message.messageId}`);
     } catch (error) {
-      console.error("Error sending welcome email:", error);
+      logger.error("Error sending welcome email:");
+      console.log(error);
     }
   }
 
@@ -259,9 +260,10 @@ The Educore Team
         `,
       });
 
-      console.log("Welcome message sent successfully:", message.messageId);
+      logger.info(`Welcome message sent successfully: ${message.messageId}`);
     } catch (error) {
-      console.error("Error sending welcome email:", error);
+      logger.error("Error sending welcome email:");
+      console.log(error);
     }
   }
 }

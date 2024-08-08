@@ -2,6 +2,8 @@ import { consumer } from "../kafkaClient";
 
 import { EmailService } from "../../services/email.service";
 
+import { logger } from "@envy-core/common";
+
 const emailService = new EmailService();
 
 export const notificationConsumer = async () => {
@@ -20,7 +22,7 @@ export const notificationConsumer = async () => {
           await emailService.sentWelcomeEmailForTutor(email);
           break;
         default:
-          console.warn(`Unhandled topic: ${topic}`);
+          logger.warn(`Unhandled topic: ${topic}`);
       }
     },
   });

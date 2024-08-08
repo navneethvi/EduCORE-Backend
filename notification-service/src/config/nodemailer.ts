@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 
+import { logger } from "@envy-core/common";
+
 export const transporter = nodemailer.createTransport({
   service: "gmail",
   port: 587,
@@ -12,8 +14,10 @@ export const transporter = nodemailer.createTransport({
 
 transporter.verify((error, success) => {
   if (error) {
-    console.error("Nodemailer configuration error:", error);
+    logger.error("Nodemailer configuration error:");
+    console.log(error);
+    
   } else {
-    console.log("Nodemailer is ready to send emails");
+    logger.info("Nodemailer is ready to send emails");
   }
 });
