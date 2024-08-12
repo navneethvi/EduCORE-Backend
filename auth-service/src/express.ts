@@ -1,8 +1,11 @@
 import express from 'express'
 import cors from 'cors'
+import { configDotenv } from 'dotenv';
 
-// import swaggerUi from 'swagger-ui-express';
-// import YAML from 'yamljs'
+
+
+import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs'
 
 import userRouter from './routes/user.route';
 
@@ -10,7 +13,9 @@ import { ErrorHandler } from '@envy-core/common';
 
 const app = express()
 
-// const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml')
+configDotenv()
+
+const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml')
 
 app.use(cors())
 
@@ -23,7 +28,7 @@ app.get("/", (req, res)=>{
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
 
 app.use('/api/users', userRouter);
 

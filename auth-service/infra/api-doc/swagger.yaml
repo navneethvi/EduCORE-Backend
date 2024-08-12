@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
-  title: Auth Service API
-  description: API for user authentication
+  title: Educore Auth Service API
+  description: API for user authentication and management for students, tutors, and admins
   version: 1.0.0
 servers:
   - url: http://localhost:3001
@@ -10,8 +10,8 @@ servers:
 paths:
   /api/students/signup:
     post:
-      summary: User Sign-Up
-      description: Create a new user account
+      summary: Student Sign-Up
+      description: Create a new student account
       requestBody:
         required: true
         content:
@@ -35,7 +35,7 @@ paths:
                   example: password123
       responses:
         '201':
-          description: User created successfully
+          description: Student created successfully
           content:
             application/json:
               schema:
@@ -43,7 +43,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: User created successfully
+                    example: Student created successfully
                   userId:
                     type: string
                     example: 1234567890
@@ -60,8 +60,8 @@ paths:
 
   /api/students/signin:
     post:
-      summary: User Sign-In
-      description: Authenticate a user and return a token
+      summary: Student Sign-In
+      description: Authenticate a student and return a token
       requestBody:
         required: true
         content:
@@ -79,7 +79,7 @@ paths:
                   example: password123
       responses:
         '200':
-          description: User authenticated successfully
+          description: Student authenticated successfully
           content:
             application/json:
               schema:
@@ -87,7 +87,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: User authenticated successfully
+                    example: Student authenticated successfully
                   token:
                     type: string
                     example: jwt-token
@@ -102,22 +102,482 @@ paths:
                     type: string
                     example: Invalid email or password
 
-components:
-  schemas:
-    User:
-      type: object
-      properties:
-        id:
-          type: string
-          example: 1234567890
-        username:
-          type: string
-          example: johndoe
-        email:
-          type: string
-          format: email
-          example: johndoe@example.com
-        password:
-          type: string
-          format: password
-          example: password123
+  /api/students/verify-otp:
+    post:
+      summary: Verify OTP for Student
+      description: Verify the OTP sent to the student
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                otp:
+                  type: string
+                  example: 123456
+      responses:
+        '200':
+          description: OTP verified successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP verified successfully
+        '400':
+          description: Invalid OTP
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid OTP
+
+  /api/students/resend-otp:
+    post:
+      summary: Resend OTP to Student
+      description: Resend the OTP to the student
+      responses:
+        '200':
+          description: OTP resent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP resent successfully
+
+  /api/students/set-interests:
+    post:
+      summary: Set Student Interests
+      description: Set the interests for the student's profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                interests:
+                  type: array
+                  items:
+                    type: string
+                  example: ["Math", "Science", "Programming"]
+      responses:
+        '200':
+          description: Interests updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Interests updated successfully
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/students/recover-account:
+    post:
+      summary: Recover Student Account
+      description: Recover a student's account by sending a recovery link or OTP
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+      responses:
+        '200':
+          description: Recovery instructions sent
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Recovery instructions sent successfully
+
+  /api/students/verify-account:
+    post:
+      summary: Verify OTP for Account Recovery
+      description: Verify the OTP for account recovery
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                otp:
+                  type: string
+                  example: 123456
+      responses:
+        '200':
+          description: OTP verified successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP verified successfully
+        '400':
+          description: Invalid OTP
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid OTP
+
+  /api/students/update-password:
+    post:
+      summary: Update Student Password
+      description: Update the student's account password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newPassword:
+                  type: string
+                  format: password
+                  example: newpassword123
+      responses:
+        '200':
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password updated successfully
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/tutors/signup:
+    post:
+      summary: Tutor Sign-Up
+      description: Create a new tutor account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: johndoe
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                phone:
+                  type: number
+                  example: 9072263325
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '201':
+          description: Tutor created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Tutor created successfully
+                  userId:
+                    type: string
+                    example: 1234567890
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/tutors/signin:
+    post:
+      summary: Tutor Sign-In
+      description: Authenticate a tutor and return a token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '200':
+          description: Tutor authenticated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Tutor authenticated successfully
+                  token:
+                    type: string
+                    example: jwt-token
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid email or password
+
+  /api/tutors/verify-otp:
+    post:
+      summary: Verify OTP for Tutor
+      description: Verify the OTP sent to the tutor
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                otp:
+                  type: string
+                  example: 123456
+      responses:
+        '200':
+          description: OTP verified successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP verified successfully
+        '400':
+          description: Invalid OTP
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid OTP
+
+  /api/tutors/resend-otp:
+    post:
+      summary: Resend OTP to Tutor
+      description: Resend the OTP to the tutor
+      responses:
+        '200':
+          description: OTP resent successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP resent successfully
+
+  /api/tutors/recover-account:
+    post:
+      summary: Recover Tutor Account
+      description: Recover a tutor's account by sending a recovery link or OTP
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+      responses:
+        '200':
+          description: Recovery instructions sent
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Recovery instructions sent successfully
+
+  /api/tutors/verify-account:
+    post:
+      summary: Verify OTP for Tutor Account Recovery
+      description: Verify the OTP for tutor account recovery
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                otp:
+                  type: string
+                  example: 123456
+      responses:
+        '200':
+          description: OTP verified successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: OTP verified successfully
+        '400':
+          description: Invalid OTP
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid OTP
+
+  /api/tutors/update-password:
+    post:
+      summary: Update Tutor Password
+      description: Update the tutor's account password
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newPassword:
+                  type: string
+                  format: password
+                  example: newpassword123
+      responses:
+        '200':
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Password updated successfully
+        '400':
+          description: Invalid input data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/admin/signin:
+    post:
+      summary: Admin Sign-In
+      description: Authenticate an admin and return a token
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: admin@example.com
+                password:
+                  type: string
+                  format: password
+                  example: adminpassword
+      responses:
+        '200':
+          description: Admin authenticated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Admin authenticated successfully
+                  token:
+                    type: string
+                    example: jwt-token
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid email or password

@@ -5,8 +5,11 @@ import { sendMessage } from "../events/kafkaClient";
 import bcryptjs from "bcryptjs";
 import { generateToken } from "../utils/jwt";
 import { OtpService } from "./otp.service";
+import { OAuth2Client } from "google-auth-library";
 
 import { ITutorService } from "../interfaces/tutor.service.interface";
+
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 class TutotService implements ITutorService {
   private tutorRepository = new TutorRepository();
@@ -57,6 +60,33 @@ class TutotService implements ITutorService {
     const token = generateToken({ id: tutor._id, email: tutor.email });
 
     const tutorWithToken = { ...tutor.toObject(), token };
+
+    return tutorWithToken;
+  }
+
+  public async googleSignin(token: string): Promise<ITutor | null> {
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience:
+        process.env.GOOGLE_CLIENT_ID,
+    });
+
+    const payload = ticket.getPayload();
+    const email = payload?.email;
+
+    if (!email) {
+      throw new Error("Invalid Google token.");
+    }
+
+    const tutor = await this.tutorRepository.findTutor(email);
+
+    if (!tutor) {
+      throw new Error("User not found.");
+    }
+
+    const authToken = generateToken({ id: tutor._id, email: tutor.email });
+
+    const tutorWithToken = { ...tutor.toObject(), token: authToken };
 
     return tutorWithToken;
   }

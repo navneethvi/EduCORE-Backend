@@ -6,18 +6,19 @@ import bcryptjs from "bcryptjs";
 import { generateToken } from "../utils/jwt";
 import { sendMessage } from "../events/kafkaClient";
 import { OtpService } from "./otp.service";
+import { OAuth2Client } from "google-auth-library";
 
 import { IStudentService } from "../interfaces/student.service.interface";
 
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-class StudentService implements IStudentService{
+class StudentService implements IStudentService {
   private studentRepository = new StudentRepository();
-  private otpService = new OtpService()
+  private otpService = new OtpService();
 
   public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
-
     const hashedPassword = await bcryptjs.hash(studentData.password, 10);
-    
+
     const studentInput: INewStudent = {
       name: studentData.name,
       email: studentData.email,
@@ -25,59 +26,92 @@ class StudentService implements IStudentService{
       password: hashedPassword,
       interests: studentData.interests || [],
       following: [],
-      role: studentData.role || 'student',
+      role: studentData.role || "student",
     };
 
     const newStudent = await this.studentRepository.createStudent(studentInput);
 
-    await sendMessage('student-created', {email: newStudent.email})
+    await sendMessage("student-created", { email: newStudent.email });
 
-    const token = generateToken({ id: newStudent._id, email: newStudent.email });
+    const token = generateToken({
+      id: newStudent._id,
+      email: newStudent.email,
+    });
 
     const studentWithToken = { ...newStudent.toObject(), token };
 
     return studentWithToken;
   }
 
-  public async signinStudent(email: string, password: string): Promise<IStudent | null> {
+  public async signinStudent(
+    email: string,
+    password: string
+  ): Promise<IStudent | null> {
+    const student = await this.studentRepository.findUser(email);
 
-    const student = await this.studentRepository.findUser(email)
-    
     if (!student) {
-      throw new Error('Invalid email or password.');
+      throw new Error("Invalid email or password.");
     }
 
-    const isPasswordMatch = await bcryptjs.compare(password, student.password)
+    const isPasswordMatch = await bcryptjs.compare(password, student.password);
 
     console.log("passmatch : ", isPasswordMatch);
-    
 
-    if(!isPasswordMatch){
-      throw new Error('Invalid password.');
-    } 
+    if (!isPasswordMatch) {
+      throw new Error("Invalid password.");
+    }
 
-    const token = generateToken({id: student._id, email: student.email})
+    const token = generateToken({ id: student._id, email: student.email });
 
     const studentWithToken = { ...student.toObject(), token };
 
     return studentWithToken;
   }
 
-  public async recoverAccount(email: string): Promise<void> {
-    console.log("email in service : ", email);
-    
-    const student = await this.studentRepository.findUser(email)
+  public async googleSignin(token: string): Promise<IStudent | null> {
+    const ticket = await client.verifyIdToken({
+      idToken: token,
+      audience:
+        process.env.GOOGLE_CLIENT_ID,
+    });
 
-    if(!student){
-      throw new Error('User not found.');
+    const payload = ticket.getPayload();
+    const email = payload?.email;
+
+    if (!email) {
+      throw new Error("Invalid Google token.");
     }
 
-    await this.otpService.generateAccRecoverOtp(email)
+    const student = await this.studentRepository.findUser(email);
+
+    if (!student) {
+      throw new Error("User not found.");
+    }
+
+    const authToken = generateToken({ id: student._id, email: student.email });
+
+    const studentWithToken = { ...student.toObject(), token: authToken };
+
+    return studentWithToken;
   }
 
-  public async updatePassword(email: string, newPassword: string): Promise<void> {
+  public async recoverAccount(email: string): Promise<void> {
+    console.log("email in service : ", email);
 
-    const student = await this.studentRepository.findUser(email)
+    const student = await this.studentRepository.findUser(email);
+
+    if (!student) {
+      throw new Error("User not found.");
+    }
+
+    await this.otpService.generateAccRecoverOtp(email);
+  }
+
+  public async updatePassword(
+    email: string,
+    newPassword: string
+  ): Promise<void> {
+    const student = await this.studentRepository.findUser(email);
 
     if (!student) {
       throw new Error("User not found.");
@@ -89,7 +123,7 @@ class StudentService implements IStudentService{
 
     await student.save();
 
-    await this.otpService.deleteOtp(email)
+    await this.otpService.deleteOtp(email);
   }
 }
 

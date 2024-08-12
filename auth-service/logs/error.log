@@ -2,3 +2,5 @@
 2024-08-08T12:09:41.690Z [localhost] [31merror[39m: MongoDB connection error
 2024-08-08T12:13:20.889Z [localhost] [31merror[39m: MongoDB connection error
 2024-08-08T12:14:42.047Z [localhost] [31merror[39m: MongoDB connection error
+2024-08-10T14:21:19.733Z [localhost] [31merror[39m: Error connecting to Kafka producer:
+2024-08-10T14:21:19.743Z [localhost] [31merror[39m: Error sending message:

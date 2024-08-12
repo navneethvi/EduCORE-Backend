@@ -1,46 +1,250 @@
 openapi: 3.0.0
 info:
-  title: EduCORE API Gateway
-  description: API Gateway for the EduCORE application, which proxies requests to the authentication service.
+  title: Educore API Gateway
+  description: API Gateway for Educore application, routing requests to various services
   version: 1.0.0
 servers:
   - url: http://localhost:3000
-    description: Local server
+    description: Local API Gateway
+
 paths:
-  /:
-    get:
-      summary: Welcome message
-      description: Returns a welcome message
+  /api/students/signup:
+    post:
+      summary: Route to Student Service Sign-Up
+      description: Route requests to the student service for user sign-up
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: johndoe
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                phone:
+                  type: string
+                  example: 9072263325
+                password:
+                  type: string
+                  format: password
+                  example: password123
       responses:
-        '200':
-          description: Successful response
+        '201':
+          description: User created successfully
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
-                example: Hello, TypeScript with Express!
-  /api/students:
-    get:
-      summary: Proxy to auth service
-      description: Routes the request to the authentication service to retrieve user data.
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User created successfully
+                  userId:
+                    type: string
+                    example: 1234567890
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/auth/signin:
+    post:
+      summary: Route to Student Service Sign-In
+      description: Route requests to the student service for user sign-in
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
       responses:
         '200':
-          description: Successfully proxied request to the auth service.
-        '502':
-          description: Bad gateway error if the request to the auth service fails.
-        '500':
-          description: Internal server error if something goes wrong in the gateway.
+          description: User authenticated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User authenticated successfully
+                  token:
+                    type: string
+                    example: jwt-token
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid email or password
+
+  /api/tutors/signup:
+    post:
+      summary: Route to Tutor Service Sign-Up
+      description: Route requests to the tutor service for tutor sign-up
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: johndoe
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                phone:
+                  type: string
+                  example: 9072263325
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '201':
+          description: Tutor created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Tutor created successfully
+                  userId:
+                    type: string
+                    example: 1234567890
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid input data
+
+  /api/tutors/signin:
+    post:
+      summary: Route to Tutor Service Sign-In
+      description: Route requests to the tutor service for tutor sign-in
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: johndoe@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '200':
+          description: Tutor authenticated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Tutor authenticated successfully
+                  token:
+                    type: string
+                    example: jwt-token
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid email or password
+
+  /api/admin/signin:
+    post:
+      summary: Route to Admin Service Sign-In
+      description: Route requests to the admin service for admin sign-in
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: admin@example.com
+                password:
+                  type: string
+                  format: password
+                  example: adminpassword
+      responses:
+        '200':
+          description: Admin authenticated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Admin authenticated successfully
+                  token:
+                    type: string
+                    example: jwt-token
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Invalid email or password
+
 components:
   schemas:
-    User:
+    ErrorResponse:
       type: object
       properties:
-        id:
+        message:
           type: string
-          description: The user's ID
-        name:
-          type: string
-          description: The user's name
-      required:
-        - id
-        - name
+          example: Error message

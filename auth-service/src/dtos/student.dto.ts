@@ -1,4 +1,4 @@
-import { IsEmail, IsString, MinLength, MaxLength, IsArray, Length } from 'class-validator';
+import { IsEmail, IsString, MinLength, IsArray, Length } from 'class-validator';
 
 export class CreateStudentDto {
     @IsString()

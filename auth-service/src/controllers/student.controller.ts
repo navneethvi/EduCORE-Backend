@@ -45,7 +45,6 @@ class StudentController {
       const verifyOtpData: VerifyOtpDto = req.body;
 
       console.log("verifyotpdata ===>", verifyOtpData);
-      
 
       const isOtpValid = await this.otpService.verifyOtp(
         verifyOtpData.email,
@@ -141,7 +140,7 @@ class StudentController {
     try {
       const { email, password } = req.body;
       console.log(req.body);
-      
+
       if (!email || !password) {
         return res
           .status(400)
@@ -151,55 +150,84 @@ class StudentController {
       const student = await this.studentService.signinStudent(email, password);
 
       console.log("Student in controller: ", student);
-      
-      res.status(200).json({ message: "Signin successful", studentData : student });
+
+      res
+        .status(200)
+        .json({ message: "Signin successful", studentData: student });
     } catch (error) {
       next(error);
     }
   };
 
-  public recoverAccount = async (req: Request, res: Response, next: NextFunction) => {
+  public googleSignin = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const { token } = req.body;
+
     try {
-      const {email} = req.body
+      const studentData = await this.studentService.googleSignin(token);
 
-      await this.studentService.recoverAccount(email)
-      
-      res.status(200).json({ message: 'OTP sent to your email.' });
+      res.status(200).json({ studentData: studentData });
     } catch (error) {
-      next(error)
+      next(error);
     }
-  }
+  };
 
-  public verifyOtpForAccRecovery = async (req: Request, res: Response, next: NextFunction) => {
+  public recoverAccount = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { email } = req.body;
+
+      await this.studentService.recoverAccount(email);
+
+      res.status(200).json({ message: "OTP sent to your email." });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public verifyOtpForAccRecovery = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
     try {
       const { email, otp } = req.body;
 
       if (!email || !otp) {
-        return res.status(400).json({ message: 'Email and OTP are required.' });
+        return res.status(400).json({ message: "Email and OTP are required." });
       }
 
-      const isValid = await this.otpService.verifyOtp(email, otp)
-      
-      if (isValid) {
-      return res.status(200).json({ message: 'OTP verified.', isValid });
-    } else {
-      return res.status(400).json({ message: 'Invalid OTP.', isValid });
-    }
+      const isValid = await this.otpService.verifyOtp(email, otp);
 
+      if (isValid) {
+        return res.status(200).json({ message: "OTP verified.", isValid });
+      } else {
+        return res.status(400).json({ message: "Invalid OTP.", isValid });
+      }
     } catch (error) {
       next(error);
     }
   };
 
-  public updatePassword = async (req: Request, res: Response, next: NextFunction) => {
+  public updatePassword = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
     try {
       const { email, otp, newPassword, confirmNewPassword } = req.body;
 
-      if(newPassword !== confirmNewPassword){
+      if (newPassword !== confirmNewPassword) {
         throw new Error("Invalid Password.");
       }
 
-      const isValid = await this.otpService.verifyOtp(email, otp)
+      const isValid = await this.otpService.verifyOtp(email, otp);
 
       if (!isValid) {
         throw new Error("Invalid or expired OTP.");
@@ -209,9 +237,9 @@ class StudentController {
 
       res.status(200).json({ message: "Password updated successfully." });
     } catch (error) {
-      next(error)
+      next(error);
     }
-  }
+  };
 }
 
 export default StudentController;
