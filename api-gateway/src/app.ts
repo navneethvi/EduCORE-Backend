@@ -8,7 +8,10 @@ const port = 3000;
 
 import authRouter from "./middleware/auth-route";
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true, // Allow credentials (cookies) to be sent
+}));
 
 // Proxy routes
 
