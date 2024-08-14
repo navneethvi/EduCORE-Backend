@@ -1,16 +1,20 @@
 import nodemailer from "nodemailer";
-
+import { configDotenv } from "dotenv";
 import { logger } from "@envy-core/common";
+
+configDotenv()
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
   port: 587,
   secure: false,
   auth: {
-    user: "navaneethvinod18@gmail.com",
-    pass: "zomq cpea ruub asjr",
+    user: process.env.GOOGLE_EMAIL,
+    pass: process.env.GOOGLE_APP_PASS,
   },
 });
+
+
 
 transporter.verify((error, success) => {
   if (error) {

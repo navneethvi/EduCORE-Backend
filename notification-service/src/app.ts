@@ -16,7 +16,6 @@ connectConsumer()
   .catch((error) => {
     logger.error("Kafka consumer connection error:");
     console.log(error);
-    
   });
 
 app.listen(port, () => {
