@@ -9,5 +9,6 @@ export const config = {
     kafka: {
       broker: process.env.KAFKA_BROKER || 'localhost:9092'
     },
-    JWT_SECRET: process.env.JWT_SECRET_KEY || 'jwtsecretkey'
+    JWT_SECRET: process.env.JWT_SECRET_KEY || 'jwtsecretkey',
+    JWT_REFRESH: process.env.JWT_SECRET_KEY || 'jwtsecretkey'
   };

@@ -4,7 +4,16 @@ import { config } from "../config/config";
 interface JwtPayload {
   id: string;
   email: string;
+  role: string
 }
+
+export const generateAccessToken = (payload: JwtPayload) => {
+  return jwt.sign(payload, config.JWT_SECRET, { expiresIn: "10h" });
+};
+
+export const generateRefreshToken = (payload: JwtPayload) => {
+  return jwt.sign(payload, config.JWT_REFRESH, { expiresIn: "30d" });
+};
 
 export const verifyAccessToken = (token: string) => {
   try {
@@ -15,6 +24,11 @@ export const verifyAccessToken = (token: string) => {
   }
 };
 
-export const generateToken = (payload: JwtPayload) => {
-  return jwt.sign(payload, config.JWT_SECRET, { expiresIn: "1h" });
+export const verifyRefreshToken = (token: string) => {
+  try {
+    return jwt.verify(token, config.JWT_REFRESH) as { id: string; role: string };
+  } catch (error) {
+    console.log(error);
+    throw new Error("Token verification failed");
+  }
 };

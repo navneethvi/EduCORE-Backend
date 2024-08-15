@@ -6,6 +6,8 @@ import { CreateTutorDto } from "../dtos/tutor.dto";
 import { OtpService } from "../services/otp.service";
 import { VerifyOtpDto } from "../dtos/student.dto";
 
+import { HttpStatusCodes } from "@envy-core/common";
+
 class TutorController {
   private tutorService = new TutotService();
   private tutorRepository = new TutorRepository();
@@ -18,14 +20,14 @@ class TutorController {
       console.log("Req body : =>", req.body);
 
       if (tutorData.password !== tutorData.confirmPassword) {
-        return res.status(400).json({ message: "Passwords do not match" });
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Passwords do not match" });
       }
 
       const tutorExists = await this.tutorRepository.findTutor(tutorData.email);
 
       if (tutorExists) {
         return res
-          .status(400)
+          .status(HttpStatusCodes.BAD_REQUEST)
           .json({ message: "Tutor with this email already exists" });
       }
 
@@ -33,7 +35,7 @@ class TutorController {
 
       await this.otpService.storeUserDataWithOtp(tutorData, otp);
 
-      res.status(200).json({ message: "OTP sent successfully" });
+      res.status(HttpStatusCodes.OK).json({ message: "OTP sent successfully" });
     } catch (error) {
       next(error);
     }
@@ -61,24 +63,33 @@ class TutorController {
         );
 
         if (!tutorData) {
-          return res.status(400).json({ message: "Tutor data not found" });
+          return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Tutor data not found" });
         }
 
         console.log("tutorData from redis : ", tutorData);
 
         const newTutor = await this.tutorService.createTutor(tutorData);
 
+        const { refreshToken, ...tutor } = newTutor;
+
+        res.cookie("refreshToken", refreshToken, {
+          httpOnly: true,
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "strict",
+          maxAge: 30 * 24 * 60 * 60 * 1000,
+        });
+
         await this.otpService.deleteUserOtpAndData(
           verifyOtpData.email,
           verifyOtpData.otp
         );
 
-        res.status(201).json({
+        res.status(HttpStatusCodes.CREATED).json({
           message: "Tutor registered successfully",
-          tutorData: newTutor,
+          tutorData: tutor,
         });
       } else {
-        res.status(400).json({ message: "Invalid OTP" });
+        res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Invalid OTP" });
       }
     } catch (error) {
       next(error);
@@ -97,7 +108,7 @@ class TutorController {
       const existingTutor = await this.otpService.getUserDataByOtp(email);
       console.log(existingTutor, "==> userdata from redis");
       if (!existingTutor) {
-        return res.status(400).json({
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({
           message: "User with this email does not exist or OTP expired",
         });
       }
@@ -106,7 +117,7 @@ class TutorController {
 
       await this.otpService.storeUserDataWithOtp(existingTutor, otp);
 
-      res.status(200).json({ message: "OTP resent successfully" });
+      res.status(HttpStatusCodes.OK).json({ message: "OTP resent successfully" });
     } catch (error) {
       next(error);
     }
@@ -119,7 +130,7 @@ class TutorController {
 
       if (!email || !password) {
         return res
-          .status(400)
+          .status(HttpStatusCodes.BAD_REQUEST)
           .json({ message: "Email and password are required." });
       }
 
@@ -127,7 +138,22 @@ class TutorController {
 
       console.log("Tutor in controller : ", tutor);
 
-      res.status(200).json({ message: "Signin successful", tutorData: tutor });
+      if (!tutor) {
+        return res.status(HttpStatusCodes.UNAUTHORIZED).json({ message: "Signin failed." });
+      }
+
+      const { refreshToken, ...tutorData } = tutor;
+
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+      });
+
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Signin successful", tutorData: tutorData });
     } catch (error) {
       next(error);
     }
@@ -141,9 +167,20 @@ class TutorController {
     const { token } = req.body;
 
     try {
-      const tutorData = await this.tutorService.googleSignin(token);
+      const tutor = await this.tutorService.googleSignin(token);
 
-      res.status(200).json({ tutorData: tutorData });
+      const { refreshToken, ...tutorData } = tutor;
+
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
+
+      console.log("Cookies:", req.cookies);
+
+      res.status(HttpStatusCodes.OK).json({ message: "Signin successful", tutorData });
     } catch (error) {
       next(error);
     }
@@ -159,7 +196,7 @@ class TutorController {
 
       await this.tutorService.recoverAccount(email);
 
-      res.status(200).json({ message: "OTP sent to your email." });
+      res.status(HttpStatusCodes.OK).json({ message: "OTP sent to your email." });
     } catch (error) {
       next(error);
     }
@@ -174,15 +211,15 @@ class TutorController {
       const { email, otp } = req.body;
 
       if (!email || !otp) {
-        return res.status(400).json({ message: "Email and OTP are required." });
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Email and OTP are required." });
       }
 
       const isValid = await this.otpService.verifyOtp(email, otp);
 
       if (isValid) {
-        return res.status(200).json({ message: "OTP verified.", isValid });
+        return res.status(HttpStatusCodes.OK).json({ message: "OTP verified.", isValid });
       } else {
-        return res.status(400).json({ message: "Invalid OTP.", isValid });
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Invalid OTP.", isValid });
       }
     } catch (error) {
       next(error);
@@ -209,7 +246,33 @@ class TutorController {
 
       await this.tutorService.updatePassword(email, newPassword);
 
-      res.status(200).json({ message: "Password updated successfully." });
+      res.status(HttpStatusCodes.OK).json({ message: "Password updated successfully." });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public logout = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const authHeader = req.headers.authorization;
+      console.log("token from logout ===>", authHeader);
+      console.log("cookieees ===>", req.cookies);
+
+      if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Authorization token is missing or invalid" });
+      }
+
+      const token = authHeader.split(" ")[1];
+
+      // await logoutTutorService(token);
+      console.log(token);
+
+      // Clear refresh token cookie if applicable
+      res.clearCookie("refreshToken");
+
+      res.status(HttpStatusCodes.OK).json({ message: "Logout successful" });
     } catch (error) {
       next(error);
     }

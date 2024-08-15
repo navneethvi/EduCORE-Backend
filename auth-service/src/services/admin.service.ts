@@ -1,7 +1,7 @@
 import bcryptjs from "bcryptjs";
 import AdminRepository from "../repositories/admin.repository";
 import { AdminDocument } from "../models/admin.model";
-import { generateToken } from "../utils/jwt";
+import { generateAccessToken } from "../utils/jwt";
 
 import { IAdminService } from "../interfaces/admin.service.interface";
 
@@ -24,7 +24,11 @@ class AdminService implements IAdminService {
       throw new Error("Invalid password.");
     }
 
-    const token = generateToken({ id: admin._id, email: admin.email });
+    const token = generateAccessToken({
+      id: admin._id,
+      email: admin.email,
+      role: "admin",
+    });
 
     const adminWithToken = { ...admin.toObject(), token };
 

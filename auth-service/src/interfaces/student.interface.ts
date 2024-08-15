@@ -12,7 +12,8 @@ export interface IStudent extends Document {
   image?: string;
   following?: string[];
   role: string;
-  token?: string;
+  accessToken?: string;
+  refreshToken?: string;
 }
 
 export interface INewStudent {

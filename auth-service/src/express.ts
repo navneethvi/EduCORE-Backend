@@ -1,6 +1,8 @@
 import express from 'express'
+
 import cors from 'cors'
 import { configDotenv } from 'dotenv';
+import cookieParser from 'cookie-parser';
 
 
 
@@ -15,9 +17,14 @@ const app = express()
 
 configDotenv()
 
+app.use(cookieParser())
+
 const swaggerDoc = YAML.load('../api-gateway/infra/api-doc/swagger.yaml')
 
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true, 
+  }));
 
 
 app.get("/", (req, res)=>{

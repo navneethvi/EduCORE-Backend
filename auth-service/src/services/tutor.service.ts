@@ -3,7 +3,7 @@ import { INewTutor, ITutor } from "../interfaces/tutor.interface";
 import TutorRepository from "../repositories/tutor.repository";
 import { sendMessage } from "../events/kafkaClient";
 import bcryptjs from "bcryptjs";
-import { generateToken } from "../utils/jwt";
+import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 import { OtpService } from "./otp.service";
 import { OAuth2Client } from "google-auth-library";
 
@@ -32,9 +32,23 @@ class TutotService implements ITutorService {
 
     await sendMessage("tutor-created", { email: newTutor.email });
 
-    const token = generateToken({ id: newTutor._id, email: newTutor.email });
+    const accessToken = generateAccessToken({
+      id: newTutor._id,
+      email: newTutor.email,
+      role: "tutor",
+    });
 
-    const tutorWithToken = { ...newTutor.toObject(), token };
+    const refreshToken = generateRefreshToken({
+      id: newTutor._id,
+      email: newTutor.email,
+      role: "tutor",
+    });
+
+    const tutorWithToken = {
+      ...newTutor.toObject(),
+      accessToken,
+      refreshToken,
+    };
 
     return tutorWithToken;
   }
@@ -57,18 +71,27 @@ class TutotService implements ITutorService {
       throw new Error("Invalid password.");
     }
 
-    const token = generateToken({ id: tutor._id, email: tutor.email });
+    const accessToken = generateAccessToken({
+      id: tutor._id,
+      email: tutor.email,
+      role: "tutor",
+    });
 
-    const tutorWithToken = { ...tutor.toObject(), token };
+    const refreshToken = generateRefreshToken({
+      id: tutor._id,
+      email: tutor.email,
+      role: "tutor",
+    });
+
+    const tutorWithToken = { ...tutor.toObject(), accessToken, refreshToken };
 
     return tutorWithToken;
   }
 
-  public async googleSignin(token: string): Promise<ITutor | null> {
+  public async googleSignin(token: string): Promise<ITutor> {
     const ticket = await client.verifyIdToken({
       idToken: token,
-      audience:
-        process.env.GOOGLE_CLIENT_ID,
+      audience: process.env.GOOGLE_CLIENT_ID,
     });
 
     const payload = ticket.getPayload();
@@ -84,9 +107,18 @@ class TutotService implements ITutorService {
       throw new Error("User not found.");
     }
 
-    const authToken = generateToken({ id: tutor._id, email: tutor.email });
+    const accessToken = generateAccessToken({
+      id: tutor._id,
+      email: tutor.email,
+      role: "tutor",
+    });
+    const refreshToken = generateRefreshToken({
+      id: tutor._id,
+      email: tutor.email,
+      role: "tutor",
+    });
 
-    const tutorWithToken = { ...tutor.toObject(), token: authToken };
+    const tutorWithToken = { ...tutor.toObject(), accessToken, refreshToken };
 
     return tutorWithToken;
   }

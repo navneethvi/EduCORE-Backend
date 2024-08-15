@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import AdminService from "../services/admin.service";
+import { HttpStatusCodes } from "@envy-core/common";
 
 class AdminController {
   private adminService = new AdminService();
@@ -11,7 +12,7 @@ class AdminController {
 
       if (!email || !password) {
         return res
-          .status(400)
+          .status(HttpStatusCodes.BAD_REQUEST)
           .json({ message: "Email and password are required." });
       }
 
@@ -19,7 +20,7 @@ class AdminController {
 
       console.log("Admin in controller: ", admin);
 
-      res.status(200).json({ message: "Signin successful", adminData: admin });
+      res.status(HttpStatusCodes.OK).json({ message: "Signin successful", adminData: admin });
     } catch (error) {
       next(error);
     }

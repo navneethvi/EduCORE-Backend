@@ -13,7 +13,8 @@ export interface ITutor extends Document {
   image?: string;
   followers?: string[];
   role: string;
-  token?: string;
+  refreshToken?: string;
+  accessToken?: string;
 }
 
 export interface INewTutor {

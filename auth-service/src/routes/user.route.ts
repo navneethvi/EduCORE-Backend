@@ -3,7 +3,14 @@ import StudentController from "../controllers/student.controller";
 import TutorController from "../controllers/tutor.controller";
 import AdminController from "../controllers/admin.controller";
 
-import { validateRegisterUser } from "@envy-core/common";
+import Tutor from "../models/tutor.model";
+
+import {
+  validateRegisterUser,
+  isTutorLogin,
+  isStudentLogin,
+} from "@envy-core/common";
+import Student from "../models/student.model";
 
 const router = Router();
 
@@ -17,6 +24,7 @@ router.post("/signup", validateRegisterUser, studentController.signup);
 router.post("/verify-otp", studentController.verifyOtp);
 router.post("/resend-otp", studentController.resendOtp);
 router.post("/set-interests", studentController.updateInterests);
+router.post("/logout",isStudentLogin(Student), studentController.logout);
 
 router.post("/signin", studentController.signin);
 router.post("/google", studentController.googleSignin);
@@ -29,6 +37,7 @@ router.post("/update-password", studentController.updatePassword);
 router.post("/tutor/signup", validateRegisterUser, tutorController.signup);
 router.post("/tutor/verify-otp", tutorController.verifyOtp);
 router.post("/tutor/resend-otp", tutorController.resendOtp);
+router.post("/tutor/logout", isTutorLogin(Tutor), tutorController.logout);
 
 router.post("/tutor/signin", tutorController.signin);
 router.post("/tutor/google", tutorController.googleSignin);

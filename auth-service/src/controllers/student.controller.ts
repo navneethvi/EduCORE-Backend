@@ -4,6 +4,8 @@ import StudentService from "../services/student.service";
 import { OtpService } from "../services/otp.service";
 import { CreateStudentDto, VerifyOtpDto } from "../dtos/student.dto";
 
+import { HttpStatusCodes } from "@envy-core/common";
+
 class StudentController {
   private studentService = new StudentService();
   private otpService = new OtpService();
@@ -22,7 +24,7 @@ class StudentController {
       );
       if (existingStudent) {
         return res
-          .status(400)
+          .status(HttpStatusCodes.BAD_REQUEST)
           .json({ message: "Student with this email already exists" });
       }
 
@@ -30,7 +32,7 @@ class StudentController {
 
       await this.otpService.storeUserDataWithOtp(studentData, otp);
 
-      res.status(200).json({ message: "OTP sent successfully" });
+      res.status(HttpStatusCodes.OK).json({ message: "OTP sent successfully" });
     } catch (error) {
       next(error);
     }
@@ -69,11 +71,13 @@ class StudentController {
           studentData
         );
 
-        res.status(200).json({
+        res.status(HttpStatusCodes.OK).json({
           message: "OTP Verified, Please Update Interests",
         });
       } else {
-        res.status(400).json({ message: "Invalid OTP" });
+        res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Invalid OTP" });
       }
     } catch (error) {
       next(error);
@@ -92,7 +96,7 @@ class StudentController {
       const existingStudent = await this.otpService.getUserDataByOtp(email);
       console.log(existingStudent, "==> userdata from redis");
       if (!existingStudent) {
-        return res.status(400).json({
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({
           message: "User with this email does not exist or OTP expired",
         });
       }
@@ -101,7 +105,9 @@ class StudentController {
 
       await this.otpService.storeUserDataWithOtp(existingStudent, otp);
 
-      res.status(200).json({ message: "OTP resent successfully" });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "OTP resent successfully" });
     } catch (error) {
       next(error);
     }
@@ -118,18 +124,29 @@ class StudentController {
       const studentData = await this.otpService.getVerifiedUserData(email);
 
       if (!studentData) {
-        return res.status(400).json({ message: "Student data not found" });
+        return res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Student data not found" });
       }
 
       studentData.interests = interests;
 
       const newStudent = await this.studentService.createStudent(studentData);
 
+      const { refreshToken, ...student } = newStudent;
+
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
+
       await this.otpService.deleteVerifiedUserData(email);
 
-      res.status(201).json({
+      res.status(HttpStatusCodes.CREATED).json({
         message: "Student registered successfully",
-        studentData: newStudent,
+        studentData: student,
       });
     } catch (error) {
       next(error);
@@ -143,7 +160,7 @@ class StudentController {
 
       if (!email || !password) {
         return res
-          .status(400)
+          .status(HttpStatusCodes.BAD_REQUEST)
           .json({ message: "Email and password are required." });
       }
 
@@ -151,9 +168,24 @@ class StudentController {
 
       console.log("Student in controller: ", student);
 
+      if (!student) {
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Signin failed." });
+      }
+
+      const { refreshToken, ...studentData } = student;
+
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
+
       res
-        .status(200)
-        .json({ message: "Signin successful", studentData: student });
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Signin successful", studentData: studentData });
     } catch (error) {
       next(error);
     }
@@ -167,9 +199,28 @@ class StudentController {
     const { token } = req.body;
 
     try {
-      const studentData = await this.studentService.googleSignin(token);
+      const student = await this.studentService.googleSignin(token);
 
-      res.status(200).json({ studentData: studentData });
+      console.log("Student in controller: ", student);
+
+      if (!student) {
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Signin failed." });
+      }
+
+      const { refreshToken, ...studentData } = student;
+
+      res.cookie("refreshToken", refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
+
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Signin successful", studentData: studentData });
     } catch (error) {
       next(error);
     }
@@ -185,7 +236,9 @@ class StudentController {
 
       await this.studentService.recoverAccount(email);
 
-      res.status(200).json({ message: "OTP sent to your email." });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "OTP sent to your email." });
     } catch (error) {
       next(error);
     }
@@ -206,9 +259,13 @@ class StudentController {
       const isValid = await this.otpService.verifyOtp(email, otp);
 
       if (isValid) {
-        return res.status(200).json({ message: "OTP verified.", isValid });
+        return res
+          .status(HttpStatusCodes.OK)
+          .json({ message: "OTP verified.", isValid });
       } else {
-        return res.status(400).json({ message: "Invalid OTP.", isValid });
+        return res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Invalid OTP.", isValid });
       }
     } catch (error) {
       next(error);
@@ -235,7 +292,33 @@ class StudentController {
 
       await this.studentService.updatePassword(email, newPassword);
 
-      res.status(200).json({ message: "Password updated successfully." });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Password updated successfully." });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public logout = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const authHeader = req.headers.authorization;
+      console.log("token from logout ===>", authHeader);
+      console.log("cookieees ===>", req.cookies);
+
+      if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Authorization token is missing or invalid" });
+      }
+
+      const token = authHeader.split(" ")[1];
+
+      console.log(token);
+
+      res.clearCookie("refreshToken");
+
+      res.status(HttpStatusCodes.OK).json({ message: "Logout successful" });
     } catch (error) {
       next(error);
     }

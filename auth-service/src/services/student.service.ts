@@ -3,7 +3,7 @@ import StudentRepository from "../repositories/student.repository";
 import { CreateStudentDto } from "../dtos/student.dto";
 
 import bcryptjs from "bcryptjs";
-import { generateToken } from "../utils/jwt";
+import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 import { sendMessage } from "../events/kafkaClient";
 import { OtpService } from "./otp.service";
 import { OAuth2Client } from "google-auth-library";
@@ -33,12 +33,23 @@ class StudentService implements IStudentService {
 
     await sendMessage("student-created", { email: newStudent.email });
 
-    const token = generateToken({
+    const accessToken = generateAccessToken({
       id: newStudent._id,
       email: newStudent.email,
+      role: "student",
     });
 
-    const studentWithToken = { ...newStudent.toObject(), token };
+    const refreshToken = generateRefreshToken({
+      id: newStudent._id,
+      email: newStudent.email,
+      role: "student",
+    });
+
+    const studentWithToken = {
+      ...newStudent.toObject(),
+      accessToken,
+      refreshToken,
+    };
 
     return studentWithToken;
   }
@@ -61,9 +72,23 @@ class StudentService implements IStudentService {
       throw new Error("Invalid password.");
     }
 
-    const token = generateToken({ id: student._id, email: student.email });
+    const accessToken = generateAccessToken({
+      id: student._id,
+      email: student.email,
+      role: "student",
+    });
 
-    const studentWithToken = { ...student.toObject(), token };
+    const refreshToken = generateRefreshToken({
+      id: student._id,
+      email: student.email,
+      role: "student",
+    });
+
+    const studentWithToken = {
+      ...student.toObject(),
+      accessToken,
+      refreshToken,
+    };
 
     return studentWithToken;
   }
@@ -71,8 +96,7 @@ class StudentService implements IStudentService {
   public async googleSignin(token: string): Promise<IStudent | null> {
     const ticket = await client.verifyIdToken({
       idToken: token,
-      audience:
-        process.env.GOOGLE_CLIENT_ID,
+      audience: process.env.GOOGLE_CLIENT_ID,
     });
 
     const payload = ticket.getPayload();
@@ -88,9 +112,23 @@ class StudentService implements IStudentService {
       throw new Error("User not found.");
     }
 
-    const authToken = generateToken({ id: student._id, email: student.email });
+    const accessToken = generateAccessToken({
+      id: student._id,
+      email: student.email,
+      role: "student",
+    });
 
-    const studentWithToken = { ...student.toObject(), token: authToken };
+    const refreshToken = generateRefreshToken({
+      id: student._id,
+      email: student.email,
+      role: "student",
+    });
+
+    const studentWithToken = {
+      ...student.toObject(),
+      accessToken,
+      refreshToken,
+    };
 
     return studentWithToken;
   }
