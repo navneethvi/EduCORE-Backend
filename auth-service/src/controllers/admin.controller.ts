@@ -27,8 +27,6 @@ class AdminController {
       next(error);
     }
   };
-
-
 }
 
 export default AdminController;
