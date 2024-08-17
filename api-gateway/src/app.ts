@@ -7,11 +7,14 @@ const app = express();
 const port = 3000;
 
 import authRouter from "./middleware/auth-route";
+import courseRouter from "./middleware/course-route";
 
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true, // Allow credentials (cookies) to be sent
-}));
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true, 
+  })
+);
 
 // Proxy routes
 
@@ -19,8 +22,9 @@ app.get("/", (req, res) => {
   res.json("Hellooooooo");
 });
 
-
 app.use("/api/auth", authRouter);
+
+app.use("/api/course", courseRouter);
 
 app.listen(port, () => {
   logger.info(`API Gateway is running on http://localhost:${port}`);
