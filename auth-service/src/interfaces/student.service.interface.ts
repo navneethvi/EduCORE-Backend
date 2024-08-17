@@ -6,4 +6,12 @@ export interface IStudentService {
   signinStudent(email: string, password: string): Promise<IStudent | null>;
   recoverAccount(email: string): Promise<void>;
   updatePassword(email: string, newPassword: string): Promise<void>;
+  getStudents(
+    page: number,
+    limit: number
+  ): Promise<{
+    students: IStudent[];
+    totalPages: number;
+    currentPage: number;
+  }>;
 }

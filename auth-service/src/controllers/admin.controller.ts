@@ -20,11 +20,15 @@ class AdminController {
 
       console.log("Admin in controller: ", admin);
 
-      res.status(HttpStatusCodes.OK).json({ message: "Signin successful", adminData: admin });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Signin successful", adminData: admin });
     } catch (error) {
       next(error);
     }
   };
+
+
 }
 
 export default AdminController;

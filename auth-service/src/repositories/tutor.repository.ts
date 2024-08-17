@@ -12,6 +12,17 @@ class TutorRepository implements ITutorRepository {
     const tutor = new Tutor(tutorData);
     return await tutor.save();
   }
+
+  public async getTutors(page = 1, limit = 5): Promise<ITutor[]> {
+    console.log("page in repo ==>", page);
+
+    const skip = (page - 1) * limit;
+    return await Tutor.find().skip(skip).limit(limit).exec();
+  }
+
+  public async countTutors(): Promise<number> {
+    return await Tutor.countDocuments().exec();
+  }
 }
 
 export default TutorRepository;

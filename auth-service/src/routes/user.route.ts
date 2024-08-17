@@ -48,5 +48,7 @@ router.post("/tutor/update-password", tutorController.updatePassword);
 //* Admin Routes
 
 router.post("/admin/signin", adminController.signin);
+router.get("/admin/get_students", studentController.getStudents)
+router.get("/admin/get_tutors", tutorController.getTutors)
 
 export default router;

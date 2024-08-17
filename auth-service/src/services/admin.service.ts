@@ -1,5 +1,6 @@
 import bcryptjs from "bcryptjs";
 import AdminRepository from "../repositories/admin.repository";
+import StudentRepository from "../repositories/student.repository";
 import { AdminDocument } from "../models/admin.model";
 import { generateAccessToken } from "../utils/jwt";
 
@@ -7,6 +8,7 @@ import { IAdminService } from "../interfaces/admin.service.interface";
 
 class AdminService implements IAdminService {
   private adminRepository = new AdminRepository();
+  private studentRepository = new StudentRepository();
 
   public async signinAdmin(
     email: string,
@@ -34,6 +36,7 @@ class AdminService implements IAdminService {
 
     return adminWithToken;
   }
+
 }
 
 export default AdminService;

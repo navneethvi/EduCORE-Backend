@@ -277,6 +277,26 @@ class TutorController {
       next(error);
     }
   };
+
+  public getTutors = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const page = parseInt(req.query.page as string) || 1;      
+
+      const limit = parseInt(req.query.limit as string) || 5;
+
+      console.log("Fetching students...");
+
+      const students = await this.tutorService.getTutors(page, limit);
+
+      res.json(students);
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default TutorController;

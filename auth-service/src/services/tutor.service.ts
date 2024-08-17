@@ -151,6 +151,28 @@ class TutotService implements ITutorService {
 
     await this.otpService.deleteOtp(email);
   }
+
+  public async getTutors(
+    page: number,
+    limit: number
+  ): Promise<{
+    tutors: ITutor[];
+    totalPages: number;
+    currentPage: number;
+  }> {
+
+    console.log("page in servuce ==>", page);
+    
+    const tutors = await this.tutorRepository.getTutors(page, limit);
+
+    const totalCount = await this.tutorRepository.countTutors();
+
+    return {
+      tutors,
+      totalPages: Math.ceil(totalCount / limit),
+      currentPage: page,
+    };
+  }
 }
 
 export default TutotService;

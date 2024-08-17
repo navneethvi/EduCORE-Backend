@@ -163,6 +163,29 @@ class StudentService implements IStudentService {
 
     await this.otpService.deleteOtp(email);
   }
+
+  
+  public async getStudents(
+    page: number,
+    limit: number
+  ): Promise<{
+    students: IStudent[];
+    totalPages: number;
+    currentPage: number;
+  }> {
+
+    console.log("page in servuce ==>", page);
+    
+    const students = await this.studentRepository.getStudents(page, limit);
+
+    const totalCount = await this.studentRepository.countStudents();
+
+    return {
+      students,
+      totalPages: Math.ceil(totalCount / limit),
+      currentPage: page,
+    };
+  }
 }
 
 export default StudentService;
