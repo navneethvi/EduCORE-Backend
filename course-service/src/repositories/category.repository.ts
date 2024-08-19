@@ -22,6 +22,11 @@ class CategoryRepository implements ICategoryRepository {
   public async getCategoryCount(): Promise<number> {
     return await Category.countDocuments().exec();
   }
+
+  public async deleteCategoryById(category_id : string): Promise<boolean> {
+    const result = await Category.findByIdAndDelete(category_id)
+    return result !== null
+  }
 }
 
 export default CategoryRepository;

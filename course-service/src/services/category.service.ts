@@ -36,6 +36,17 @@ class CategoryService implements ICategoryService {
 
     return { categories, totalPages };
   }
+
+  public async deleteCategory(category_id: string): Promise<void> {
+    const success = await this.categoryRepository.deleteCategoryById(
+      category_id
+    );
+    console.log("successsss", success);
+    
+    if (!success) {
+      throw new CustomError(HttpStatusCodes.NOT_FOUND, "Category not found");
+    }
+  }
 }
 
 export default CategoryService;
