@@ -12,18 +12,39 @@ class StudentRepository implements IStudentRepository {
     return await Student.findOne({ email }).exec();
   }
 
-  public async getStudents(page = 1, limit = 5): Promise<IStudent[]> {
-
+  public async getStudents(
+    page = 1,
+    limit = 5,
+    searchTerm = ""
+  ): Promise<IStudent[]> {
     console.log("page in repo ==>", page);
-    
+
     const skip = (page - 1) * limit;
-    return await Student.find().skip(skip).limit(limit).exec();
+    const query = searchTerm
+      ? { name: { $regex: searchTerm, $options: "i" } }
+      : {};
+
+    return await Student.find(query).skip(skip).limit(limit).exec();
   }
 
-  public async countStudents(): Promise<number> {
-    return await Student.countDocuments().exec();
+  public async countStudents(searchTerm = ""): Promise<number> {
+    const query = searchTerm
+      ? { name: { $regex: searchTerm, $options: "i" } }
+      : {};
+
+    return await Student.countDocuments(query).exec();
   }
-  
+
+  async updateStudentStatus(
+    tutorId: string,
+    is_blocked: boolean
+  ): Promise<void> {
+    await Student.findByIdAndUpdate(tutorId, { is_blocked });
+  }
+
+  async getStudentById(tutorId: string): Promise<IStudent | null> {
+    return Student.findById(tutorId);
+  }
 }
 
 export default StudentRepository;

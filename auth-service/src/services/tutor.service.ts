@@ -8,12 +8,34 @@ import { OtpService } from "./otp.service";
 import { OAuth2Client } from "google-auth-library";
 
 import { ITutorService } from "../interfaces/tutor.service.interface";
+import { HttpStatusCodes } from "@envy-core/common";
+import CustomError from "@envy-core/common/build/errors/CustomError";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
-class TutotService implements ITutorService {
+class TutorService implements ITutorService {
   private tutorRepository = new TutorRepository();
   private otpService = new OtpService();
+
+  public async checkUserExists(tutorData: CreateTutorDto): Promise<void> {
+    if(tutorData.password !== tutorData.confirmPassword){
+      throw Error("Password do not match !!!")
+    }
+
+    const tutorExists = await this.tutorRepository.findTutor(tutorData.email)
+
+    if(tutorExists){
+      throw Error("Tutor with this email already exists !!!")
+    }
+
+    const otp = await this.otpService.generateOtp(tutorData.email)
+
+    if(!otp){
+      throw Error("Failed to generate otp")
+    }
+
+    await this.otpService.storeUserDataWithOtp(tutorData, otp)
+  }
 
   public async createTutor(tutorData: CreateTutorDto): Promise<ITutor> {
     const hashedPassword = await bcryptjs.hash(tutorData.password, 10);
@@ -63,6 +85,10 @@ class TutotService implements ITutorService {
       throw new Error("Invalid email or password.");
     }
 
+    if (tutor.is_blocked) {
+      throw new Error("Tutor is temporarily blocked by admin.");
+    }
+
     const isPasswordMatch = await bcryptjs.compare(password, tutor.password);
 
     console.log("passmatch : ", isPasswordMatch);
@@ -105,6 +131,10 @@ class TutotService implements ITutorService {
 
     if (!tutor) {
       throw new Error("User not found.");
+    }
+
+    if(tutor.is_blocked){
+      throw new CustomError(HttpStatusCodes.UNAUTHORIZED, 'Tutor is temporarily blocked by admin')
     }
 
     const accessToken = generateAccessToken({
@@ -154,7 +184,8 @@ class TutotService implements ITutorService {
 
   public async getTutors(
     page: number,
-    limit: number
+    limit: number,
+    searchTerm: string
   ): Promise<{
     tutors: ITutor[];
     totalPages: number;
@@ -163,7 +194,7 @@ class TutotService implements ITutorService {
 
     console.log("page in servuce ==>", page);
     
-    const tutors = await this.tutorRepository.getTutors(page, limit);
+    const tutors = await this.tutorRepository.getTutors(page, limit, searchTerm);
 
     const totalCount = await this.tutorRepository.countTutors();
 
@@ -173,6 +204,19 @@ class TutotService implements ITutorService {
       currentPage: page,
     };
   }
+
+  public async toggleBlockTutor(tutorId : string): Promise<void> {
+
+    const tutor = await this.tutorRepository.getTutorById(tutorId)
+
+    if(!tutor){
+      throw new CustomError(HttpStatusCodes.NOT_FOUND, 'Tutor not found!!!')
+    }
+
+    const newStatus = !tutor.is_blocked
+
+    await this.tutorRepository.updateTutorStatus(tutorId, newStatus)
+  }
 }
 
-export default TutotService;
+export default TutorService;

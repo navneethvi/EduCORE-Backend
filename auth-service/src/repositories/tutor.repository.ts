@@ -13,15 +13,33 @@ class TutorRepository implements ITutorRepository {
     return await tutor.save();
   }
 
-  public async getTutors(page = 1, limit = 5): Promise<ITutor[]> {
+  public async getTutors(
+    page = 1,
+    limit = 5,
+    searchTerm = ""
+  ): Promise<ITutor[]> {
     console.log("page in repo ==>", page);
 
     const skip = (page - 1) * limit;
-    return await Tutor.find().skip(skip).limit(limit).exec();
+    const query = searchTerm
+      ? { name: { $regex: searchTerm, $options: "i" } }
+      : {};
+    return await Tutor.find(query).skip(skip).limit(limit).exec();
   }
 
-  public async countTutors(): Promise<number> {
-    return await Tutor.countDocuments().exec();
+  public async countTutors(searchTerm = ""): Promise<number> {
+    const query = searchTerm
+      ? { name: { $regex: searchTerm, $options: "i" } }
+      : {};
+    return await Tutor.countDocuments(query).exec();
+  }
+
+  async updateTutorStatus(tutorId: string, is_blocked: boolean): Promise<void> {
+    await Tutor.findByIdAndUpdate(tutorId, { is_blocked });
+  }
+
+  async getTutorById(tutorId: string): Promise<ITutor | null> {
+    return Tutor.findById(tutorId);
   }
 }
 

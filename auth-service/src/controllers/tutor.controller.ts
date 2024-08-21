@@ -1,16 +1,12 @@
 import { Request, Response, NextFunction } from "express";
-import TutotService from "../services/tutor.service";
-import TutorRepository from "../repositories/tutor.repository";
-
+import TutorService from "../services/tutor.service";
 import { CreateTutorDto } from "../dtos/tutor.dto";
 import { OtpService } from "../services/otp.service";
 import { VerifyOtpDto } from "../dtos/student.dto";
-
 import { HttpStatusCodes } from "@envy-core/common";
 
 class TutorController {
-  private tutorService = new TutotService();
-  private tutorRepository = new TutorRepository();
+  private tutorService = new TutorService();
   private otpService = new OtpService();
 
   public signup = async (req: Request, res: Response, next: NextFunction) => {
@@ -19,21 +15,7 @@ class TutorController {
 
       console.log("Req body : =>", req.body);
 
-      if (tutorData.password !== tutorData.confirmPassword) {
-        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Passwords do not match" });
-      }
-
-      const tutorExists = await this.tutorRepository.findTutor(tutorData.email);
-
-      if (tutorExists) {
-        return res
-          .status(HttpStatusCodes.BAD_REQUEST)
-          .json({ message: "Tutor with this email already exists" });
-      }
-
-      const otp = await this.otpService.generateOtp(tutorData.email);
-
-      await this.otpService.storeUserDataWithOtp(tutorData, otp);
+      await this.tutorService.checkUserExists(tutorData);
 
       res.status(HttpStatusCodes.OK).json({ message: "OTP sent successfully" });
     } catch (error) {
@@ -63,7 +45,9 @@ class TutorController {
         );
 
         if (!tutorData) {
-          return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Tutor data not found" });
+          return res
+            .status(HttpStatusCodes.BAD_REQUEST)
+            .json({ message: "Tutor data not found" });
         }
 
         console.log("tutorData from redis : ", tutorData);
@@ -89,7 +73,9 @@ class TutorController {
           tutorData: tutor,
         });
       } else {
-        res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Invalid OTP" });
+        res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Invalid OTP" });
       }
     } catch (error) {
       next(error);
@@ -117,7 +103,9 @@ class TutorController {
 
       await this.otpService.storeUserDataWithOtp(existingTutor, otp);
 
-      res.status(HttpStatusCodes.OK).json({ message: "OTP resent successfully" });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "OTP resent successfully" });
     } catch (error) {
       next(error);
     }
@@ -139,7 +127,9 @@ class TutorController {
       console.log("Tutor in controller : ", tutor);
 
       if (!tutor) {
-        return res.status(HttpStatusCodes.UNAUTHORIZED).json({ message: "Signin failed." });
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Signin failed." });
       }
 
       const { refreshToken, ...tutorData } = tutor;
@@ -180,7 +170,9 @@ class TutorController {
 
       console.log("Cookies:", req.cookies);
 
-      res.status(HttpStatusCodes.OK).json({ message: "Signin successful", tutorData });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Signin successful", tutorData });
     } catch (error) {
       next(error);
     }
@@ -196,7 +188,9 @@ class TutorController {
 
       await this.tutorService.recoverAccount(email);
 
-      res.status(HttpStatusCodes.OK).json({ message: "OTP sent to your email." });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "OTP sent to your email." });
     } catch (error) {
       next(error);
     }
@@ -211,15 +205,21 @@ class TutorController {
       const { email, otp } = req.body;
 
       if (!email || !otp) {
-        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Email and OTP are required." });
+        return res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Email and OTP are required." });
       }
 
       const isValid = await this.otpService.verifyOtp(email, otp);
 
       if (isValid) {
-        return res.status(HttpStatusCodes.OK).json({ message: "OTP verified.", isValid });
+        return res
+          .status(HttpStatusCodes.OK)
+          .json({ message: "OTP verified.", isValid });
       } else {
-        return res.status(HttpStatusCodes.BAD_REQUEST).json({ message: "Invalid OTP.", isValid });
+        return res
+          .status(HttpStatusCodes.BAD_REQUEST)
+          .json({ message: "Invalid OTP.", isValid });
       }
     } catch (error) {
       next(error);
@@ -246,7 +246,9 @@ class TutorController {
 
       await this.tutorService.updatePassword(email, newPassword);
 
-      res.status(HttpStatusCodes.OK).json({ message: "Password updated successfully." });
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Password updated successfully." });
     } catch (error) {
       next(error);
     }
@@ -284,15 +286,42 @@ class TutorController {
     next: NextFunction
   ) => {
     try {
-      const page = parseInt(req.query.page as string) || 1;      
+      const page = parseInt(req.query.page as string) || 1;
 
       const limit = parseInt(req.query.limit as string) || 5;
 
-      console.log("Fetching students...");
+      const searchTerm = req.query.searchTerm
+        ? String(req.query.searchTerm)
+        : "";
 
-      const students = await this.tutorService.getTutors(page, limit);
+      console.log("Fetching tutors...", searchTerm);
+
+      const students = await this.tutorService.getTutors(
+        page,
+        limit,
+        searchTerm
+      );
 
       res.json(students);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public blockTutors = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { tutorId } = req.params;
+      console.log("hre");
+
+      await this.tutorService.toggleBlockTutor(tutorId);
+
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Tutor block status updated successfully" });
     } catch (error) {
       next(error);
     }

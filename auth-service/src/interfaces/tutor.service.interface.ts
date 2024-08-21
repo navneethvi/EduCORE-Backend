@@ -8,7 +8,8 @@ export interface ITutorService {
   updatePassword(email: string, newPassword: string): Promise<void>;
   getTutors(
     page: number,
-    limit: number
+    limit: number,
+    searchTerm: string
   ): Promise<{
     tutors: ITutor[];
     totalPages: number;

@@ -1,36 +1,20 @@
 import { Request, Response, NextFunction } from "express";
-import StudentRepository from "../repositories/student.repository";
 import StudentService from "../services/student.service";
 import { OtpService } from "../services/otp.service";
 import { CreateStudentDto, VerifyOtpDto } from "../dtos/student.dto";
-
 import { HttpStatusCodes } from "@envy-core/common";
 
 class StudentController {
   private studentService = new StudentService();
   private otpService = new OtpService();
-  private studentRepository = new StudentRepository();
 
   public signup = async (req: Request, res: Response, next: NextFunction) => {
     try {
       const studentData: CreateStudentDto = req.body;
 
-      if (studentData.password !== studentData.confirmPassword) {
-        return res.status(400).json({ message: "Passwords do not match" });
-      }
+      console.log("Req body : =>", req.body);
 
-      const existingStudent = await this.studentRepository.findUser(
-        studentData.email
-      );
-      if (existingStudent) {
-        return res
-          .status(HttpStatusCodes.BAD_REQUEST)
-          .json({ message: "Student with this email already exists" });
-      }
-
-      const otp = await this.otpService.generateOtp(studentData.email);
-
-      await this.otpService.storeUserDataWithOtp(studentData, otp);
+      await this.studentService.checkUserExists(studentData);
 
       res.status(HttpStatusCodes.OK).json({ message: "OTP sent successfully" });
     } catch (error) {
@@ -330,15 +314,41 @@ class StudentController {
     next: NextFunction
   ) => {
     try {
-      const page = parseInt(req.query.page as string) || 1;      
+      const page = parseInt(req.query.page as string) || 1;
 
       const limit = parseInt(req.query.limit as string) || 5;
 
-      console.log("Fetching students...");
+      const searchTerm = req.query.searchTerm
+        ? String(req.query.searchTerm)
+        : "";
 
-      const students = await this.studentService.getStudents(page, limit);
+      console.log("Fetching students...", searchTerm);
+
+      const students = await this.studentService.getStudents(
+        page,
+        limit,
+        searchTerm
+      );
 
       res.json(students);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public blockStudents = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      const { studentId } = req.params;
+      console.log("hre");
+
+      await this.studentService.toggleBlockStudent(studentId);
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Tutor block status updated successfully" });
     } catch (error) {
       next(error);
     }
