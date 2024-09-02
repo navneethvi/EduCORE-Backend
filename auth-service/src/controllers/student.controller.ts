@@ -1,12 +1,17 @@
 import { Request, Response, NextFunction } from "express";
-import StudentService from "../services/student.service";
-import { OtpService } from "../services/otp.service";
 import { CreateStudentDto, VerifyOtpDto } from "../dtos/student.dto";
 import { HttpStatusCodes } from "@envy-core/common";
+import { IStudentService } from "../interfaces/student.service.interface";
+import { IOtpService } from "../interfaces/otp.service.interface";
 
 class StudentController {
-  private studentService = new StudentService();
-  private otpService = new OtpService();
+  private studentService: IStudentService;
+  private otpService: IOtpService;
+
+  constructor(studentService: IStudentService, otpService: IOtpService){
+    this.studentService = studentService;
+    this.otpService = otpService
+  }
 
   public signup = async (req: Request, res: Response, next: NextFunction) => {
     try {

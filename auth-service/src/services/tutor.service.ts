@@ -1,40 +1,45 @@
 import { CreateTutorDto } from "../dtos/tutor.dto";
 import { INewTutor, ITutor } from "../interfaces/tutor.interface";
-import TutorRepository from "../repositories/tutor.repository";
 import { sendMessage } from "../events/kafkaClient";
 import bcryptjs from "bcryptjs";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
-import { OtpService } from "./otp.service";
 import { OAuth2Client } from "google-auth-library";
 
 import { ITutorService } from "../interfaces/tutor.service.interface";
 import { HttpStatusCodes } from "@envy-core/common";
 import CustomError from "@envy-core/common/build/errors/CustomError";
+import { ITutorRepository } from "../interfaces/tutor.repository.interface";
+import { IOtpService } from "../interfaces/otp.service.interface";
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 class TutorService implements ITutorService {
-  private tutorRepository = new TutorRepository();
-  private otpService = new OtpService();
+  private tutorRepository: ITutorRepository;
+  private otpService: IOtpService;
+
+  constructor(tutorRepository: ITutorRepository, otpService: IOtpService) {
+    this.tutorRepository = tutorRepository;
+    this.otpService = otpService;
+  }
 
   public async checkUserExists(tutorData: CreateTutorDto): Promise<void> {
-    if(tutorData.password !== tutorData.confirmPassword){
-      throw Error("Password do not match !!!")
+    if (tutorData.password !== tutorData.confirmPassword) {
+      throw Error("Password do not match !!!");
     }
 
-    const tutorExists = await this.tutorRepository.findTutor(tutorData.email)
+    const tutorExists = await this.tutorRepository.findTutor(tutorData.email);
 
-    if(tutorExists){
-      throw Error("Tutor with this email already exists !!!")
+    if (tutorExists) {
+      throw Error("Tutor with this email already exists !!!");
     }
 
-    const otp = await this.otpService.generateOtp(tutorData.email)
+    const otp = await this.otpService.generateOtp(tutorData.email);
 
-    if(!otp){
-      throw Error("Failed to generate otp")
+    if (!otp) {
+      throw Error("Failed to generate otp");
     }
 
-    await this.otpService.storeUserDataWithOtp(tutorData, otp)
+    await this.otpService.storeUserDataWithOtp(tutorData, otp);
   }
 
   public async createTutor(tutorData: CreateTutorDto): Promise<ITutor> {
@@ -144,8 +149,11 @@ class TutorService implements ITutorService {
       throw new Error("User not found.");
     }
 
-    if(tutor.is_blocked){
-      throw new CustomError(HttpStatusCodes.UNAUTHORIZED, 'Tutor is temporarily blocked by admin')
+    if (tutor.is_blocked) {
+      throw new CustomError(
+        HttpStatusCodes.UNAUTHORIZED,
+        "Tutor is temporarily blocked by admin"
+      );
     }
 
     const accessToken = generateAccessToken({
@@ -202,10 +210,13 @@ class TutorService implements ITutorService {
     totalPages: number;
     currentPage: number;
   }> {
-
     console.log("page in servuce ==>", page);
-    
-    const tutors = await this.tutorRepository.getTutors(page, limit, searchTerm);
+
+    const tutors = await this.tutorRepository.getTutors(
+      page,
+      limit,
+      searchTerm
+    );
 
     const totalCount = await this.tutorRepository.countTutors();
 
@@ -216,17 +227,16 @@ class TutorService implements ITutorService {
     };
   }
 
-  public async toggleBlockTutor(tutorId : string): Promise<void> {
+  public async toggleBlockTutor(tutorId: string): Promise<void> {
+    const tutor = await this.tutorRepository.getTutorById(tutorId);
 
-    const tutor = await this.tutorRepository.getTutorById(tutorId)
-
-    if(!tutor){
-      throw new CustomError(HttpStatusCodes.NOT_FOUND, 'Tutor not found!!!')
+    if (!tutor) {
+      throw new CustomError(HttpStatusCodes.NOT_FOUND, "Tutor not found!!!");
     }
 
-    const newStatus = !tutor.is_blocked
+    const newStatus = !tutor.is_blocked;
 
-    await this.tutorRepository.updateTutorStatus(tutorId, newStatus)
+    await this.tutorRepository.updateTutorStatus(tutorId, newStatus);
   }
 }
 

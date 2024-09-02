@@ -1,17 +1,22 @@
 import { Request, Response, NextFunction } from "express";
-import TutorService from "../services/tutor.service";
 import { CreateTutorDto } from "../dtos/tutor.dto";
-import { OtpService } from "../services/otp.service";
 import { VerifyOtpDto } from "../dtos/student.dto";
 import { HttpStatusCodes } from "@envy-core/common";
+import { ITutorService } from "../interfaces/tutor.service.interface";
+import { IOtpService } from "../interfaces/otp.service.interface";
 
 interface AdminRequest extends Request {
-  admin?: unknown; // Replace `any` with the correct type for your `tutor` object if you know it
+  admin?: unknown; 
 }
 
 class TutorController {
-  private tutorService = new TutorService();
-  private otpService = new OtpService();
+  private tutorService: ITutorService;
+  private otpService: IOtpService;
+
+  constructor(tutorService: ITutorService, otpService: IOtpService) {
+    this.tutorService = tutorService;
+    this.otpService = otpService;
+  }
 
   public signup = async (req: Request, res: Response, next: NextFunction) => {
     try {

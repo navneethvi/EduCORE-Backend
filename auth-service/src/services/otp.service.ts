@@ -43,7 +43,7 @@ export class OtpService implements IOtpService {
   async getUserDataByOtp(
     email: string,
     otp?: string
-  ): Promise<CreateStudentDto> {
+  ): Promise<CreateStudentDto | CreateTutorDto> {
     const key = otp ? `user:${email}:${otp}` : `userData:${email}`;
     const userData = await redis.get(key);
     if (userData) {
@@ -54,7 +54,7 @@ export class OtpService implements IOtpService {
 
   async storeVerifiedUserData(
     email: string,
-    userData: CreateStudentDto
+    userData: CreateStudentDto | CreateTutorDto
   ): Promise<void> {
     await redis.setex(
       `verifiedUserData:${email}`,

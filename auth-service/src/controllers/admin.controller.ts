@@ -1,9 +1,13 @@
 import { Request, Response, NextFunction } from "express";
-import AdminService from "../services/admin.service";
 import { HttpStatusCodes } from "@envy-core/common";
+import { IAdminService } from "../interfaces/admin.service.interface";
 
 class AdminController {
-  private adminService = new AdminService();
+  private adminService: IAdminService;
+
+  constructor(adminService: IAdminService) {
+    this.adminService = adminService;
+  }
 
   public signin = async (req: Request, res: Response, next: NextFunction) => {
     try {

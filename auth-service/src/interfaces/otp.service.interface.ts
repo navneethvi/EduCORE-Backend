@@ -14,7 +14,7 @@ export interface IOtpService {
   ): Promise<CreateStudentDto | CreateTutorDto>;
   storeVerifiedUserData(
     email: string,
-    userData: CreateStudentDto
+    userData: CreateStudentDto | CreateTutorDto
   ): Promise<void>;
   getVerifiedUserData(email: string): Promise<CreateStudentDto>;
   deleteUserOtpAndData(email: string, otp: string): Promise<void>;

@@ -1,11 +1,11 @@
 import { INewStudent, IStudent } from "../interfaces/student.interface";
-import StudentRepository from "../repositories/student.repository";
 import { CreateStudentDto } from "../dtos/student.dto";
+import { IStudentRepository } from "../interfaces/student.repository.interface";
+import { IOtpService } from "../interfaces/otp.service.interface";
 
 import bcryptjs from "bcryptjs";
 import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 import { sendMessage } from "../events/kafkaClient";
-import { OtpService } from "./otp.service";
 import { OAuth2Client } from "google-auth-library";
 
 import { IStudentService } from "../interfaces/student.service.interface";
@@ -15,27 +15,34 @@ import { HttpStatusCodes } from "@envy-core/common";
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 class StudentService implements IStudentService {
-  private studentRepository = new StudentRepository();
-  private otpService = new OtpService();
+  private studentRepository: IStudentRepository
+  private otpService: IOtpService
+
+  constructor(studentRepository: IStudentRepository, otpService: IOtpService){
+    this.studentRepository = studentRepository;
+    this.otpService = otpService;
+  }
 
   public async checkUserExists(studentData: CreateStudentDto): Promise<void> {
-    if(studentData.password !== studentData.confirmPassword){
-      throw Error("Password do not match !!!")
+    if (studentData.password !== studentData.confirmPassword) {
+      throw Error("Password do not match !!!");
     }
 
-    const tutorExists = await this.studentRepository.findUser(studentData.email)
+    const tutorExists = await this.studentRepository.findUser(
+      studentData.email
+    );
 
-    if(tutorExists){
-      throw Error("Student with this email already exists !!!")
+    if (tutorExists) {
+      throw Error("Student with this email already exists !!!");
     }
 
-    const otp = await this.otpService.generateOtp(studentData.email)
+    const otp = await this.otpService.generateOtp(studentData.email);
 
-    if(!otp){
-      throw Error("Failed to generate otp")
+    if (!otp) {
+      throw Error("Failed to generate otp");
     }
 
-    await this.otpService.storeUserDataWithOtp(studentData, otp)
+    await this.otpService.storeUserDataWithOtp(studentData, otp);
   }
 
   public async createStudent(studentData: CreateStudentDto): Promise<IStudent> {
@@ -86,7 +93,7 @@ class StudentService implements IStudentService {
       throw new Error("Invalid email or password.");
     }
 
-    if(student.is_blocked){
+    if (student.is_blocked) {
       throw new Error("Student is temporarily blocked by admin.");
     }
 
@@ -138,7 +145,7 @@ class StudentService implements IStudentService {
       throw new Error("User not found.");
     }
 
-    if(student.is_blocked){
+    if (student.is_blocked) {
       throw new Error("Student is temporarily blocked by admin.");
     }
 
@@ -205,7 +212,11 @@ class StudentService implements IStudentService {
   }> {
     console.log("page in servuce ==>", page);
 
-    const students = await this.studentRepository.getStudents(page, limit, searchTerm);
+    const students = await this.studentRepository.getStudents(
+      page,
+      limit,
+      searchTerm
+    );
 
     const totalCount = await this.studentRepository.countStudents(searchTerm);
 
