@@ -52,7 +52,18 @@ class TutorService implements ITutorService {
 
     const newTutor = await this.tutorRepository.createTutor(tutorInput);
 
-    await sendMessage("tutor-created", { email: newTutor.email });
+    await sendMessage("tutor-created", {
+      _id: newTutor._id,
+      name: newTutor.name,
+      email: newTutor.email,
+      phone: newTutor.phone,
+      password: newTutor.password,
+      is_blocked: newTutor.is_blocked,
+      is_verified: newTutor.is_verified,
+      bio: "",
+      followers: [],
+      role: newTutor.role || "tutor",
+    });
 
     const accessToken = generateAccessToken({
       id: newTutor._id,

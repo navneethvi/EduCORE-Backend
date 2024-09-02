@@ -9,8 +9,10 @@ import {
   validateRegisterUser,
   isTutorLogin,
   isStudentLogin,
+  isAdminLogin,
 } from "@envy-core/common";
 import Student from "../models/student.model";
+import Admin from "../models/admin.model";
 
 const router = Router();
 
@@ -52,6 +54,6 @@ router.patch("/tutor/:tutorId/block", tutorController.blockTutors)
 
 router.post("/admin/signin", adminController.signin);
 router.get("/admin/get_students", studentController.getStudents)
-router.get("/admin/get_tutors", tutorController.getTutors)
+router.get("/admin/get_tutors",isAdminLogin(Admin), tutorController.getTutors)
 
 export default router;

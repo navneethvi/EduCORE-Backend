@@ -5,6 +5,10 @@ import { OtpService } from "../services/otp.service";
 import { VerifyOtpDto } from "../dtos/student.dto";
 import { HttpStatusCodes } from "@envy-core/common";
 
+interface AdminRequest extends Request {
+  admin?: unknown; // Replace `any` with the correct type for your `tutor` object if you know it
+}
+
 class TutorController {
   private tutorService = new TutorService();
   private otpService = new OtpService();
@@ -281,11 +285,13 @@ class TutorController {
   };
 
   public getTutors = async (
-    req: Request,
+    req: AdminRequest,
     res: Response,
     next: NextFunction
   ) => {
     try {
+      // logger.info(req.admin);
+
       const page = parseInt(req.query.page as string) || 1;
 
       const limit = parseInt(req.query.limit as string) || 5;
