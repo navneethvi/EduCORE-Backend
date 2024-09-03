@@ -1,9 +1,13 @@
 import { Request, Response, NextFunction } from "express";
-import CategoryService from "../services/category.service";
 import { HttpStatusCodes } from "@envy-core/common";
+import { ICategoryService } from "../interfaces/category.service.interface";
 
 class CategoryController {
-  private categoryService = new CategoryService();
+  private categoryService: ICategoryService;
+
+  constructor(categoryService: ICategoryService){
+    this.categoryService = categoryService
+  }
 
   public addCategory = async (
     req: Request,

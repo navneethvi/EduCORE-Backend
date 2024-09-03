@@ -1,1 +1,5 @@
 2024-09-02T05:36:51.079Z [localhost] [31merror[39m: Kafka consumer connection error:
+2024-09-03T04:55:34.499Z [localhost] [31merror[39m: Error fetching courses for tutor with ID 66bc9006149821060a2a3d7f: Error: No courses found for this tutor
+2024-09-03T05:11:55.660Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"
+2024-09-03T05:13:54.411Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"
+2024-09-03T06:39:28.546Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"

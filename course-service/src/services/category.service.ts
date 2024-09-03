@@ -1,12 +1,16 @@
-import CategoryRepository from "../repositories/category.repository";
 import { HttpStatusCodes } from "@envy-core/common";
 import { ICategoryService } from "../interfaces/category.service.interface";
 import { ICategory, INewCategory } from "../interfaces/category.interface";
 
 import CustomError from "@envy-core/common/build/errors/CustomError";
+import { ICategoryRepository } from "../interfaces/category.repository.interface";
 
 class CategoryService implements ICategoryService {
-  private categoryRepository = new CategoryRepository();
+  private categoryRepository: ICategoryRepository;
+
+  constructor(categoryRepository: ICategoryRepository){
+    this.categoryRepository = categoryRepository
+  }
 
   public async createCategory(name: string): Promise<INewCategory> {
     const existingCategory = await this.categoryRepository.findCategory(name);

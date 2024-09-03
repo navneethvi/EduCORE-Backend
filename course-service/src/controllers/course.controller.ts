@@ -1,7 +1,8 @@
 import { Request, Response, NextFunction } from "express";
 import { HttpStatusCodes, logger } from "@envy-core/common";
-import CourseService from "../services/course.service";
 import { CreateCourseRequest } from "../interfaces/course.interface";
+import { Types } from "mongoose";
+import { ICourseService } from "../interfaces/course.service.interface";
 // import Joi from "joi";
 
 // const courseSchema = Joi.object({
@@ -25,10 +26,10 @@ interface TutorRequest extends Request {
 }
 
 class CourseController {
-  private courseService: CourseService;
+  private courseService: ICourseService;
 
-  constructor() {
-    this.courseService = new CourseService();
+  constructor(courseService: ICourseService) {
+    this.courseService = courseService;
   }
 
   public createCourse = async (
@@ -54,7 +55,7 @@ class CourseController {
       const createCourseRequest: CreateCourseRequest = {
         body: req.body,
         files: req.files as unknown as File[],
-        tutor_id: req.tutor as string,
+        tutor_id: req.tutor as unknown as Types.ObjectId,
       };
 
       console.log("createCourseReq ====>", createCourseRequest);
@@ -88,6 +89,37 @@ class CourseController {
       next(error);
     }
   };
+
+  public getAllCoursesForCards = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      logger.info("Hereeee at getAllCourses controller");
+
+      const response = await this.courseService.getAllCoursesForCards();
+
+      logger.info(`Log in controller ====>${response}`);
+
+      res.status(HttpStatusCodes.OK).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getCourseDetails = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      logger.info("Hereeee at getAllCourses controller");
+      // 
+    } catch (error) {
+      next(error)
+    }
+  }
 }
 
 export default CourseController;

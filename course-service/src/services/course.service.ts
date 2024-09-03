@@ -1,13 +1,18 @@
 import { getObjectUrl, putObject } from "../utils/S3";
-import CourseRepository from "../repositories/course.repository";
-import { CreateCourseRequest } from "../interfaces/course.interface";
+import { Course, CourseForCard, CreateCourseRequest } from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
+import { ICourseService } from "../interfaces/course.service.interface";
+import { CourseDocument } from "../models/course.model";
+import { ICourseRepository } from "../interfaces/course.repository.interface";
+import { ITutorRepository } from "../interfaces/tutor.repository.interface";
 
-class CourseService {
-  private courseRepository: CourseRepository;
+class CourseService implements ICourseService {
+  private courseRepository: ICourseRepository;
+  private tutorRepository: ITutorRepository;
 
-  constructor() {
-    this.courseRepository = new CourseRepository();
+  constructor(courseRepository: ICourseRepository, tutorRepository: ITutorRepository) {
+    this.courseRepository = courseRepository;
+    this.tutorRepository = tutorRepository;
   }
 
   public async createCourse(req: CreateCourseRequest): Promise<string> {
@@ -76,9 +81,11 @@ class CourseService {
     };
   }
 
-  public async getCourseById(courseId: string) {
+  public async getCourseById(courseId: string): Promise<Course> {
     try {
-      const course = await this.courseRepository.findById(courseId);
+      const course = (await this.courseRepository.findById(
+        courseId
+      )) as CourseDocument;
       if (!course) {
         throw new Error("Course not found");
       }
@@ -97,14 +104,32 @@ class CourseService {
         }
       }
 
-      return course;
+      const courseData: Course = {
+        _id: course._id,
+        title: course.title,
+        description: course.description,
+        category: course.category,
+        level: course.level,
+        thumbnail: course.thumbnail,
+        tutor_id: course.tutor_id,
+        price: course.price,
+        lessons: course.lessons.map((lesson) => ({
+          title: lesson.title,
+          goal: lesson.goal,
+          video: lesson.video,
+          materials: lesson.materials,
+          homework: lesson.homework,
+        })),
+      };
+
+      return courseData;
     } catch (error) {
       logger.error(`Error fetching course by ID ${courseId}: ${error}`);
       throw new Error("Error fetching course details");
     }
   }
 
-  public async getTutorCourse(tutorId: string) {
+  public async getTutorCourse(tutorId: string): Promise<Course[]> {
     logger.info(`Fetching courses for tutor with ID ${tutorId}`);
 
     try {
@@ -135,6 +160,36 @@ class CourseService {
         `Error fetching courses for tutor with ID ${tutorId}: ${error}`
       );
       throw new Error("Error fetching tutor courses");
+    }
+  }
+
+  public async getAllCoursesForCards(): Promise<CourseForCard[]> {
+    logger.info(`Fetching all courses for admin`);
+    
+    try {
+      const courses = await this.courseRepository.getAllCourses();
+
+      if (!courses || courses.length === 0) {
+        throw new Error("No courses found");
+      }
+
+      const processedCourses = await Promise.all(
+        courses.map(async (course) => {
+          const thumbnailUrl = await getObjectUrl(course.thumbnail) || "";
+          const tutorData = await this.tutorRepository.findTutor(course.tutor_id);
+  
+          return {
+            ...course,
+            thumbnail: thumbnailUrl,
+            tutor_data: tutorData ? [tutorData] : [],
+          };
+        })
+      );
+  
+      return processedCourses;
+    } catch (error) {
+      logger.error(`Error fetching courses: ${error}`);
+      throw new Error("Error fetching courses");
     }
   }
 }

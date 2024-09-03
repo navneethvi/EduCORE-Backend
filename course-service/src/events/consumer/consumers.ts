@@ -3,7 +3,7 @@ import { logger } from "@envy-core/common";
 import { Message } from "kafkajs"; // Import the KafkaJS Message type
 import consumerController from "../../controllers/consumer.controller";
 
-export const courseConsumer = async () => {
+export const courseConsumer = async (): Promise<void> => {
   try {
     await consumer.run({
       eachMessage: async ({ topic, message }: { topic: string, message: Message }) => {

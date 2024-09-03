@@ -1,7 +1,7 @@
 import { Document, Schema, model, Types } from "mongoose";
 
 interface CourseDocument extends Document {
-  _id: string;
+  _id: Types.ObjectId;
   title: string;
   description: string;
   category: string;

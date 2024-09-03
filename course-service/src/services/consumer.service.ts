@@ -1,17 +1,19 @@
 import { ITutor } from "../interfaces/tutor.interface";
-import TutorRepository from "../repositories/tutor.repository";
+import { IConsumerService } from "../interfaces/consumer.service.interface";
+import { ITutorRepository } from "../interfaces/tutor.repository.interface";
 
-class ConsumerService {
-    private tutorRepository = new TutorRepository()
-    
-    public async createTutor(tutorData: ITutor): Promise<void> {
-        
-        console.log(tutorData);
+class ConsumerService implements IConsumerService {
+  private tutorRepository: ITutorRepository;
 
-        await this.tutorRepository.createTutor(tutorData)
-        
+  constructor(tutorRepository: ITutorRepository) {
+    this.tutorRepository = tutorRepository;
+  }
 
-    }
+  public async createTutor(tutorData: ITutor): Promise<void> {
+    console.log(tutorData);
+
+    await this.tutorRepository.createTutor(tutorData);
+  }
 }
 
-export default ConsumerService
+export default ConsumerService;

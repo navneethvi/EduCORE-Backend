@@ -19,10 +19,5 @@ export interface ITutor extends Document {
 
 export interface INewTutor {
   name: string;
-  email: string;
-  phone: number;
-  password: string;
-  bio: string;
-  followers: string[];
-  role: string;
+  image: string;
 }
