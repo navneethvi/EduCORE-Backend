@@ -1,4 +1,4 @@
-import { Model } from "mongoose";
+import { Model } from "mongoose"
 import { AdminDocument } from "../models/admin.model";
 import { IAdminRepository } from "../interfaces/admin.repository.interface";
 
