@@ -48,6 +48,10 @@ class CourseRepository implements ICourseRepository {
 
     return courses;
   }
+
+  public async getCourseDetails(course_id: string): Promise<CourseDocument | null> {
+      return this.courseModel.findOne({_id: course_id}).exec()
+  }
 }
 
 export default CourseRepository;

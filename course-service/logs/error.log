@@ -3,3 +3,19 @@
 2024-09-03T05:11:55.660Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"
 2024-09-03T05:13:54.411Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"
 2024-09-03T06:39:28.546Z [localhost] [31merror[39m: Error fetching courses for tutor with ID undefined: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "tutor_id" for model "Course"
+2024-09-03T17:05:42.489Z [localhost] [31merror[39m: Error fetching course: CastError: Cast to ObjectId failed for value ":id" (type string) at path "_id" for model "Course"
+2024-09-03T17:05:42.534Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-03T17:08:54.519Z [localhost] [31merror[39m: Error fetching course: CastError: Cast to ObjectId failed for value ":id" (type string) at path "_id" for model "Course"
+2024-09-03T17:08:54.522Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-03T17:12:49.908Z [localhost] [31merror[39m: Error fetching course: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Course"
+2024-09-03T17:12:49.913Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-03T17:15:40.965Z [localhost] [31merror[39m: Error fetching course: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Course"
+2024-09-03T17:15:40.984Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-03T17:17:00.622Z [localhost] [31merror[39m: Error fetching course: CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Course"
+2024-09-03T17:17:00.622Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-04T11:42:14.526Z [localhost] [31merror[39m: Error fetching course: Error: No course found
+2024-09-04T11:42:14.529Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-04T11:44:16.681Z [localhost] [31merror[39m: Error fetching course: Error: No course found
+2024-09-04T11:44:16.682Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course
+2024-09-04T11:45:40.428Z [localhost] [31merror[39m: Error fetching course: Error: No course found
+2024-09-04T11:45:40.430Z [localhost] [31merror[39m: Error in getCourseDetails controller: Error: Error fetching course

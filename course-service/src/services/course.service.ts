@@ -1,5 +1,10 @@
 import { getObjectUrl, putObject } from "../utils/S3";
-import { Course, CourseForCard, CreateCourseRequest } from "../interfaces/course.interface";
+import {
+  Course,
+  CourseForCard,
+  CourseWithTutor,
+  CreateCourseRequest,
+} from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
 import { ICourseService } from "../interfaces/course.service.interface";
 import { CourseDocument } from "../models/course.model";
@@ -10,7 +15,10 @@ class CourseService implements ICourseService {
   private courseRepository: ICourseRepository;
   private tutorRepository: ITutorRepository;
 
-  constructor(courseRepository: ICourseRepository, tutorRepository: ITutorRepository) {
+  constructor(
+    courseRepository: ICourseRepository,
+    tutorRepository: ITutorRepository
+  ) {
     this.courseRepository = courseRepository;
     this.tutorRepository = tutorRepository;
   }
@@ -165,7 +173,7 @@ class CourseService implements ICourseService {
 
   public async getAllCoursesForCards(): Promise<CourseForCard[]> {
     logger.info(`Fetching all courses for admin`);
-    
+
     try {
       const courses = await this.courseRepository.getAllCourses();
 
@@ -175,9 +183,11 @@ class CourseService implements ICourseService {
 
       const processedCourses = await Promise.all(
         courses.map(async (course) => {
-          const thumbnailUrl = await getObjectUrl(course.thumbnail) || "";
-          const tutorData = await this.tutorRepository.findTutor(course.tutor_id);
-  
+          const thumbnailUrl = (await getObjectUrl(course.thumbnail)) || "";
+          const tutorData = await this.tutorRepository.findTutor(
+            course.tutor_id
+          );
+
           return {
             ...course,
             thumbnail: thumbnailUrl,
@@ -185,11 +195,56 @@ class CourseService implements ICourseService {
           };
         })
       );
-  
+
       return processedCourses;
     } catch (error) {
       logger.error(`Error fetching courses: ${error}`);
       throw new Error("Error fetching courses");
+    }
+  }
+
+  public async getCourseDetails(course_id: string): Promise<CourseWithTutor> {
+    logger.info(`Fetching a course.....${course_id}`);
+    try {
+      const courseData = await this.courseRepository.getCourseDetails(
+        course_id
+      );
+
+      if (!courseData) {
+        throw new Error("No course found");
+      }
+
+      courseData.thumbnail = (await getObjectUrl(courseData.thumbnail)) || "";
+
+      const tutorData = await this.tutorRepository.findTutor(
+        courseData.tutor_id as string
+      );
+
+      if (!tutorData) {
+        throw new Error("Tutor not found");
+      }
+
+      const courseWithTutor: CourseWithTutor = {
+        course_id: courseData._id,
+        title: courseData.title,
+        description: courseData.description,
+        category: courseData.category,
+        level: courseData.level,
+        thumbnail: courseData.thumbnail,
+        tutor_id: courseData.tutor_id,
+        is_approved: courseData.is_approved,
+        price: courseData.price,
+        lessons: courseData.lessons,
+        tutor_name: tutorData.name,
+        tutor_image: tutorData.image,
+        tutor_bio: tutorData.bio,
+      };
+
+      return courseWithTutor;
+
+    } catch (error) {
+      logger.error(`Error fetching course: ${error}`);
+      throw new Error("Error fetching course");
     }
   }
 }

@@ -44,5 +44,6 @@ router.post(
 
 router.get("/:tutorId/courses", courseController.getTutorCourses);
 router.get("/get_courses", courseController.getAllCoursesForCards)
+router.get("/course_details/:id", courseController.getCourseDetails)
 
 export default router;

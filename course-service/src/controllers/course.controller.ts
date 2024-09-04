@@ -108,18 +108,23 @@ class CourseController {
     }
   };
 
-  public getCourseDetails = async (
-    req: Request,
-    res: Response,
-    next: NextFunction
-  ) => {
+  public getCourseDetails = async (req: Request, res: Response, next: NextFunction) => {
     try {
-      logger.info("Hereeee at getAllCourses controller");
-      // 
+      const courseId = req.params.id;
+      logger.info(`Fetching course with ID: ${courseId}`);
+  
+      const courseDetails = await this.courseService.getCourseDetails(courseId);
+  
+      if (!courseDetails) {
+        return res.status(404).json({ message: "Course not found" });
+      }
+  
+      res.status(200).json(courseDetails);
     } catch (error) {
-      next(error)
+      logger.error(`Error in getCourseDetails controller: ${error}`);
+      next(error);
     }
-  }
+  };
 }
 
 export default CourseController;

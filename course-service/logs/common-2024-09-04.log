@@ -1,0 +1,125 @@
+2024-09-04 19:03:49.035 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-09-04 19:03:49.052 [localhost] [32minfo[39m: Course Database connected
+2024-09-04 19:03:49.075 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-09-04 19:09:17.970 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-09-04 19:09:17.989 [localhost] [32minfo[39m: Course Database connected
+2024-09-04 19:09:18.026 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-09-04 19:14:23.826 [localhost] [32minfo[39m: Fetching courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-09-04 19:14:24.052 [localhost] [32minfo[39m: Log in controller ====>{
+  _id: new ObjectId('66d1c3f33585b4921f61c103'),
+  title: 'Namaste Frontend🚀',
+  description: '✅ Practical Learning\r\n' +
+    '\r\n' +
+    '✅ Structured In-depth Curriculum\r\n' +
+    '\r\n' +
+    '✅ Private Frontend Experts Community Access\r\n' +
+    '\r\n' +
+    '✅ Interview Preparation Content\r\n' +
+    '\r\n' +
+    '✅ Advanced Frontend Learning\r\n' +
+    '\r\n' +
+    '✅ Namaste Frontend System Design - Certificate\r\n' +
+    '\r\n' +
+    '✅ Five Year access to all Course Content',
+  category: 'design',
+  level: 'advanced',
+  thumbnail: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/uwp4222466.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134423Z&X-Amz-Expires=3600&X-Amz-Signature=7c6572fb6e024e37ef078a4ca5d80c5f9ec2a63dace5bace9ba081b0de9a91ff&X-Amz-SignedHeaders=host&x-id=GetObject',
+  tutor_id: new ObjectId('66cbb30d079c34288caaf86d'),
+  is_approved: false,
+  enrollments: 0,
+  price: 8999,
+  lessons: [
+    {
+      title: 'Lesson 1',
+      goal: 'Hiiiiiiiiiii',
+      video: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/0527%20%281%29.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134423Z&X-Amz-Expires=3600&X-Amz-Signature=bb9c8fc37d856d1fed712349583acbc62047302d78fc5b1322c7931caf48db84&X-Amz-SignedHeaders=host&x-id=GetObject',
+      materials: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/week%208.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134423Z&X-Amz-Expires=3600&X-Amz-Signature=3a0169702a503d61931725c09fc7046e727438349b532e3863df380e30b314d5&X-Amz-SignedHeaders=host&x-id=GetObject',
+      homework: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/Navaneeth%20V.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134423Z&X-Amz-Expires=3600&X-Amz-Signature=b923a858b0f2a130cfc19d1f283d3cdd0b83a04a38bfb4599087a1f01dc23e20&X-Amz-SignedHeaders=host&x-id=GetObject',
+      _id: new ObjectId('66d1c3f33585b4921f61c104')
+    }
+  ],
+  __v: 0
+},{
+  _id: new ObjectId('66d1ce443585b4921f61c152'),
+  title: 'Namaste Nodejs',
+  description: '✅ In depth High-Quality videos\n' +
+    '\n' +
+    '✅ Hands-on experience with Express.js & MongoDB\n' +
+    '\n' +
+    '✅ Deep dive into the architecture of Node.js\n' +
+    '\n' +
+    '✅ Building Real world Projects from scratch\n' +
+    '\n' +
+    'true\n' +
+    '\n' +
+    '✅ Three year access to all course content\n' +
+    '\n' +
+    '✅ Namaste Node.js Course Certificate',
+  category: 'programming',
+  level: 'intermediate',
+  thumbnail: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/wallpaperflare.com_wallpaper%20%281%29.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134423Z&X-Amz-Expires=3600&X-Amz-Signature=818a3159819e0bb56eb6d58ed1b7c09e91e09ca4c88959ffa78309327963291d&X-Amz-SignedHeaders=host&x-id=GetObject',
+  tutor_id: new ObjectId('66cbb30d079c34288caaf86d'),
+  is_approved: true,
+  enrollments: 0,
+  price: 3999,
+  lessons: [
+    {
+      title: 'Introduction to node',
+      goal: 'hello',
+      video: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/0621.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=cda2f99aa39b4107e5093b8f05d1905004fa29635db8e22dd216a36064933fab&X-Amz-SignedHeaders=host&x-id=GetObject',
+      materials: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/that%20girl%20word%20pdf.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=a1556f2995912c41414ba1637b82bed72d31de89232fc6dbe217940dfabcb4b0&X-Amz-SignedHeaders=host&x-id=GetObject',
+      homework: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/report%20%2868%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=0941c89368829723c7b9a726bab2592774562e8a6b9bc1f7ba0cab25d014e690&X-Amz-SignedHeaders=host&x-id=GetObject',
+      _id: new ObjectId('66d1ce443585b4921f61c153')
+    }
+  ],
+  __v: 0
+},{
+  _id: new ObjectId('66d2afc33585b4921f61c227'),
+  title: 'Microservices 2',
+  description: 'jfjekjnkfnkjwenjfkewjkbfjkwb',
+  category: 'programming',
+  level: 'beginner',
+  thumbnail: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/prfile.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=071fa78a7e956888b98a786be2316541ab778dc1e264d5541e5ed5b0aab517a3&X-Amz-SignedHeaders=host&x-id=GetObject',
+  tutor_id: new ObjectId('66cbb30d079c34288caaf86d'),
+  is_approved: false,
+  enrollments: 0,
+  price: 4999,
+  lessons: [
+    {
+      title: 'First Lesson',
+      goal: 'nothing',
+      video: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/0621.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=cda2f99aa39b4107e5093b8f05d1905004fa29635db8e22dd216a36064933fab&X-Amz-SignedHeaders=host&x-id=GetObject',
+      materials: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/Navaneeth%20V.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=b25d3edad68db086d1a9903da09bc6a1bfcc3e15790a2005fd2e6e9300432436&X-Amz-SignedHeaders=host&x-id=GetObject',
+      homework: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/ANUSREE%20%28pro1%29.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=150f837dbcd4abd824b2808df02490780f9fbfa3ed8012a68362dcdce730b9ce&X-Amz-SignedHeaders=host&x-id=GetObject',
+      _id: new ObjectId('66d2afc33585b4921f61c228')
+    }
+  ],
+  __v: 0
+},{
+  _id: new ObjectId('66d5841fe064a86e298190f1'),
+  title: 'Micro 3',
+  description: 'Nothing',
+  category: 'programming',
+  level: 'beginner',
+  thumbnail: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/adhaar.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=a401c0e80bee5c8ae4d3dcddbc682ae078368b9a931594e4fe3d27226394ca19&X-Amz-SignedHeaders=host&x-id=GetObject',
+  tutor_id: new ObjectId('66cbb30d079c34288caaf86d'),
+  is_approved: false,
+  enrollments: 0,
+  price: 12345,
+  lessons: [
+    {
+      title: 'new',
+      goal: 'new goal',
+      video: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/TripEditMain%20%281%29.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=8d803ce45e3004443e366c54a15f917e26f165666e49bc3728e3035426597e55&X-Amz-SignedHeaders=host&x-id=GetObject',
+      materials: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/Navaneeth%20V.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=b25d3edad68db086d1a9903da09bc6a1bfcc3e15790a2005fd2e6e9300432436&X-Amz-SignedHeaders=host&x-id=GetObject',
+      homework: 'https://educore-bucket.s3.ap-southeast-2.amazonaws.com/person.sql?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIA44Y6CODNVIPVKPSB%2F20240904%2Fap-southeast-2%2Fs3%2Faws4_request&X-Amz-Date=20240904T134424Z&X-Amz-Expires=3600&X-Amz-Signature=867b76812a1cba575fcc1f6d1b5ae42496544991db84bf04f3f9270e269dde75&X-Amz-SignedHeaders=host&x-id=GetObject',
+      _id: new ObjectId('66d5841fe064a86e298190f2')
+    }
+  ],
+  __v: 0
+}
+2024-09-04 19:15:51.726 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-09-04 19:15:51.729 [localhost] [32minfo[39m: Fetching all courses for admin
+2024-09-04 19:15:51.828 [localhost] [32minfo[39m: Log in controller ====>[object Object],[object Object],[object Object],[object Object]
+2024-09-04 19:16:12.593 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-09-04 19:16:12.595 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152

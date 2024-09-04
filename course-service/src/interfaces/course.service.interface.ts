@@ -1,4 +1,4 @@
-import { CourseForCard, CreateCourseRequest } from "./course.interface";
+import { CourseForCard, CourseWithTutor, CreateCourseRequest } from "./course.interface";
 import { Course } from "./course.interface";
 
 export interface ICourseService {
@@ -6,4 +6,5 @@ export interface ICourseService {
   getCourseById(courseId: string): Promise<Course>;
   getTutorCourse(tutorId: string): Promise<Course[]>;
   getAllCoursesForCards(): Promise<CourseForCard[]>;
+  getCourseDetails(course_id: string): Promise<CourseWithTutor>;
 }
