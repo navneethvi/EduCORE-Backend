@@ -8,6 +8,7 @@ const port = 3000;
 
 import authRouter from "./middleware/auth-route";
 import courseRouter from "./middleware/course-route";
+import { apiLimiter } from "./config/limiter";
 
 app.use(
   cors({
@@ -17,6 +18,8 @@ app.use(
 );
 
 // Proxy routes
+
+app.use(apiLimiter)
 
 app.get("/", (req, res) => {
   res.json("Hellooooooo");

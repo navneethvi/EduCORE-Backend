@@ -7,7 +7,7 @@
     "start": "nodemon --watch \"src/**/*.ts\" --ext \"ts,json\" --exec \"npx ts-node -r tsconfig-paths/register src/app.ts\""
   },
   "author": "Navaneeth V",
-  "license": "ISC", 
+  "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@types/cors": "^2.8.17",
@@ -27,6 +27,7 @@
     "@envy-core/common": "^1.0.4",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
     "http-proxy-middleware": "^3.0.0",
     "jsonwebtoken": "^9.0.2",
     "swagger-ui-express": "^5.0.1",
