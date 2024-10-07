@@ -31,6 +31,30 @@ class AdminController {
       next(error);
     }
   };
+
+  public logout = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const authHeader = req.headers.authorization;
+      console.log("token from logout ===>", authHeader);
+      console.log("cookieees ===>", req.cookies);
+
+      if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        return res
+          .status(HttpStatusCodes.UNAUTHORIZED)
+          .json({ message: "Authorization token is missing or invalid" });
+      }
+
+      const token = authHeader.split(" ")[1];
+
+      console.log(token);
+
+      res.clearCookie("refreshToken");
+
+      res.status(HttpStatusCodes.OK).json({ message: "Logout successful" });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default AdminController;

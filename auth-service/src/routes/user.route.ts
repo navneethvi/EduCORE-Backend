@@ -68,7 +68,8 @@ router.patch("/tutor/:tutorId/block", tutorController.blockTutors);
 //* Admin Routes
 
 router.post("/admin/signin", adminController.signin);
-router.get("/admin/get_students", studentController.getStudents);
+router.post("/admin/logout",isAdminLogin(Admin), adminController.logout)
+router.get("/admin/get_students",isAdminLogin(Admin), studentController.getStudents);
 router.get("/admin/get_tutors", isAdminLogin(Admin), tutorController.getTutors);
 
 export default router;

@@ -1,8 +1,0 @@
-2024-09-05 03:02:50.807 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
-2024-09-05 03:02:50.809 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
-2024-09-05 03:02:50.833 [localhost] [32minfo[39m: Auth Database connected
-2024-09-05 03:02:50.901 [localhost] [32minfo[39m: Connected to Kafka producer
-2024-09-05 03:02:51.305 [localhost] [32minfo[39m: Message sent to topic test
-2024-09-05 05:34:53.552 [localhost] [32minfo[39m: Message sent to topic email-verification
-2024-09-05 05:35:13.702 [localhost] [32minfo[39m: Message sent to topic tutor-created
-2024-09-05 12:21:00.887 [localhost] [32minfo[39m: Message sent to topic email-verification
