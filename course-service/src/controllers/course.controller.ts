@@ -1,8 +1,13 @@
 import { Request, Response, NextFunction } from "express";
 import { HttpStatusCodes, logger } from "@envy-core/common";
-import { CreateCourseRequest } from "../interfaces/course.interface";
+import {
+  Course,
+  CreateCourseRequest,
+  PaginatedData,
+} from "../interfaces/course.interface";
 import { Types } from "mongoose";
 import { ICourseService } from "../interfaces/course.service.interface";
+import { getObjectUrl, getUploadSignedUrl } from "../utils/S3";
 // import Joi from "joi";
 
 // const courseSchema = Joi.object({
@@ -70,22 +75,42 @@ class CourseController {
     }
   };
 
-  public getTutorCourses = async (
+  public getTutorCoursesByStatus = async (
     req: Request,
     res: Response,
     next: NextFunction
   ) => {
     try {
-      console.log("hereeee at controller");
-
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 5;
       const tutorId = req.params.tutorId;
+      const status = req.params.status;
 
-      const response = await this.courseService.getTutorCourse(tutorId);
+      let response: PaginatedData<Course>;
 
-      logger.info(`Log in controller ====>${response}`);
+      if (status == "true") {
+        response = await this.courseService.getTutorCourses(
+          tutorId,
+          page,
+          limit,
+          true
+        );
+      } else if (status == "false") {
+        response = await this.courseService.getTutorCourses(
+          tutorId,
+          page,
+          limit,
+          false
+        );
+      } else {
+        return res.status(HttpStatusCodes.BAD_REQUEST).json({
+          message: "Invalid status parameter. Use 'approved' or 'pending'.",
+        });
+      }
 
       res.status(HttpStatusCodes.OK).json(response);
     } catch (error) {
+      logger.error(`Failed to fetch courses for tutor: ${error}`);
       next(error);
     }
   };
@@ -97,34 +122,131 @@ class CourseController {
   ) => {
     try {
       logger.info("Hereeee at getAllCourses controller");
+  
+      const page = parseInt(req.query.page as string) || 1;
+      const limit = parseInt(req.query.limit as string) || 10;
+  
+      const status = req.params.status === 'true';
 
-      const response = await this.courseService.getAllCoursesForCards();
-
-      logger.info(`Log in controller ====>${response}`);
-
+      console.log(status);
+      
+  
+      const response = await this.courseService.getAllCoursesForCards(status, page, limit);
+  
+      logger.info(`Log in controller ====> ${response}`);
+  
       res.status(HttpStatusCodes.OK).json(response);
     } catch (error) {
       next(error);
     }
   };
-
-  public getCourseDetails = async (req: Request, res: Response, next: NextFunction) => {
+  
+  
+  public getCourseDetails = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
     try {
-      const courseId = req.params.id;
+      const courseId = req.params.courseId;
+
       logger.info(`Fetching course with ID: ${courseId}`);
-  
+
       const courseDetails = await this.courseService.getCourseDetails(courseId);
-  
+
       if (!courseDetails) {
         return res.status(404).json({ message: "Course not found" });
       }
-  
+
       res.status(200).json(courseDetails);
     } catch (error) {
       logger.error(`Error in getCourseDetails controller: ${error}`);
       next(error);
     }
   };
+
+  public deleteCourse = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const courseId = req.params.courseId;
+
+    logger.info(`Deleting course with ID: ${courseId}`);
+
+    try {
+      const success = await this.courseService.deleteCourse(courseId);
+
+      if (success) {
+        res.status(200).json({ message: "Course deleted successfully" });
+      } else {
+        res.status(404).json({ message: "Course not found" });
+      }
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getS3UploadUrl = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const { key, contentType } = req.query;
+
+    logger.info(`${key}===> ${contentType}`);
+
+    if (!key || !contentType) {
+      return res
+        .status(400)
+        .json({ error: "Missing required query parameters: key, contentType" });
+    }
+
+    try {
+      const uploadUrl = await getUploadSignedUrl(
+        key as string,
+        contentType as string
+      );
+      if (!uploadUrl) {
+        return res.status(500).json({ error: "Failed to generate upload URL" });
+      }
+
+      return res.status(200).json({ url: uploadUrl });
+    } catch (error) {
+      console.error("Error generating upload URL:", error);
+      next(error);
+    }
+  };
+
+  public getS3PresignedUrl = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    const { filename } = req.query;
+
+    logger.info(`${filename}`);
+
+    if (!filename) {
+      return res.status(400).json({ error: "Filename is required" });
+    }
+
+    try {
+      const url = await getObjectUrl(filename as string);
+      res.json({ url });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getLessonDetails = async(req: Request, res: Response, next: NextFunction) => {
+    try {
+      console.log("here at getLessonDetails controlller");
+      
+    } catch (error) {
+      next(error)
+    }
+  }
 }
 
 export default CourseController;

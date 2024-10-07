@@ -1,0 +1,26 @@
+2024-10-04 16:08:22.918 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-04 16:08:23.147 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-04 16:08:23.464 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-04 16:08:23.556 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:08:26.924 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-04 16:08:26.926 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-04 16:08:27.047 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-04 16:08:27.062 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:09:48.674 [localhost] [32minfo[39m: 2024-10-04T10:39:48.658Z-12368121_3840_2160_30fps.mp4===> application/octet-stream
+2024-10-04 16:09:48.698 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-04 16:09:49.958 [localhost] [32minfo[39m: 2024-10-04T10:39:49.937Z-MVI_1482_720p_5000br.mp4===> application/octet-stream
+2024-10-04 16:09:50.002 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-04 16:09:50.619 [localhost] [32minfo[39m: 2024-10-04T10:39:50.600Z-that-girl-word-pdf.pdf===> application/octet-stream
+2024-10-04 16:09:50.689 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-04 16:09:58.709 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-04 16:09:58.724 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:10:00.617 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-04 16:10:00.674 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:10:06.402 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-04 16:10:06.411 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:10:07.530 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-04 16:10:07.544 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:10:09.921 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-04 16:10:09.960 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-04 16:10:11.798 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-04 16:10:11.828 [localhost] [32minfo[39m: Generated presigned URL for retrieval

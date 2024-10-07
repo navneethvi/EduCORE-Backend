@@ -1,9 +1,10 @@
-import { getObjectUrl, putObject } from "../utils/S3";
 import {
   Course,
   CourseForCard,
   CourseWithTutor,
   CreateCourseRequest,
+  Lesson,
+  PaginatedData,
 } from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
 import { ICourseService } from "../interfaces/course.service.interface";
@@ -22,17 +23,11 @@ class CourseService implements ICourseService {
     this.courseRepository = courseRepository;
     this.tutorRepository = tutorRepository;
   }
-
   public async createCourse(req: CreateCourseRequest): Promise<string> {
-    if (!req.files || !Array.isArray(req.files)) {
-      throw new Error("No files uploaded");
-    }
+    console.log("Request in service:", req.body);
 
-    console.log("Request in service:", req);
-
-    const uploadedFiles = await this.uploadFilesToS3(
-      req.files as unknown as Express.Multer.File[]
-    );
+    // Assuming `uploadedFiles` are filenames from `req.body` or another source
+    const uploadedFiles = this.extractUploadedFiles(req.body);
 
     const courseData = this.prepareCourseData(req, uploadedFiles);
 
@@ -43,31 +38,23 @@ class CourseService implements ICourseService {
     return "Course created successfully";
   }
 
-  private async uploadFilesToS3(
-    files: Express.Multer.File[]
-  ): Promise<{ filename: string; url: string }[]> {
-    const uploadedFiles: { filename: string; url: string }[] = [];
-
-    for (const file of files) {
-      const success = await putObject(
-        file.originalname,
-        file.mimetype,
-        file.buffer
-      );
-      if (success) {
-        const url = await getObjectUrl(file.originalname);
-        uploadedFiles.push({ filename: file.originalname, url: url || "" });
-      } else {
-        logger.error(`Failed to upload file: ${file.originalname}`);
-      }
-    }
-
-    return uploadedFiles;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  private extractUploadedFiles(body: any): { filename: string }[] {
+    // Extract filenames from the request body or elsewhere
+    // This needs to be implemented based on how `uploadedFiles` are determined
+    return [
+      { filename: body.thumbnail }, // Example for thumbnail
+      ...body.lessons.map((lesson: Lesson) => ({
+        video: lesson.video,
+        materials: lesson.materials,
+        homework: lesson.homework,
+      })),
+    ];
   }
 
   private prepareCourseData(
     req: CreateCourseRequest,
-    uploadedFiles: { filename: string; url: string }[]
+    uploadedFiles: { filename: string }[]
   ) {
     const thumbnailFile = uploadedFiles[0].filename;
 
@@ -79,12 +66,12 @@ class CourseService implements ICourseService {
       thumbnail: thumbnailFile,
       tutor_id: req.tutor_id,
       price: req.body.price,
-      lessons: req.body.lessons.map((lesson) => ({
+      lessons: req.body.lessons.map((lesson: Lesson) => ({
         title: lesson.title,
         goal: lesson.goal,
-        video: lesson.video,
-        materials: lesson.materials,
-        homework: lesson.homework,
+        video: lesson.video || "", // Default to empty string if undefined
+        materials: lesson.materials || "", // Default to empty string if undefined
+        homework: lesson.homework || "", // Default to empty string if undefined
       })),
     };
   }
@@ -96,20 +83,6 @@ class CourseService implements ICourseService {
       )) as CourseDocument;
       if (!course) {
         throw new Error("Course not found");
-      }
-
-      course.thumbnail = (await getObjectUrl(course.thumbnail)) || "";
-
-      for (const lesson of course.lessons) {
-        if (lesson.video) {
-          lesson.video = (await getObjectUrl(lesson.video)) || "";
-        }
-        if (lesson.materials) {
-          lesson.materials = (await getObjectUrl(lesson.materials)) || "";
-        }
-        if (lesson.homework) {
-          lesson.homework = (await getObjectUrl(lesson.homework)) || "";
-        }
       }
 
       const courseData: Course = {
@@ -137,57 +110,80 @@ class CourseService implements ICourseService {
     }
   }
 
-  public async getTutorCourse(tutorId: string): Promise<Course[]> {
-    logger.info(`Fetching courses for tutor with ID ${tutorId}`);
+  public async getTutorCourses(
+    tutorId: string,
+    page: number,
+    limit: number,
+    isApproved: boolean
+  ): Promise<PaginatedData<Course>> {
+    logger.info(
+      `Fetching ${
+        isApproved ? "approved" : "pending"
+      } courses for tutor with ID ${tutorId}`
+    );
 
     try {
-      const courses = await this.courseRepository.getCourseByTutor(tutorId);
-      if (!courses || courses.length === 0) {
-        throw new Error("No courses found for this tutor");
-      }
-
-      for (const course of courses) {
-        course.thumbnail = (await getObjectUrl(course.thumbnail)) || "";
-
-        for (const lesson of course.lessons) {
-          if (lesson.video) {
-            lesson.video = (await getObjectUrl(lesson.video)) || "";
-          }
-          if (lesson.materials) {
-            lesson.materials = (await getObjectUrl(lesson.materials)) || "";
-          }
-          if (lesson.homework) {
-            lesson.homework = (await getObjectUrl(lesson.homework)) || "";
-          }
-        }
-      }
-
-      return courses;
-    } catch (error) {
-      logger.error(
-        `Error fetching courses for tutor with ID ${tutorId}: ${error}`
+      const courses = await this.courseRepository.getCoursesByTutor(
+        tutorId,
+        page,
+        limit,
+        isApproved
       );
-      throw new Error("Error fetching tutor courses");
+      console.log(courses);
+
+      if (!courses || courses.length === 0) {
+        return {
+          data: [],
+          totalPages: 0,
+          loading: false,
+          error: `No ${
+            isApproved ? "approved" : "pending"
+          } courses found for this tutor`,
+        };
+      }
+
+      const totalCourses = await this.courseRepository.countCoursesByTutor(
+        tutorId,
+        isApproved
+      );
+      const totalPages = Math.ceil(totalCourses / limit);
+
+      return {
+        data: courses,
+        totalPages: totalPages,
+        loading: false,
+        error: "",
+      };
+    } catch (error) {
+      logger.error(`Error fetching courses: ${error}`);
+      throw new Error(
+        `Unable to fetch ${
+          isApproved ? "approved" : "pending"
+        } courses for this tutor`
+      );
     }
   }
 
-  public async getAllCoursesForCards(): Promise<CourseForCard[]> {
-    logger.info(`Fetching all courses for admin`);
-
+  public async getAllCoursesForCards(isApproved: boolean, page: number, limit: number): Promise<CourseForCard[]> {
+    logger.info(`Fetching courses for admin with status ${isApproved}`);
+  
     try {
-      const courses = await this.courseRepository.getAllCourses();
-
+      const skip = (page - 1) * limit;
+  
+      const courses = await this.courseRepository.getAllCourses(isApproved, page, limit, skip);
+  
       if (!courses || courses.length === 0) {
         throw new Error("No courses found");
       }
-
+  
+      // Process courses to add tutor data
       const processedCourses = await Promise.all(
         courses.map(async (course) => {
-          const thumbnailUrl = (await getObjectUrl(course.thumbnail)) || "";
+          const thumbnailUrl = course.thumbnail;
           const tutorData = await this.tutorRepository.findTutor(
             course.tutor_id
           );
-
+  
           return {
             ...course,
             thumbnail: thumbnailUrl,
@@ -195,13 +191,14 @@ class CourseService implements ICourseService {
           };
         })
       );
-
+  
       return processedCourses;
     } catch (error) {
       logger.error(`Error fetching courses: ${error}`);
       throw new Error("Error fetching courses");
     }
   }
+  
 
   public async getCourseDetails(course_id: string): Promise<CourseWithTutor> {
     logger.info(`Fetching a course.....${course_id}`);
@@ -213,8 +210,6 @@ class CourseService implements ICourseService {
       if (!courseData) {
         throw new Error("No course found");
       }
-
-      courseData.thumbnail = (await getObjectUrl(courseData.thumbnail)) || "";
 
       const tutorData = await this.tutorRepository.findTutor(
         courseData.tutor_id as string
@@ -241,10 +236,21 @@ class CourseService implements ICourseService {
       };
 
       return courseWithTutor;
-
     } catch (error) {
       logger.error(`Error fetching course: ${error}`);
       throw new Error("Error fetching course");
+    }
+  }
+
+  public async deleteCourse(courseId: string): Promise<boolean> {
+    logger.info(`Deleting a course with ID: ${courseId}`);
+
+    try {
+      const result = await this.courseRepository.deleteCourse(courseId);
+      return result;
+    } catch (error) {
+      logger.error(`Error deleting course: ${error}`);
+      throw new Error("Error deleting course");
     }
   }
 }

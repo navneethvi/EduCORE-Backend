@@ -51,6 +51,14 @@ export interface CourseForCard {
   lessons: number;
 }
 
+export interface PaginatedData<T> {
+  data: T[];
+  totalPages: number;
+  loading: boolean;
+  error: string;
+}
+
+
 
 interface Lesson2 {
   _id: string;

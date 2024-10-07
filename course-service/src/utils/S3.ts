@@ -1,7 +1,6 @@
-import { GetObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { PutObjectCommand } from "@aws-sdk/client-s3";
-
+import { logger } from "@envy-core/common";
 import { configDotenv } from "dotenv";
 
 configDotenv();
@@ -14,25 +13,26 @@ export const s3Client = new S3Client({
   },
 });
 
-export const putObject = async (
+export const getUploadSignedUrl = async (
   key: string,
-  contentType: string,
-  body: Buffer | Uint8Array | Blob | string
-): Promise<boolean> => {
+  contentType: string
+): Promise<string | null> => {
   try {
     const command = new PutObjectCommand({
       Bucket: process.env.AWS_S3_BUCKET_NAME,
       Key: key,
       ContentType: contentType,
-      Body: body,
     });
 
-    await s3Client.send(command);
-    console.log("File uploaded successfully.");
-    return true;
+    const signedUrl = await getSignedUrl(s3Client, command, {
+      expiresIn: 3600,
+    });
+
+    logger.info("Generated presigned URL for upload");
+    return signedUrl;
   } catch (error) {
-    console.error("Error uploading file:", error);
-    return false;
+    logger.error("Error generating presigned URL for upload", { error });
+    return null;
   }
 };
 
@@ -42,12 +42,11 @@ export const getObjectUrl = async (key: string): Promise<string | null> => {
       Bucket: process.env.AWS_S3_BUCKET_NAME,
       Key: key,
     });
-
     const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
-    console.log("Generated presigned URL for retrieval:", url);
+    logger.info("Generated presigned URL for retrieval");
     return url;
   } catch (error) {
-    console.error("Error generating presigned URL for retrieval:", error);
+    logger.error("Error generating presigned URL for retrieval", { error });
     return null;
   }
 };

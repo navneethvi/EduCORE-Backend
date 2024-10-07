@@ -21,7 +21,7 @@ const router = Router();
 
 const courseRepository = new CourseRepository(Course);
 const categoryRepository = new CategoryRepository(Category);
-const tutorRepository = new TutorRepository(Tutor)
+const tutorRepository = new TutorRepository(Tutor);
 
 const courseService = new CourseService(courseRepository, tutorRepository);
 const categoryService = new CategoryService(categoryRepository);
@@ -34,6 +34,11 @@ router.post("/add_category", categoryController.addCategory);
 router.get("/get_categories", categoryController.getCategories);
 router.post("/delete_category", categoryController.deleteCategory);
 
+// * AWS S3 Routes
+
+router.get("/get-upload-url", courseController.getS3UploadUrl);
+router.get("/get-presigned-url", courseController.getS3PresignedUrl);
+
 // * Course Routes
 router.post(
   "/add_course",
@@ -42,8 +47,15 @@ router.post(
   courseController.createCourse
 );
 
-router.get("/:tutorId/courses", courseController.getTutorCourses);
-router.get("/get_courses", courseController.getAllCoursesForCards)
-router.get("/course_details/:id", courseController.getCourseDetails)
+router.get(
+  "/:tutorId/courses/:status",
+  courseController.getTutorCoursesByStatus
+);
+
+router.get("/get_courses/:status", courseController.getAllCoursesForCards);
+router.get("/course_details/:courseId", courseController.getCourseDetails);
+router.get("/:courseId/lesson_details", courseController.getLessonDetails)
+router.patch("/edit_course/:courseId");
+router.delete("/delete_course/:courseId", courseController.deleteCourse);
 
 export default router;
