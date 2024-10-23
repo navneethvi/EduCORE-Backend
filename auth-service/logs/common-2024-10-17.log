@@ -1,0 +1,30 @@
+2024-10-17 12:01:41.332 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 12:01:41.336 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 12:01:41.372 [localhost] [32minfo[39m: Auth Database connected
+2024-10-17 12:01:41.379 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 12:01:41.527 [localhost] [32minfo[39m: Message sent to topic test
+2024-10-17 12:31:51.879 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 12:31:51.882 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 12:31:51.979 [localhost] [32minfo[39m: Auth Database connected
+2024-10-17 12:32:22.362 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 12:32:32.657 [localhost] [31merror[39m: Error sending message:
+2024-10-17 12:54:09.159 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 12:54:09.162 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 12:54:09.388 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 12:54:09.752 [localhost] [32minfo[39m: Message sent to topic test
+2024-10-17 12:54:39.174 [localhost] [31merror[39m: MongoDB connection error
+2024-10-17 13:12:50.822 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 13:12:50.828 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 13:12:50.884 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 13:12:51.094 [localhost] [32minfo[39m: Message sent to topic test
+2024-10-17 13:13:20.821 [localhost] [31merror[39m: MongoDB connection error
+2024-10-17 13:16:58.292 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 13:16:58.295 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 13:16:58.321 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 13:16:58.408 [localhost] [32minfo[39m: Message sent to topic test
+2024-10-17 13:17:28.297 [localhost] [31merror[39m: MongoDB connection error
+2024-10-17 13:21:56.095 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-17 13:21:56.098 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-17 13:21:56.148 [localhost] [32minfo[39m: Auth Database connected
+2024-10-17 13:21:56.359 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-17 13:21:56.784 [localhost] [32minfo[39m: Message sent to topic test

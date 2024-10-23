@@ -1,0 +1,5 @@
+2024-10-14 13:51:53.279 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-10-14 13:51:53.283 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-10-14 13:51:53.335 [localhost] [32minfo[39m: Auth Database connected
+2024-10-14 13:51:53.435 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-10-14 13:51:53.908 [localhost] [32minfo[39m: Message sent to topic test
