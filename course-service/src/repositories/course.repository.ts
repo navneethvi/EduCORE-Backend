@@ -1,7 +1,7 @@
 import mongoose, { Model } from "mongoose";
 import { ICourseRepository } from "../interfaces/course.repository.interface";
 import { CourseDocument } from "../models/course.model";
-import { CourseForCard } from "../interfaces/course.interface";
+import { CourseForCard, Lesson } from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
 
 class CourseRepository implements ICourseRepository {
@@ -78,7 +78,7 @@ class CourseRepository implements ICourseRepository {
   ): Promise<CourseForCard[]> {
     const skip = (page - 1) * limit;
 
-    logger.info(isApproved)
+    logger.info(isApproved);
 
     const courses = await this.courseModel
       .aggregate([
@@ -121,6 +121,97 @@ class CourseRepository implements ICourseRepository {
     } catch (error) {
       console.error("Error deleting course:", error);
       return false;
+    }
+  }
+
+  public async getLessonDetails(
+    courseId: string,
+    lessonIndex: number
+  ): Promise<Lesson | null> {
+    try {
+      const lessonDetails = await this.courseModel
+        .aggregate([
+          {
+            $match: {
+              _id: new mongoose.Types.ObjectId(courseId),
+            },
+          },
+          {
+            $project: {
+              lesson: { $arrayElemAt: ["$lessons", lessonIndex] },
+            },
+          },
+          {
+            $project: {
+              title: "$lesson.title",
+              goal: "$lesson.goal",
+              video: "$lesson.video",
+              materials: "$lesson.materials",
+              homework: "$lesson.homework",
+            },
+          },
+        ])
+        .exec();
+
+      if (lessonDetails.length === 0 || !lessonDetails[0]) {
+        return null;
+      }
+
+      return lessonDetails[0] as Lesson;
+    } catch (error) {
+      console.error("Error fetching lesson details:", error);
+      return null;
+    }
+  }
+
+  public async approveCourse(courseId: string): Promise<boolean> {
+    try {
+      const updatedCourse = await this.courseModel.findByIdAndUpdate(
+        courseId,
+        { is_approved: true },
+        { new: true }
+      );
+
+      if (!updatedCourse) {
+        console.log(`Course with ID ${courseId} not found.`);
+        return false;
+      }
+
+      console.log(`Course approved:`, updatedCourse);
+      return true;
+    } catch (error) {
+      console.error("Error approving course:", error);
+      return false;
+    }
+  }
+
+  public async getTrendingCourses(): Promise<CourseDocument[] | undefined> {
+    try {
+      const trendingCourses = await this.courseModel
+        .find({ is_approved: true })
+        .sort({ enrollments: -1 })
+        .limit(4)
+        .select("_id title thumbnail price enrollments category tutor_id").lean()
+
+      return trendingCourses;
+    } catch (error) {
+      console.error("Error fetching trending courses:", error);
+      return undefined; 
+    }
+  }
+
+  public async getNewlyAddedCourses(): Promise<CourseDocument[] | undefined> {
+    try {
+      const newlyAddedCourses = await this.courseModel
+        .find({ is_approved: true })
+        .sort({ _id: -1 })
+        .limit(4)
+        .select("_id title thumbnail price enrollments category tutor_id").lean()
+
+      return newlyAddedCourses; 
+    } catch (error) {
+      console.error("Error fetching newly added courses:", error);
+      return undefined; 
     }
   }
 }

@@ -5,8 +5,8 @@ import { ICategoryService } from "../interfaces/category.service.interface";
 class CategoryController {
   private categoryService: ICategoryService;
 
-  constructor(categoryService: ICategoryService){
-    this.categoryService = categoryService
+  constructor(categoryService: ICategoryService) {
+    this.categoryService = categoryService;
   }
 
   public addCategory = async (
@@ -32,7 +32,6 @@ class CategoryController {
     next: NextFunction
   ) => {
     try {
-      
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 5;
       console.log("Fetching categories for page:", page);
@@ -58,10 +57,28 @@ class CategoryController {
     try {
       const { _id } = req.body;
       console.log("hereeeeeee ===>", _id);
-      
-      await this.categoryService.deleteCategory(_id)
 
-      res.status(HttpStatusCodes.OK).json({ message: "Category deleted successfully" });
+      await this.categoryService.deleteCategory(_id);
+
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ message: "Category deleted successfully" });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public getAllCategories = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      console.log("Fetching all categories for page");
+
+      const response = await this.categoryService.getAllCategories();
+
+      res.status(HttpStatusCodes.OK).json(response);
     } catch (error) {
       next(error);
     }

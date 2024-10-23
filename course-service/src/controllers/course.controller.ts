@@ -8,6 +8,7 @@ import {
 import { Types } from "mongoose";
 import { ICourseService } from "../interfaces/course.service.interface";
 import { getObjectUrl, getUploadSignedUrl } from "../utils/S3";
+import { ICategoryService } from "../interfaces/category.service.interface";
 // import Joi from "joi";
 
 // const courseSchema = Joi.object({
@@ -32,9 +33,11 @@ interface TutorRequest extends Request {
 
 class CourseController {
   private courseService: ICourseService;
+  private categoryService: ICategoryService;
 
-  constructor(courseService: ICourseService) {
+  constructor(courseService: ICourseService, categoryService: ICategoryService) {
     this.courseService = courseService;
+    this.categoryService = categoryService;
   }
 
   public createCourse = async (
@@ -122,26 +125,28 @@ class CourseController {
   ) => {
     try {
       logger.info("Hereeee at getAllCourses controller");
-  
+
       const page = parseInt(req.query.page as string) || 1;
       const limit = parseInt(req.query.limit as string) || 10;
-  
-      const status = req.params.status === 'true';
+
+      const status = req.params.status === "true";
 
       console.log(status);
-      
-  
-      const response = await this.courseService.getAllCoursesForCards(status, page, limit);
-  
+
+      const response = await this.courseService.getAllCoursesForCards(
+        status,
+        page,
+        limit
+      );
+
       logger.info(`Log in controller ====> ${response}`);
-  
+
       res.status(HttpStatusCodes.OK).json(response);
     } catch (error) {
       next(error);
     }
   };
-  
-  
+
   public getCourseDetails = async (
     req: Request,
     res: Response,
@@ -239,10 +244,59 @@ class CourseController {
     }
   };
 
-  public getLessonDetails = async(req: Request, res: Response, next: NextFunction) => {
+  public getLessonDetails = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
     try {
-      console.log("here at getLessonDetails controlller");
-      
+      logger.warn("here at getLessonDetails controlller");
+
+      const { lessonIndex } = req.body;
+      const { courseId } = req.params;
+
+      console.log("courseId ===>", courseId, "lessonIndex===>", lessonIndex);
+      const response = await this.courseService.getLessonDetails(
+        courseId,
+        lessonIndex
+      );
+      console.log("res i con===>", response);
+
+      return res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public approveCourse = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      logger.info("hitted approve course controller");
+
+      const { courseId } = req.params;
+
+      const response = await this.courseService.approveCourse(courseId);
+
+      return res.status(200).json(response);
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public dataForHome = async(req: Request, res: Response, next: NextFunction) => {
+    logger.info("Im here for fetching home page datas.......")
+    try {
+      const trendingCourses = await this.courseService.getTrendingCourses()
+
+      const newlyAddedCourses = await this.courseService.getNewlyAddedCourses()
+
+      const trendingCategories = await this.categoryService.getAllCategories()
+
+      res.status(HttpStatusCodes.OK).json({trendingCourses, newlyAddedCourses, trendingCategories})
+
     } catch (error) {
       next(error)
     }

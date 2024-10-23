@@ -27,7 +27,7 @@ const courseService = new CourseService(courseRepository, tutorRepository);
 const categoryService = new CategoryService(categoryRepository);
 
 const categoryController = new CategoryController(categoryService);
-const courseController = new CourseController(courseService);
+const courseController = new CourseController(courseService, categoryService);
 
 // * Category Routes
 router.post("/add_category", categoryController.addCategory);
@@ -52,10 +52,14 @@ router.get(
   courseController.getTutorCoursesByStatus
 );
 
+router.get("/homepage", courseController.dataForHome)
+
 router.get("/get_courses/:status", courseController.getAllCoursesForCards);
 router.get("/course_details/:courseId", courseController.getCourseDetails);
-router.get("/:courseId/lesson_details", courseController.getLessonDetails)
+router.post("/:courseId/lesson_details", courseController.getLessonDetails)
 router.patch("/edit_course/:courseId");
+router.patch("/approve_course/:courseId", courseController.approveCourse);
+
 router.delete("/delete_course/:courseId", courseController.deleteCourse);
 
 export default router;

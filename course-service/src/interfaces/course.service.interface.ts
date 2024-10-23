@@ -2,6 +2,7 @@ import {
   CourseForCard,
   CourseWithTutor,
   CreateCourseRequest,
+  Lesson,
   PaginatedData,
 } from "./course.interface";
 import { Course } from "./course.interface";
@@ -22,4 +23,11 @@ export interface ICourseService {
   ): Promise<CourseForCard[]>;
   getCourseDetails(course_id: string): Promise<CourseWithTutor>;
   deleteCourse(course_id: string): Promise<boolean>;
+  getLessonDetails(
+    courseId: string,
+    lessonIndex: number
+  ): Promise<Lesson | null>;
+  approveCourse(courseId: string): Promise<boolean>;
+  getTrendingCourses(): Promise<Course[] | undefined>;
+  getNewlyAddedCourses(): Promise<Course[] | undefined>;
 }

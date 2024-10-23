@@ -1,0 +1,68 @@
+2024-10-23 10:17:00.576 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-23 10:17:00.730 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-23 10:17:00.734 [localhost] [32minfo[39m: true
+2024-10-23 10:17:00.970 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-23 10:17:01.006 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-23 10:17:01.064 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:01.067 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:17:01.080 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:01.083 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-23 10:17:01.087 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:01.099 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:17:01.109 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:01.111 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:17:01.134 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:28.412 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-23 10:17:28.415 [localhost] [32minfo[39m: Fetching courses for admin with status false
+2024-10-23 10:17:28.416 [localhost] [32minfo[39m: false
+2024-10-23 10:17:28.430 [localhost] [31merror[39m: Error fetching courses: Error: No courses found
+2024-10-23 10:17:29.887 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:17:29.896 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.898 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:17:29.910 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.912 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-23 10:17:29.924 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.926 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-23 10:17:29.955 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.956 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:17:29.959 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.962 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-23 10:17:29.963 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-23 10:17:29.963 [localhost] [32minfo[39m: true
+2024-10-23 10:17:29.977 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-23 10:17:29.991 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:17:29.997 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:29.999 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:17:30.009 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:30.011 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-23 10:17:30.017 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:30.018 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-23 10:17:30.026 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:17:30.029 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:17:30.035 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:37.121 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-23 10:23:37.145 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-23 10:23:37.351 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:23:37.388 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:37.391 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:23:37.409 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:37.412 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:23:37.422 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:42.968 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-23 10:23:42.971 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-23 10:23:44.419 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:23:44.460 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:44.465 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:23:44.479 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:23:44.481 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:23:44.487 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:37:16.596 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-23 10:37:16.616 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-23 10:37:16.725 [localhost] [32minfo[39m: uwp4222466.jpeg
+2024-10-23 10:37:16.776 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:37:16.780 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (1).jpg
+2024-10-23 10:37:16.793 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:37:16.795 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-23 10:37:16.801 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-23 10:42:06.991 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-23 10:42:07.038 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152

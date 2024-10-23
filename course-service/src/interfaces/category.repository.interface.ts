@@ -7,4 +7,5 @@ export interface ICategoryRepository {
   getCategories(skip: number, limit: number): Promise<ICategory[]>;
   getCategoryCount(): Promise<number>;
   deleteCategoryById(category_id: string): Promise<boolean>;
+  getAllCategories(): Promise<ICategory[]>;
 }

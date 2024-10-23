@@ -164,18 +164,27 @@ class CourseService implements ICourseService {
     }
   }
 
-  public async getAllCoursesForCards(isApproved: boolean, page: number, limit: number): Promise<CourseForCard[]> {
+  public async getAllCoursesForCards(
+    isApproved: boolean,
+    page: number,
+    limit: number
+  ): Promise<CourseForCard[]> {
     logger.info(`Fetching courses for admin with status ${isApproved}`);
-  
+
     try {
       const skip = (page - 1) * limit;
-  
-      const courses = await this.courseRepository.getAllCourses(isApproved, page, limit, skip);
-  
+
+      const courses = await this.courseRepository.getAllCourses(
+        isApproved,
+        page,
+        limit,
+        skip
+      );
+
       if (!courses || courses.length === 0) {
         throw new Error("No courses found");
       }
-  
+
       // Process courses to add tutor data
       const processedCourses = await Promise.all(
         courses.map(async (course) => {
@@ -183,7 +192,7 @@ class CourseService implements ICourseService {
           const tutorData = await this.tutorRepository.findTutor(
             course.tutor_id
           );
-  
+
           return {
             ...course,
             thumbnail: thumbnailUrl,
@@ -191,14 +200,13 @@ class CourseService implements ICourseService {
           };
         })
       );
-  
+
       return processedCourses;
     } catch (error) {
       logger.error(`Error fetching courses: ${error}`);
       throw new Error("Error fetching courses");
     }
   }
-  
 
   public async getCourseDetails(course_id: string): Promise<CourseWithTutor> {
     logger.info(`Fetching a course.....${course_id}`);
@@ -253,6 +261,98 @@ class CourseService implements ICourseService {
       throw new Error("Error deleting course");
     }
   }
+
+  public async getLessonDetails(
+    courseId: string,
+    lessonIndex: number
+  ): Promise<Lesson | null> {
+    logger.info(
+      `Fetching lesson details for courseId: ${courseId}, lessonIndex: ${lessonIndex}`
+    );
+    try {
+      const response = await this.courseRepository.getLessonDetails(
+        courseId,
+        lessonIndex
+      );
+      console.log(response);
+
+      return response;
+    } catch (error) {
+      logger.error(`Error fetching lesson details: ${error}`);
+      throw new Error("Error fetching lesson details");
+    }
+  }
+
+  public async approveCourse(courseId: string): Promise<boolean> {
+    logger.info(`Approving course...`);
+    try {
+      const approve = await this.courseRepository.approveCourse(courseId);
+
+      return approve;
+    } catch (error) {
+      logger.error(`Error approving course${error}`);
+      throw new Error("Error approving course");
+    }
+  }
+
+  public async getTrendingCourses(): Promise<Course[] | undefined> {
+    try {
+      const trendingCourses = await this.courseRepository.getTrendingCourses();
+
+      if (!trendingCourses) {
+        throw new Error("No trending courses found.");
+      }
+
+      const processedCourses = await Promise.all(
+        trendingCourses.map(async (course) => {
+          const tutorData = await this.tutorRepository.findTutor(
+            course.tutor_id as string
+          );
+
+          return {
+            ...course,
+            tutor_data: tutorData ? [tutorData] : [],
+          };
+        })
+      );
+      return processedCourses;
+    } catch (error) {
+      logger.error(`Error fetching trending courses${error}`);
+      throw new Error("Error fetching trending courses");
+    }
+  }
+
+  public async getNewlyAddedCourses(): Promise<Course[]> {
+    try {
+      const newlyAddedCourses = await this.courseRepository.getNewlyAddedCourses();
+  
+      if (!newlyAddedCourses) {
+        throw new Error("No newly added courses found.");
+      }
+
+      console.log(newlyAddedCourses);
+      
+
+      const processedCourses = await Promise.all(
+        newlyAddedCourses.map(async (course) => {
+          const tutorData = await this.tutorRepository.findTutor(
+            course.tutor_id as string
+          );
+
+          return {
+            ...course,
+            tutor_data: tutorData ? [tutorData] : [],
+          };
+        })
+      );
+  
+      return processedCourses; 
+    } catch (error) {
+      logger.error(`Error fetching newly added courses: ${error}`);
+      throw new Error("Error fetching newly added courses");
+    }
+  }
+  
 }
 
 export default CourseService;

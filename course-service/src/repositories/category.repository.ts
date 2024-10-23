@@ -33,6 +33,10 @@ class CategoryRepository implements ICategoryRepository {
     const result = await this.categoryModel.findByIdAndDelete(category_id)
     return result !== null
   }
+
+  public async getAllCategories(): Promise<ICategory[]> {
+      return await this.categoryModel.find()
+  }
 }
 
 export default CategoryRepository;

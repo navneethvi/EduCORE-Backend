@@ -51,6 +51,11 @@ class CategoryService implements ICategoryService {
       throw new CustomError(HttpStatusCodes.NOT_FOUND, "Category not found");
     }
   }
+
+  public async getAllCategories(): Promise<ICategory[]> {
+      const categories = await this.categoryRepository.getAllCategories()
+      return categories
+  }
 }
 
 export default CategoryService;
