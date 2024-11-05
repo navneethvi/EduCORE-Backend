@@ -27,4 +27,5 @@ export interface ICourseRepository {
   approveCourse(courseId: string): Promise<boolean>;
   getTrendingCourses(): Promise<CourseDocument[] | undefined>;
   getNewlyAddedCourses(): Promise<CourseDocument[] | undefined>;
+  fetchCourses(limit: number, offset: number, searchTerm: string, categories: string | string[], sort: string): Promise<CourseDocument[]>;
 }

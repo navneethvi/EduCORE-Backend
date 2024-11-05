@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { HttpStatusCodes } from "@envy-core/common";
+import { HttpStatusCodes, logger } from "@envy-core/common";
 import { ICategoryService } from "../interfaces/category.service.interface";
 
 class CategoryController {
@@ -49,6 +49,8 @@ class CategoryController {
     }
   };
 
+
+
   public deleteCategory = async (
     req: Request,
     res: Response,
@@ -74,7 +76,7 @@ class CategoryController {
     next: NextFunction
   ) => {
     try {
-      console.log("Fetching all categories for page");
+      logger.info("Fetching all categories...");
 
       const response = await this.categoryService.getAllCategories();
 

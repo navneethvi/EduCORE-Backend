@@ -5,6 +5,7 @@ import {
   CreateCourseRequest,
   Lesson,
   PaginatedData,
+  SimplifiedCourse,
 } from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
 import { ICourseService } from "../interfaces/course.service.interface";
@@ -347,10 +348,85 @@ class CourseService implements ICourseService {
       );
   
       return processedCourses; 
+      
     } catch (error) {
       logger.error(`Error fetching newly added courses: ${error}`);
       throw new Error("Error fetching newly added courses");
     }
+  }
+
+  public async updateCourse(courseId: string, editedCourse: Course): Promise<Course | null> {
+    logger.info("Updating course...");
+
+    console.log(editedCourse);
+    
+
+    const existingCourse = await this.courseRepository.findById(courseId)
+
+    if (!existingCourse) {
+      throw new Error("Course not found");
+    }
+
+    existingCourse.title = editedCourse.title || existingCourse.title;
+    existingCourse.description = editedCourse.description || existingCourse.description;
+    existingCourse.category = editedCourse.category || existingCourse.category;
+    existingCourse.level = editedCourse.level || existingCourse.level;
+    existingCourse.price = editedCourse.price || existingCourse.price;
+
+    if (editedCourse.lessons && Array.isArray(editedCourse.lessons)) {
+      existingCourse.lessons = editedCourse.lessons.map((editedLesson: Lesson) => ({
+          title: editedLesson.title,
+          goal: editedLesson.goal,
+          video: editedLesson.video || "", 
+          materials: editedLesson.materials || "", 
+          homework: editedLesson.homework || "", 
+      }));
+    }
+
+    if (editedCourse.thumbnail) {
+      existingCourse.thumbnail = editedCourse.thumbnail;
+    }
+
+    return await existingCourse.save()
+
+  }
+
+  
+
+  async fetchCourses(limit: number, offset: number, searchTerm: string, categories: string[], sort: string): Promise<SimplifiedCourse[]> {
+    const courses = await this.courseRepository.fetchCourses(limit, offset, searchTerm, categories, sort);
+
+    if (!courses) {
+      throw new Error("No courses found.");
+    }
+
+    const simplifiedCourses = await Promise.all(
+      courses.map(async (course) => {
+        const tutorData = await this.tutorRepository.findTutor(course.tutor_id as string);
+  
+        return {
+          _id: course._id,
+          title: course.title,
+          category: course.category,
+          description: course.description,
+          enrollments: course.enrollments,
+          is_approved: course.is_approved,
+          level: course.level,
+          price: course.price,
+          thumbnail: course.thumbnail,
+          lessonsCount: course.lessons.length,
+          tutor: tutorData ? {
+            _id: tutorData._id,
+            image: tutorData.image,
+            name: tutorData.name,
+            email: tutorData.email,
+            phone: tutorData.phone,
+          } : null
+        };
+      })
+    );
+  
+    return simplifiedCourses;
   }
   
 }

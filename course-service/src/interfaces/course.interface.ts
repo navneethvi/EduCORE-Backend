@@ -51,6 +51,24 @@ export interface CourseForCard {
   lessons: number;
 }
 
+export interface SimplifiedCourse {
+  title: string;
+  category: string;
+  description: string;
+  enrollments: number;
+  is_approved: boolean;
+  level: string;
+  price: number;
+  thumbnail: string;
+  lessonsCount: number;
+  tutor: {
+    _id: string;
+    name: string;
+    email: string;
+    phone: number;
+  } | null;
+}
+
 export interface PaginatedData<T> {
   data: T[];
   totalPages: number;

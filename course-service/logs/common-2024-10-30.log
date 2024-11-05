@@ -1,0 +1,1391 @@
+2024-10-30 09:45:44.731 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 09:45:44.863 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 09:45:44.866 [localhost] [32minfo[39m: true
+2024-10-30 09:45:45.088 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 09:45:45.127 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 09:45:45.184 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:45:45.186 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 09:45:45.212 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:45:45.214 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 09:45:45.226 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:45:45.228 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:45:45.239 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:45:45.249 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 09:45:45.258 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:03.028 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 09:46:03.030 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 09:46:03.109 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 09:46:03.119 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:03.122 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:03.129 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:03.132 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 09:46:03.136 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:05.507 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 09:46:05.518 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 09:46:05.518 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 09:46:05.716 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:05.726 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:12.175 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 09:46:12.176 [localhost] [32minfo[39m: Updating course...
+2024-10-30 09:46:18.045 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 09:46:18.058 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.063 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:18.077 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.078 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 09:46:18.091 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.094 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 09:46:18.101 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.104 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 09:46:18.116 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.119 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 09:46:18.120 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 09:46:18.122 [localhost] [32minfo[39m: true
+2024-10-30 09:46:18.139 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 09:46:18.174 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 09:46:18.185 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.187 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:18.196 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.203 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 09:46:18.210 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.212 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 09:46:18.221 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:18.223 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 09:46:18.234 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:20.169 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 09:46:20.171 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 09:46:20.199 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:20.204 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:26.729 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 09:46:26.744 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:26.747 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:26.761 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:26.765 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 09:46:26.776 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:28.754 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 09:46:28.755 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 09:46:28.759 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 09:46:28.885 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 09:46:28.893 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 09:46:33.758 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 09:46:33.759 [localhost] [32minfo[39m: Updating course...
+2024-10-30 09:59:29.340 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 09:59:29.366 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 09:59:29.580 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 09:59:34.338 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 09:59:34.341 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:03:37.776 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 10:03:37.813 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 10:03:37.894 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 10:03:43.725 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:03:43.747 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:03:43.759 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:03:43.768 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:03:43.771 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:03:43.777 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:03:45.647 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 10:03:45.663 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:03:45.665 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:03:45.802 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:03:45.808 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:03:51.958 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:03:51.962 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:04:01.352 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:04:01.356 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:04:01.358 [localhost] [32minfo[39m: true
+2024-10-30 10:04:01.396 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:04:01.426 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:04:01.436 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:01.439 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:01.447 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:01.449 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:04:01.458 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:01.463 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:04:01.472 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:01.477 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:04:01.487 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:04.178 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:04:04.180 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:04:04.237 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:04.243 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:10.732 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:04:10.750 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:10.754 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:10.767 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:10.771 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:04:10.789 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:12.268 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 10:04:12.281 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:04:12.282 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:04:12.385 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:12.390 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:15.974 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:04:15.975 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:04:20.122 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:04:20.130 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.148 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:20.159 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.162 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:04:20.171 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.175 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:04:20.180 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.184 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:04:20.193 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.197 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:04:20.198 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:04:20.199 [localhost] [32minfo[39m: true
+2024-10-30 10:04:20.225 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:04:20.254 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:04:20.262 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.264 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:20.269 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.274 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:04:20.282 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.286 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:04:20.293 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:20.299 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:04:20.309 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:22.780 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:04:22.781 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:04:22.809 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:04:22.814 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:04:56.250 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:04:56.252 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:05:05.507 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:05:05.527 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.540 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:05:05.555 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.560 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:05:05.571 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.575 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:05:05.586 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.588 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:05:05.590 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:05:05.591 [localhost] [32minfo[39m: true
+2024-10-30 10:05:05.596 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:05:05.603 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.616 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:05:05.643 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:05:05.648 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.651 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:05:05.656 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.659 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:05:05.665 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.667 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:05:05.674 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:05:05.675 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:05:05.680 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:18:11.582 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4===> video/mp4
+2024-10-30 10:18:11.652 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:18:53.669 [localhost] [32minfo[39m: 2024-10-30T04:48:53.664Z-9781982147662.pdf===> application/pdf
+2024-10-30 10:18:53.682 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:19:11.995 [localhost] [32minfo[39m: 2024-10-30T04:49:11.982Z-CH053---Kagurabachi-[@Manga_Complex].pdf===> application/pdf
+2024-10-30 10:19:12.030 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:19:32.567 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png===> image/png
+2024-10-30 10:19:32.574 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:20:40.630 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:20:40.645 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:20:50.378 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:20:50.406 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.414 [localhost] [32minfo[39m: 2024-10-29T05:40:42.391Z-thumbnail.png
+2024-10-30 10:20:50.429 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.432 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:20:50.443 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.446 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:20:50.454 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.456 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:20:50.465 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.468 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:20:50.469 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:20:50.470 [localhost] [32minfo[39m: true
+2024-10-30 10:20:50.500 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:20:50.532 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:20:50.538 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.540 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:20:50.558 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.561 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:20:50.573 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.575 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:20:50.585 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:20:50.588 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:20:50.598 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:22:03.741 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:22:03.743 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:22:03.768 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:22:03.773 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:22:12.465 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:22:12.474 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:22:12.547 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:22:12.558 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:29.648 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:37:29.650 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:37:29.650 [localhost] [32minfo[39m: true
+2024-10-30 10:37:29.676 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:37:29.727 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:37:29.736 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:29.741 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:37:29.751 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:29.754 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:37:29.765 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:29.768 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:37:29.780 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:29.783 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:37:29.795 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:34.432 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:37:34.433 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:37:34.459 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:37:34.465 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:36.607 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:37:36.609 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:37:36.629 [localhost] [32minfo[39m: qPLghO3blQk.mp4
+2024-10-30 10:37:36.636 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:39.254 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:37:39.256 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:37:39.273 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:37:39.280 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:57.598 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 10:37:57.600 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 10:37:57.653 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:37:57.660 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:57.666 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:37:57.671 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:37:57.672 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:37:57.679 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:00.288 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:38:00.289 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:38:00.301 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 10:38:00.476 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:38:00.483 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:24.692 [localhost] [32minfo[39m: 2024-10-30T05:08:24.683Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4===> video/mp4
+2024-10-30 10:38:24.699 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:38:45.475 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:38:45.488 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:38:51.446 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:38:51.459 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.461 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:38:51.468 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.479 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:38:51.496 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.506 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:38:51.532 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.546 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:38:51.577 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.583 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:38:51.589 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:38:51.590 [localhost] [32minfo[39m: true
+2024-10-30 10:38:51.620 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:38:51.667 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:38:51.674 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.677 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:38:51.684 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.689 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:38:51.703 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.712 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:38:51.732 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:51.740 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:38:51.755 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:54.195 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:38:54.197 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:38:54.224 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:38:54.230 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:38:56.700 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:38:56.701 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:38:56.720 [localhost] [32minfo[39m: 2024-10-30T05:08:24.683Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:38:56.731 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:02.596 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:39:02.600 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:39:02.674 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:39:02.688 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:07.503 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:39:07.506 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:39:07.602 [localhost] [32minfo[39m: 2024-10-30T05:08:24.683Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:39:07.615 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:12.290 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:39:12.293 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:39:12.367 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:39:12.382 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:24.158 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:39:24.162 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:39:24.244 [localhost] [32minfo[39m: 2024-10-30T05:08:24.683Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:39:24.253 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:29.691 [localhost] [32minfo[39m: CH053 - Kagurabachi  [@Manga_Complex].pdf
+2024-10-30 10:39:29.708 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:38.313 [localhost] [32minfo[39m: 9781982147662.pdf
+2024-10-30 10:39:38.350 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:44.553 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:39:44.558 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:39:44.634 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:39:44.658 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:39:48.893 [localhost] [32minfo[39m: 2024-10-30T04:48:53.664Z-9781982147662.pdf
+2024-10-30 10:39:48.910 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:40:01.921 [localhost] [32minfo[39m: 2024-10-30T04:49:11.982Z-CH053---Kagurabachi-[@Manga_Complex].pdf
+2024-10-30 10:40:01.947 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:40:08.892 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:40:08.897 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:40:08.977 [localhost] [32minfo[39m: 2024-10-30T05:08:24.683Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:40:09.004 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:40:30.970 [localhost] [32minfo[39m: 2024-10-30T05:10:30.958Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4===> video/mp4
+2024-10-30 10:40:30.976 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:40:48.061 [localhost] [32minfo[39m: 2024-10-30T05:10:47.981Z-CH052---Kagurabachi-[@Manga_Complex].pdf===> application/pdf
+2024-10-30 10:40:48.080 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:40:56.071 [localhost] [32minfo[39m: 2024-10-30T05:10:56.055Z-CH053---Kagurabachi-[@Manga_Complex].pdf===> application/pdf
+2024-10-30 10:40:56.084 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 10:41:03.702 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 10:41:03.705 [localhost] [32minfo[39m: Updating course...
+2024-10-30 10:41:14.982 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:41:14.991 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:14.993 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:41:15.017 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.018 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:41:15.026 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.030 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:41:15.043 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.044 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:41:15.052 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.061 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 10:41:15.061 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 10:41:15.062 [localhost] [32minfo[39m: true
+2024-10-30 10:41:15.087 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 10:41:15.123 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:41:15.136 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.137 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 10:41:15.148 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.150 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 10:41:15.161 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.166 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:41:15.180 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:15.184 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:41:15.194 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:24.307 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 10:41:24.309 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 10:41:24.366 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:41:24.383 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:26.275 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:41:26.279 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:41:26.336 [localhost] [32minfo[39m: 2024-10-30T05:10:30.958Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:41:26.345 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:29.095 [localhost] [32minfo[39m: 2024-10-30T05:10:56.055Z-CH053---Kagurabachi-[@Manga_Complex].pdf
+2024-10-30 10:41:29.107 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:45.531 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:41:45.533 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 1
+2024-10-30 10:41:45.658 [localhost] [32minfo[39m: 2024-10-30T04:48:11.463Z-Ghost---The-Beauty-Of-Anime-[AMV_Edit]-[cmGyL6s9UJI].mp4
+2024-10-30 10:41:45.669 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:47.870 [localhost] [32minfo[39m: 2024-10-30T04:48:53.664Z-9781982147662.pdf
+2024-10-30 10:41:47.881 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:41:56.085 [localhost] [33mwarn[39m: here at getLessonDetails controlller
+2024-10-30 10:41:56.087 [localhost] [32minfo[39m: Fetching lesson details for courseId: 66d1ce443585b4921f61c152, lessonIndex: 0
+2024-10-30 10:41:56.164 [localhost] [32minfo[39m: 2024-10-30T05:10:30.958Z-SASUKE_ITACHI_La_Callin_Badass_AMV_EDIT_JWysG5BHDbU.mp4
+2024-10-30 10:41:56.176 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:37.820 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 10:54:37.826 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 10:54:37.882 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:54:37.899 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:37.903 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:54:37.911 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:37.913 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:54:37.919 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:52.082 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:54:52.087 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:52.090 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:54:52.098 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:54:52.101 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:54:52.113 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:55:07.154 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 10:55:07.155 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 10:55:08.417 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:55:08.424 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:55:08.425 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:55:08.439 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:55:08.440 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:55:08.446 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:08.154 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 10:58:08.155 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 10:58:09.508 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:58:09.513 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:09.521 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:58:09.531 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:09.532 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:58:09.541 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:09.963 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 10:58:09.964 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 10:58:10.580 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 10:58:10.601 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:10.621 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 10:58:10.646 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 10:58:10.650 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 10:58:10.656 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:01:11.832 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:01:11.833 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:11:17.583 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:11:17.629 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:17.647 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:11:17.660 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:17.661 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:11:17.667 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:23.134 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:11:23.135 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:11:24.123 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:11:24.148 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:24.156 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:11:24.182 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:24.190 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:11:24.209 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:34.537 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:11:34.556 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:34.560 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:11:34.573 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:11:34.576 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:11:34.588 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:19.073 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:15:19.090 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:19.096 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:15:19.108 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:19.113 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:15:19.126 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:23.919 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:15:23.935 [localhost] [32minfo[39m: Fetching course with ID: 6711f794dbc18ca13ff55310
+2024-10-30 11:15:23.937 [localhost] [32minfo[39m: Fetching a course.....6711f794dbc18ca13ff55310
+2024-10-30 11:15:24.094 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:15:24.098 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:30.202 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:15:30.205 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:15:33.970 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:15:33.979 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:33.982 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:15:33.991 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:33.994 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:15:34.002 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:37.641 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:15:37.669 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:37.679 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:15:37.693 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:37.695 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:15:37.704 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:54.618 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:15:54.625 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:15:54.719 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:15:54.726 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:54.730 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:15:54.742 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:15:54.744 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:15:54.752 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:19:54.177 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:19:54.192 [localhost] [32minfo[39m: Fetching course with ID: 66d1c3f33585b4921f61c103
+2024-10-30 11:19:54.193 [localhost] [32minfo[39m: Fetching a course.....66d1c3f33585b4921f61c103
+2024-10-30 11:19:54.651 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:19:54.658 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:00.218 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:20:00.224 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:20:00.299 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:20:00.305 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:00.311 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:20:00.322 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:00.326 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:20:00.347 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:21.997 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:20:22.019 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:22.028 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:20:22.058 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:22.061 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:20:22.069 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:26.426 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:20:26.444 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:26.451 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:20:26.463 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:20:26.465 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:20:26.477 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:23:50.382 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 11:23:50.425 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 11:23:50.625 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 11:27:43.326 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:27:43.349 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:27:43.525 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:27:43.596 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:27:43.599 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:27:43.609 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:27:43.611 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:27:43.636 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:29:07.551 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:29:07.553 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:29:07.647 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:29:07.658 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:29:07.666 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:29:07.676 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:29:07.680 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:29:07.706 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:45.127 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:33:45.136 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:33:45.242 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:33:45.261 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:45.263 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:33:45.273 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:45.278 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:33:45.303 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:46.851 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:33:46.875 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:33:46.878 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:33:47.087 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:33:47.093 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:51.536 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:33:51.542 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:33:51.740 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:33:51.751 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:51.755 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:33:51.767 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:33:51.772 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:33:51.788 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:18.080 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:35:18.094 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:35:18.096 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:35:18.244 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:35:18.349 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:23.007 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:35:23.025 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:23.029 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:35:23.042 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:23.047 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:35:23.059 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:39.783 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:35:39.807 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:39.826 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:35:39.843 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:35:39.846 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:35:39.858 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:36:52.804 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:36:52.810 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:36:52.813 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:36:52.831 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:36:52.836 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:36:52.847 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:10.811 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:37:10.821 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:10.824 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:10.846 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:10.850 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:37:10.864 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:13.800 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:37:13.816 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:13.820 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:13.836 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:13.840 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:37:13.851 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:17.134 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:37:17.138 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:37:17.138 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:37:17.229 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:17.232 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:22.487 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:37:22.488 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:37:22.634 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:37:22.646 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:22.652 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:22.669 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:22.672 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:37:22.686 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:44.420 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:37:44.422 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:37:44.492 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:37:44.498 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:44.503 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:44.510 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:44.517 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:37:44.522 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:47.515 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:37:47.519 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:37:47.520 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:37:47.667 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:47.681 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:52.247 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:37:52.248 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:37:52.385 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:37:52.394 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:52.398 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:37:52.412 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:37:52.416 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:37:52.425 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:40.610 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:38:40.612 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:38:40.648 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:38:40.654 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:40.657 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:38:40.666 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:40.668 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:38:40.680 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:42.254 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:38:42.258 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:38:42.259 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:38:42.404 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:38:42.408 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:57.215 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:38:57.216 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:38:57.428 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:38:57.433 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:57.437 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:38:57.448 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:38:57.450 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:38:57.459 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:50.264 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:39:50.266 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:39:50.354 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:39:50.359 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:50.362 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:39:50.372 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:50.374 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:39:50.387 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:51.638 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:39:51.642 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:39:51.643 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:39:51.843 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:39:51.846 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:57.673 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:39:57.674 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:39:57.848 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:39:57.863 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:57.868 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:39:57.913 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:39:57.918 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:39:57.929 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:42:48.316 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:42:48.321 [localhost] [32minfo[39m: Fetching course with ID: 6711f794dbc18ca13ff55310
+2024-10-30 11:42:48.322 [localhost] [32minfo[39m: Fetching a course.....6711f794dbc18ca13ff55310
+2024-10-30 11:42:48.594 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:42:48.599 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:43:09.261 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:43:09.263 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:43:09.551 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:43:09.559 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:43:09.561 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:43:09.572 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:43:09.574 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:43:09.586 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:46:18.815 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:46:18.824 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:46:18.981 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:46:19.008 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:46:19.014 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:46:19.033 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:46:19.038 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:46:19.043 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:46:20.266 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:46:20.267 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:46:20.273 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:46:20.489 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:46:20.504 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:46:23.674 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:46:23.675 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:47:11.331 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:47:11.335 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: true
+2024-10-30 11:47:11.439 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:47:11.445 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:11.447 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:47:11.454 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:11.455 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:47:11.459 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:12.818 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:47:12.819 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:47:12.824 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:47:13.003 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:47:13.009 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:17.162 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:47:17.163 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:47:17.345 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:47:17.353 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:17.357 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:47:17.369 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:17.372 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:47:17.386 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:47:36.143 [localhost] [32minfo[39m: Fetching course with ID: 66d1ce443585b4921f61c152
+2024-10-30 11:47:36.146 [localhost] [32minfo[39m: Fetching a course.....66d1ce443585b4921f61c152
+2024-10-30 11:47:36.164 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:47:36.341 [localhost] [32minfo[39m: 2024-10-30T04:49:32.563Z-thumbnail.png
+2024-10-30 11:47:36.346 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:49:00.078 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png===> image/png
+2024-10-30 11:49:00.118 [localhost] [32minfo[39m: Generated presigned URL for upload
+2024-10-30 11:49:01.289 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:49:01.291 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:49:01.471 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:49:01.488 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:49:01.491 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:49:01.507 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:49:01.522 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:49:01.540 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:06.506 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.509 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.578 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.579 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.599 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.599 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.621 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.621 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.638 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.639 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.656 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.657 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.675 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.675 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.688 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.689 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.712 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.712 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.732 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.732 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.746 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.747 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.762 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.763 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.782 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.783 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.800 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.802 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.814 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.815 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.828 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.828 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.842 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.843 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.856 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.857 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.872 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.873 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.891 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.891 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.906 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.907 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.921 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.921 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.937 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.937 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.950 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.951 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.966 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.967 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:06.987 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:06.988 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.002 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.003 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.023 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.023 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.038 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.039 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.055 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.056 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.070 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.070 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.086 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.087 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.101 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.101 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.117 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.118 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.132 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.133 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.148 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.148 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.162 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.163 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.176 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.177 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.212 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.213 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.224 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.225 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.240 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.242 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.256 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.256 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.269 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:07.270 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:07.284 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:50:07.293 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:07.295 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:50:07.303 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:07.305 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:50:07.314 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:07.319 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:50:07.326 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:07.331 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:50:07.337 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:07.340 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:50:07.346 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:08.126 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.128 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.195 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.197 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.230 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.231 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.249 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.249 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.265 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.266 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.281 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.282 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.295 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.295 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.309 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.309 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.323 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.323 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.338 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.339 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.354 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.355 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.371 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.372 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.387 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.388 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.409 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.410 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.423 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.424 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.437 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.437 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.451 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.451 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.465 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.466 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.478 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.478 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.494 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.494 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.510 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.510 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.531 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.532 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.544 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.545 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.559 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.560 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.573 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.574 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.587 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.588 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.601 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.602 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.617 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.618 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.634 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.634 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.648 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.648 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.662 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.662 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.678 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.679 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.694 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.695 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.710 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.710 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.724 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.724 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.738 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.738 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.752 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.752 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.765 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.766 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.780 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.781 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.793 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.793 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.807 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.807 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.821 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.822 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.837 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.837 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.849 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.849 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.863 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.863 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.877 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.877 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.893 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.893 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.908 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.909 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.923 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.924 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.938 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.939 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.953 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.954 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.968 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.969 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.984 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.985 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:08.998 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:08.999 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.012 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.012 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.026 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.026 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.039 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.040 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.053 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.054 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.071 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.072 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.086 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.086 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.101 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.102 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.118 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.118 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.135 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.136 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.155 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.155 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.168 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.168 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.183 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.183 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.200 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.200 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.214 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.214 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.229 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.230 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.258 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.259 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.284 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.285 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.301 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.301 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.316 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.316 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.333 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.334 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.348 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.349 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.363 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.363 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.380 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.380 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.394 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.394 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.408 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.409 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.425 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.426 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.440 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.440 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.455 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.455 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.471 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.471 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.487 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.488 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.505 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.505 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.518 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.518 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.533 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.533 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.548 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.549 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.565 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.565 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.583 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.584 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.601 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.602 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.621 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.622 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.641 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.641 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.655 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.655 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.669 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.671 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.684 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.685 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.698 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.699 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.713 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.713 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.728 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.728 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.743 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.744 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.758 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.759 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.773 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.773 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.788 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.788 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.808 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.808 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.825 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.825 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.839 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.839 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.853 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.853 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.869 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.870 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.885 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.886 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.900 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.900 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.915 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.916 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.932 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.933 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.947 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.947 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.962 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.963 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.977 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.977 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:09.992 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:09.993 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.009 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.010 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.025 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.025 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.040 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.041 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.057 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.058 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.071 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.071 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.086 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.087 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.100 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.101 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.117 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.117 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.138 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.139 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.151 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.151 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.164 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.165 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.180 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.181 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.196 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.196 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.210 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.211 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.225 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.226 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.241 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.241 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.255 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.256 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.272 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.273 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.291 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.291 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.304 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.305 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.320 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.321 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.334 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.335 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.349 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.350 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.367 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.367 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.381 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.381 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.398 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.398 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.414 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.415 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.429 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.430 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.444 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.444 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.457 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.458 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.470 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.471 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.486 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.487 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.501 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.502 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.520 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.522 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.536 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.536 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.549 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.549 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.565 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.566 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.581 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.582 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.599 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.600 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.613 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.613 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.629 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.629 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.644 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.645 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.659 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.659 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.675 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.675 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.691 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.692 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.703 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.703 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.716 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.717 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.730 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.730 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.744 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.744 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.758 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.758 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.770 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.770 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.798 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.798 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.815 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.815 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.829 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.830 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.844 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.844 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.858 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.859 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.876 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.876 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.889 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.889 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.903 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.904 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.917 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.918 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.931 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.932 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.945 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.946 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.957 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.958 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.971 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.971 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:10.984 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:10.985 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.036 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.037 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.115 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.116 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.157 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.191 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.223 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.223 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.252 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.252 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.284 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.285 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.323 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.323 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.388 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.389 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.415 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.416 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.446 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.447 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.498 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.499 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.516 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.517 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.533 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.533 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.549 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.549 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.563 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.563 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.577 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.578 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.592 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.593 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.606 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.607 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.621 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.622 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.639 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.639 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.657 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.657 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.673 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.674 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.687 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.688 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.701 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.702 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.716 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.716 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.731 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.731 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.745 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.745 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.759 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.760 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.776 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.777 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.792 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.792 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.808 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.810 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.827 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.827 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.843 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.844 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.860 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.861 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.877 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66cbb30d079c34288caaf86d
+2024-10-30 11:50:11.877 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66cbb30d079c34288caaf86d, page: 1, limit: 5, isApproved: false
+2024-10-30 11:50:11.891 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:50:11.898 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:11.902 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:50:11.909 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:11.914 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:50:11.925 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:11.935 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:50:11.996 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:12.010 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:50:12.020 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:50:12.023 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:50:12.032 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:48.050 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:51:48.061 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:48.064 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:51:48.073 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:48.075 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:51:48.087 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:58.011 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:51:58.028 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:58.038 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:51:58.062 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:51:58.066 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:51:58.079 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:52:04.604 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:52:04.611 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:52:04.618 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:52:04.626 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:52:04.629 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:52:04.634 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:53:35.596 [localhost] [32minfo[39m: Fetching course with ID: 66d1c3f33585b4921f61c103
+2024-10-30 11:53:35.597 [localhost] [32minfo[39m: Fetching a course.....66d1c3f33585b4921f61c103
+2024-10-30 11:53:35.606 [localhost] [32minfo[39m: Fetching all categories...
+2024-10-30 11:53:35.718 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:53:35.724 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:53:40.476 [localhost] [33mwarn[39m: Controller is ready to edit the course...
+2024-10-30 11:53:40.477 [localhost] [32minfo[39m: Updating course...
+2024-10-30 11:53:40.597 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 11:53:40.602 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:53:40.607 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 11:53:40.618 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 11:53:40.624 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 11:53:40.642 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.370 [localhost] [32minfo[39m: Im here for fetching home page datas.......
+2024-10-30 12:07:03.852 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 12:07:03.866 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.869 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 12:07:03.878 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.881 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 12:07:03.890 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.895 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 12:07:03.929 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.935 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 12:07:03.956 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.961 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 12:07:03.974 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.977 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 12:07:03.986 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 12:07:03.993 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 12:07:04.001 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 13:39:44.915 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:39:44.951 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:39:45.090 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 13:39:59.487 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:39:59.517 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:39:59.526 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 13:41:37.548 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:41:37.569 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:41:37.595 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 13:46:30.209 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:46:30.238 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:46:30.284 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 13:50:27.272 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:50:27.294 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:50:27.375 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 13:50:54.389 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 13:50:54.417 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 13:50:54.424 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 14:11:17.376 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:14:45.276 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-10-30 14:14:45.313 [localhost] [32minfo[39m: Course Database connected
+2024-10-30 14:14:45.463 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-10-30 14:14:50.832 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:14:56.179 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:15:00.154 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:15:02.941 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:15:05.888 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:15:27.305 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:16:36.143 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 14:17:05.517 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 15:03:56.888 [localhost] [32minfo[39m: Im here for fetching home page datas.......
+2024-10-30 15:03:57.250 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 15:03:57.343 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.345 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 15:03:57.361 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.363 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 15:03:57.386 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.391 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 15:03:57.404 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.408 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 15:03:57.415 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.418 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 15:03:57.431 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.437 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 15:03:57.444 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:03:57.446 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 15:03:57.453 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:07:33.288 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 15:08:31.948 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-10-30 15:09:14.724 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 15:09:14.728 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 15:09:14.730 [localhost] [32minfo[39m: true
+2024-10-30 15:09:14.809 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 15:09:14.857 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 15:09:14.876 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:09:14.878 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 15:09:14.889 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:09:14.891 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 15:09:14.905 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:09:14.908 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 15:09:14.920 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 15:09:14.922 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 15:09:14.932 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:19:40.180 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 20:19:40.220 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 20:19:40.223 [localhost] [32minfo[39m: true
+2024-10-30 20:19:40.581 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 20:19:40.715 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 20:19:40.825 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:19:40.832 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 20:19:40.850 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:19:40.859 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 20:19:40.883 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:19:40.889 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 20:19:40.912 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:19:40.920 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 20:19:40.944 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:27:11.400 [localhost] [32minfo[39m: Hereeee at getAllCourses controller
+2024-10-30 20:27:11.408 [localhost] [32minfo[39m: Fetching courses for admin with status true
+2024-10-30 20:27:11.409 [localhost] [32minfo[39m: true
+2024-10-30 20:27:11.444 [localhost] [32minfo[39m: Log in controller ====> [object Object],[object Object],[object Object],[object Object],[object Object]
+2024-10-30 20:27:11.484 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-10-30 20:27:11.513 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:27:11.516 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-10-30 20:27:11.529 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:27:11.533 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-10-30 20:27:11.553 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:27:11.562 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-10-30 20:27:11.571 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-10-30 20:27:11.573 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-10-30 20:27:11.587 [localhost] [32minfo[39m: Generated presigned URL for retrieval

@@ -191,12 +191,13 @@ class CourseRepository implements ICourseRepository {
         .find({ is_approved: true })
         .sort({ enrollments: -1 })
         .limit(4)
-        .select("_id title thumbnail price enrollments category tutor_id").lean()
+        .select("_id title thumbnail price enrollments category tutor_id")
+        .lean();
 
       return trendingCourses;
     } catch (error) {
       console.error("Error fetching trending courses:", error);
-      return undefined; 
+      return undefined;
     }
   }
 
@@ -206,14 +207,48 @@ class CourseRepository implements ICourseRepository {
         .find({ is_approved: true })
         .sort({ _id: -1 })
         .limit(4)
-        .select("_id title thumbnail price enrollments category tutor_id").lean()
+        .select("_id title thumbnail price enrollments category tutor_id")
+        .lean();
 
-      return newlyAddedCourses; 
+      return newlyAddedCourses;
     } catch (error) {
       console.error("Error fetching newly added courses:", error);
-      return undefined; 
+      return undefined;
     }
   }
+
+  async fetchCourses(
+    limit: number,
+    offset: number,
+    searchTerm: string,
+    categories: string | string[],
+    sort: string
+  ): Promise<CourseDocument[]> {
+
+    const searchQuery: Record<string, unknown> = { is_approved: true };
+  
+    if (searchTerm) {
+      searchQuery.title = { $regex: searchTerm, $options: 'i' };
+    }
+  
+    if (typeof categories === 'string') {
+      categories = categories.split(',') as string[]; 
+    }
+  
+    if (Array.isArray(categories) && categories.length > 0) {
+      searchQuery.category = { $in: categories };
+    }
+
+    const coursesQuery = this.courseModel.find(searchQuery).skip(offset).limit(limit);
+  
+    if (sort) {
+      coursesQuery.sort(sort);
+    }
+  
+    const courses = await coursesQuery;
+    return courses;
+  }
+  
 }
 
 export default CourseRepository;

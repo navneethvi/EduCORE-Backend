@@ -35,7 +35,10 @@ class CourseController {
   private courseService: ICourseService;
   private categoryService: ICategoryService;
 
-  constructor(courseService: ICourseService, categoryService: ICategoryService) {
+  constructor(
+    courseService: ICourseService,
+    categoryService: ICategoryService
+  ) {
     this.courseService = courseService;
     this.categoryService = categoryService;
   }
@@ -286,21 +289,77 @@ class CourseController {
     }
   };
 
-  public dataForHome = async(req: Request, res: Response, next: NextFunction) => {
-    logger.info("Im here for fetching home page datas.......")
+  public dataForHome = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    logger.info("Im here for fetching home page datas.......");
     try {
-      const trendingCourses = await this.courseService.getTrendingCourses()
+      const trendingCourses = await this.courseService.getTrendingCourses();
 
-      const newlyAddedCourses = await this.courseService.getNewlyAddedCourses()
+      const newlyAddedCourses = await this.courseService.getNewlyAddedCourses();
 
-      const trendingCategories = await this.categoryService.getAllCategories()
+      const trendingCategories = await this.categoryService.getAllCategories();
 
-      res.status(HttpStatusCodes.OK).json({trendingCourses, newlyAddedCourses, trendingCategories})
-
+      res
+        .status(HttpStatusCodes.OK)
+        .json({ trendingCourses, newlyAddedCourses, trendingCategories });
     } catch (error) {
-      next(error)
+      next(error);
     }
-  }
+  };
+
+  public editCourse = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    logger.warn("Controller is ready to edit the course...");
+    try {
+      console.log("course for edit ===>", req.params);
+      const { courseId } = req.params;
+
+      const editedCourse = req.body;
+
+      const updatedCourse = await this.courseService.updateCourse(
+        courseId,
+        editedCourse
+      );
+
+      res.status(200).json({
+        message: "Course updated successfully",
+        updatedCourse,
+      });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public fetchCourses = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    logger.warn("Controller is fetch courses for store...");
+    try {
+      const { limit, offset, searchTerm, categories, sort } = req.query;
+      console.log("Search term for courses:", req.query);
+      const parsedLimit = parseInt(limit as string, 10) || 10;
+      const parsedOffset = parseInt(offset as string, 10) || 0;
+      const courses = await this.courseService.fetchCourses(
+        parsedLimit,
+        parsedOffset,
+        searchTerm as string,
+        categories as string[],
+        sort as string
+      );
+      const allCategories = await this.categoryService.getAllCategories();
+      return res.status(200).json({ courses, categories: allCategories });
+    } catch (error) {
+      next(error);
+    }
+  };
 }
 
 export default CourseController;

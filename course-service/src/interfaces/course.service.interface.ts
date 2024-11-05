@@ -4,6 +4,7 @@ import {
   CreateCourseRequest,
   Lesson,
   PaginatedData,
+  SimplifiedCourse,
 } from "./course.interface";
 import { Course } from "./course.interface";
 
@@ -30,4 +31,6 @@ export interface ICourseService {
   approveCourse(courseId: string): Promise<boolean>;
   getTrendingCourses(): Promise<Course[] | undefined>;
   getNewlyAddedCourses(): Promise<Course[] | undefined>;
+  updateCourse(courseId: string, editedCourse: Course): Promise<Course | null>;
+  fetchCourses(limit: number, offset: number, searchTerm: string, categories: string[], sort: string): Promise<SimplifiedCourse[]>
 }
