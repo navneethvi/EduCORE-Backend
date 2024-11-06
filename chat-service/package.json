@@ -17,6 +17,7 @@
     "kafkajs": "^2.2.4",
     "mongoose": "^8.8.0",
     "nodemon": "^3.1.7",
+    "socket.io": "^4.8.1",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
