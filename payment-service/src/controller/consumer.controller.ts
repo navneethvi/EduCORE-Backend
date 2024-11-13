@@ -7,6 +7,7 @@ import Course, { CourseDocument } from "../models/course.model";
 import ConsumerService from "../services/consumer.service";
 import { IConsumerService } from "../interfaces/consumer.service.interface";
 import CourseRepository from "../repositories/course.repository";
+import Enrollment from "../models/enrollment.model";
 
 class consumerController {
   private consumerService: IConsumerService;
@@ -110,7 +111,7 @@ class consumerController {
 }
 
 const studentRepository = new StudentRepository(Student);
-const courseRepository = new CourseRepository(Course);
+const courseRepository = new CourseRepository(Course, Enrollment);
 
 const consumerService = new ConsumerService(
   studentRepository,

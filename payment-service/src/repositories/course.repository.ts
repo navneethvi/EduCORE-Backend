@@ -3,12 +3,15 @@ import { ICourse } from "../interfaces/course.interface";
 import { logger } from "@envy-core/common";
 import { ICourseRepository } from "../interfaces/course.repository.interface";
 import { CourseDocument } from "../models/course.model";
+import { IEnrollment } from "../interfaces/enrollment.interface";
 
 class CourseRepository implements ICourseRepository {
   private readonly courseModel: Model<CourseDocument>;
+  private readonly enrollmentModel: Model<IEnrollment>
 
-  constructor(CourseModel: Model<CourseDocument>) {
+  constructor(CourseModel: Model<CourseDocument>, EnrollmentModel: Model<IEnrollment>) {
     this.courseModel = CourseModel;
+    this.enrollmentModel = EnrollmentModel;
   }
 
   public async findCourse(courseId: string): Promise<boolean> {
@@ -21,6 +24,15 @@ class CourseRepository implements ICourseRepository {
 
       return !!finded;
       
+    } catch (error) {
+      logger.error(`Error finding Course: ${error}`);
+      throw new Error("Error finding Course");
+    }
+  }
+
+  public async getCourse(courseId: string): Promise<ICourse | null> {
+    try {      
+      return  await this.courseModel.findOne({ _id: courseId }).exec();
     } catch (error) {
       logger.error(`Error finding Course: ${error}`);
       throw new Error("Error finding Course");
@@ -83,6 +95,23 @@ class CourseRepository implements ICourseRepository {
     }
   
     console.log("Updated Course:", updatedCourse);
+  }
+
+   public async getEnrolledCourses(studentId: string): Promise<ICourse[]> {
+    try {
+      const enrollments = await this.enrollmentModel.find({ studentId })
+        .populate<{ courseId: ICourse }>("courseId")
+        .exec();
+  
+      const courses = enrollments
+        .filter((enrollment) => enrollment.courseId)
+        .map((enrollment) => enrollment.courseId);
+  
+      return courses;
+    } catch (error) {
+      console.error("Error fetching enrolled courses:", error);
+      throw error;
+    }
   }
 }
 

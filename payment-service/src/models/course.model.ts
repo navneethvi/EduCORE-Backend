@@ -1,6 +1,7 @@
 import { Document, Schema, model, Types } from "mongoose";
 
 interface CourseDocument extends Document {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   edited: any;
   _id: Types.ObjectId;
   title: string;
