@@ -9,6 +9,8 @@ export class WebSocket extends Server {
       cors: {
         origin: process.env.FRONTEND_URL || "http://localhost:5173",
         methods: ["GET"],
+        allowedHeaders: ["Content-Type"],
+        credentials: true,
       },
       allowEIO3: true,
     });

@@ -18,7 +18,6 @@ const studentSchema = new Schema<IStudent>({
     },
     password : {
         type : String,
-        required : true
     },
     interests : {
         type : [String],

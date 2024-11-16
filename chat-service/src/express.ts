@@ -4,7 +4,7 @@ import cors from "cors";
 import { configDotenv } from "dotenv";
 import cookieParser from "cookie-parser";
 
-// import Router from "./routes/routes";
+import Router from "./routes/chat.routes";
 
 import { ErrorHandler } from "@envy-core/common";
 
@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 app.use(express.json());
 app.use(express.urlencoded({extended: true }));
 
-// app.use('/api/course', Router)
+app.use('/api/chat', Router)
 
 app.use(ErrorHandler.handleError);
 
