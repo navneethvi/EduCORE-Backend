@@ -56,6 +56,10 @@ class CategoryService implements ICategoryService {
       const categories = await this.categoryRepository.getAllCategories()
       return categories
   }
+
+  public async getCategoryCount(): Promise<number> {
+      return await this.categoryRepository.totalCategoryCount()
+  }
 }
 
 export default CategoryService;

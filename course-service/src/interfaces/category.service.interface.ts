@@ -6,4 +6,5 @@ export interface ICategoryService {
   getCategories(page: number,pageSize: number): Promise<{ categories: ICategory[]; totalPages: number }>;
   deleteCategory(category_id: string): Promise<void>;
   getAllCategories(): Promise<ICategory[]>;
+  getCategoryCount(): Promise<number>;
 }

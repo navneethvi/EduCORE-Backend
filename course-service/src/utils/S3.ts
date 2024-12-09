@@ -25,7 +25,7 @@ export const getUploadSignedUrl = async (
     });
 
     const signedUrl = await getSignedUrl(s3Client, command, {
-      expiresIn: 3600,
+      expiresIn: parseInt(process.env.AWS_S3_EXPIRY_TIME || "0", 10),
     });
 
     logger.info("Generated presigned URL for upload");

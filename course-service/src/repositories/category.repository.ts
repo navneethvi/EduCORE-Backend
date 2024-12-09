@@ -37,6 +37,10 @@ class CategoryRepository implements ICategoryRepository {
   public async getAllCategories(): Promise<ICategory[]> {
       return await this.categoryModel.find()
   }
+
+  public async totalCategoryCount(): Promise<number> {
+      return await this.categoryModel.countDocuments()
+  }
 }
 
 export default CategoryRepository;

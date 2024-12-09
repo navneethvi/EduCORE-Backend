@@ -28,6 +28,10 @@ class TutorRepository implements ITutorRepository {
       throw new Error("Error creating tutor");
     }
   }
+
+  public async totalTutorCount(): Promise<number> {
+      return await this.tutorModel.countDocuments()
+  }
 }
 
 export default TutorRepository;

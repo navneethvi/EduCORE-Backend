@@ -1,3 +1,4 @@
+import { IReview } from "../models/review.model";
 import {
   CourseForCard,
   CourseWithTutor,
@@ -32,5 +33,23 @@ export interface ICourseService {
   getTrendingCourses(): Promise<Course[] | undefined>;
   getNewlyAddedCourses(): Promise<Course[] | undefined>;
   updateCourse(courseId: string, editedCourse: Course): Promise<Course | null>;
-  fetchCourses(limit: number, offset: number, searchTerm: string, categories: string[], sort: string): Promise<SimplifiedCourse[]>
+  fetchCourses(
+    limit: number,
+    offset: number,
+    searchTerm: string,
+    categories: string[],
+    sort: string
+  ): Promise<SimplifiedCourse[]>;
+  getCourseCount(): Promise<number>;
+  getCourseCountByTutor(tutorId: string): Promise<number>;
+  createReview(params: {
+    studentId: string;
+    courseId: string;
+    rating: number;
+    review: string;
+    tutorId: string;
+  }): Promise<IReview | null>;
+  getReviewsByCourse(courseId: string): Promise<IReview[] | []>
+  getReviewsForHome(): Promise<IReview[] | []>
+
 }

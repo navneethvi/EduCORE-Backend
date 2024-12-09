@@ -34,6 +34,7 @@ export interface Course {
   category: string;
   level: string;
   thumbnail: string;
+  createdAt?: Date;
   tutor_id: Types.ObjectId | string; // Adjusted to match Mongoose ObjectId type
   price: number;
   lessons: Lesson[];
@@ -45,6 +46,7 @@ export interface CourseForCard {
   category: string;
   level: string;
   is_approved: boolean;
+  createdAt: Date;
   thumbnail: string;
   tutor_id: string;
   price: number;

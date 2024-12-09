@@ -106,6 +106,7 @@ class CourseRepository implements ICourseRepository {
 
     return courses;
   }
+  
 
   public async getCourseDetails(
     course_id: string
@@ -247,6 +248,10 @@ class CourseRepository implements ICourseRepository {
   
     const courses = await coursesQuery;
     return courses;
+  }
+
+  public async totalCourseCount(): Promise<number> {
+    return this.courseModel.countDocuments()
   }
   
 }

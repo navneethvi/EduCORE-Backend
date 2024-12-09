@@ -1,4 +1,4 @@
-// src/interfaces/student.interface.ts
+
 import { Document } from "mongoose";
 
 export interface ITutor extends Document {

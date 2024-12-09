@@ -1,0 +1,206 @@
+2024-12-04 18:27:36.369 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 18:27:36.517 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 18:27:36.522 [localhost] [33mwarn[39m: total tutors count: 29
+2024-12-04 18:27:36.526 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 18:27:36.531 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 18:32:15.220 [localhost] [32minfo[39m: Received message: {"_id":"675052d7e69ac1540743ae4b","name":"Drishya Biju","email":"drishyabiju@gmail.com","phone":8943365344,"is_blocked":false,"is_verified":false,"bio":"","followers":[],"role":"tutor"}
+2024-12-04 18:32:15.612 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 18:32:15.631 [localhost] [32minfo[39m: Successfully processed tutor: undefined
+2024-12-04 18:32:15.703 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 18:32:15.709 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 18:32:15.715 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 18:32:15.729 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 18:34:37.046 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 18:34:37.074 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 18:34:37.081 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 18:34:37.086 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 18:34:37.102 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 18:35:08.249 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66bbbd7f7ec9ce77f38e318b
+2024-12-04 18:35:08.278 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66bbbd7f7ec9ce77f38e318b, page: 1, limit: 5, isApproved: true
+2024-12-04 18:35:08.399 [localhost] [32minfo[39m: 2024-12-03T11:21:52.150Z-thumbnail.png
+2024-12-04 18:35:08.612 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:35:12.909 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66bbbd7f7ec9ce77f38e318b
+2024-12-04 18:35:12.910 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66bbbd7f7ec9ce77f38e318b, page: 1, limit: 5, isApproved: false
+2024-12-04 18:35:12.944 [localhost] [32minfo[39m: 2024-12-03T11:32:53.291Z-thumbnail.png
+2024-12-04 18:35:12.967 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:35:14.564 [localhost] [32minfo[39m: 2024-12-03T11:21:52.150Z-thumbnail.png
+2024-12-04 18:35:14.579 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:36:12.422 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 18:36:12.429 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 18:36:12.434 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 18:36:12.444 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 18:36:12.449 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 18:52:12.502 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 18:52:12.609 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 18:52:12.619 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 18:52:12.625 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 18:52:12.631 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 18:52:14.017 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:52:14.102 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:16.377 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:52:16.552 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-12-04 18:52:16.569 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:16.572 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-12-04 18:52:16.581 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:16.583 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-12-04 18:52:16.591 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:16.595 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 18:52:16.609 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:17.580 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:52:17.639 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-12-04 18:52:17.664 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:17.666 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:52:17.689 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:17.691 [localhost] [32minfo[39m: 2024-11-04T04:17:47.440Z-thumbnail.png
+2024-12-04 18:52:17.700 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:17.703 [localhost] [32minfo[39m: 2024-11-04T04:29:04.583Z-thumbnail.png
+2024-12-04 18:52:17.715 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:18.220 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:52:18.275 [localhost] [32minfo[39m: 2024-12-01T06:43:27.943Z-thumbnail.jpg
+2024-12-04 18:52:18.294 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:18.300 [localhost] [32minfo[39m: 2024-12-03T11:21:52.150Z-thumbnail.png
+2024-12-04 18:52:18.312 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:24.859 [localhost] [32minfo[39m: Fetching course with ID: 66d8f6e82580f613ab388c34
+2024-12-04 18:52:24.861 [localhost] [32minfo[39m: Fetching a course.....66d8f6e82580f613ab388c34
+2024-12-04 18:52:24.901 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 18:52:24.915 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:49.689 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 18:52:49.706 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:52:49.734 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:52:49.764 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:38.138 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:53:38.185 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-12-04 18:53:38.193 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:38.195 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-12-04 18:53:38.205 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:38.206 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 18:53:38.214 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:38.217 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-12-04 18:53:38.222 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.225 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:53:39.264 [localhost] [32minfo[39m: 2024-11-04T04:29:04.583Z-thumbnail.png
+2024-12-04 18:53:39.275 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.281 [localhost] [32minfo[39m: 2024-10-18T05:52:13.081Z-thumbnail.png
+2024-12-04 18:53:39.290 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.294 [localhost] [32minfo[39m: 2024-11-04T04:17:47.440Z-thumbnail.png
+2024-12-04 18:53:39.304 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.306 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:53:39.319 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.576 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 18:53:39.615 [localhost] [32minfo[39m: 2024-12-01T06:43:27.943Z-thumbnail.jpg
+2024-12-04 18:53:39.623 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:39.625 [localhost] [32minfo[39m: 2024-12-03T11:21:52.150Z-thumbnail.png
+2024-12-04 18:53:39.639 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:53:41.674 [localhost] [32minfo[39m: Fetching course with ID: 672caf97dbb2aa5087436566
+2024-12-04 18:53:41.677 [localhost] [32minfo[39m: Fetching a course.....672caf97dbb2aa5087436566
+2024-12-04 18:53:41.700 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:53:41.706 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:54:14.167 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 18:54:14.177 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 18:58:39.083 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-12-04 18:58:39.258 [localhost] [32minfo[39m: Course Database connected
+2024-12-04 18:58:41.576 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-04 18:58:41.642 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-04 18:58:43.898 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-04 19:07:21.325 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 19:07:21.497 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 19:07:21.506 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 19:07:21.513 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 19:07:21.519 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 19:07:57.076 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 19:07:57.084 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 19:07:57.089 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 19:07:57.093 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 19:07:57.096 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 19:08:50.899 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-12-04 19:08:50.941 [localhost] [32minfo[39m: Course Database connected
+2024-12-04 19:08:51.058 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-04 19:08:51.075 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-04 19:08:51.238 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-04 19:08:54.868 [localhost] [32minfo[39m: im here for fetching tutor dashboard datas
+2024-12-04 19:09:04.702 [localhost] [32minfo[39m: Fetching approved courses for tutor with ID 66d8f5b9925513c53fa09e38
+2024-12-04 19:09:04.703 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66d8f5b9925513c53fa09e38, page: 1, limit: 5, isApproved: true
+2024-12-04 19:09:04.770 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 19:09:04.839 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:09:04.852 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 19:09:04.866 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:09:07.435 [localhost] [32minfo[39m: Fetching pending courses for tutor with ID 66d8f5b9925513c53fa09e38
+2024-12-04 19:09:07.436 [localhost] [32minfo[39m: Fetching courses with params: tutorId: 66d8f5b9925513c53fa09e38, page: 1, limit: 5, isApproved: false
+2024-12-04 19:09:07.467 [localhost] [32minfo[39m: 2024-11-07T11:39:08.448Z-thumbnail.png
+2024-12-04 19:09:07.476 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:09:08.350 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 19:09:08.356 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:09:08.360 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 19:09:08.368 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:10:17.772 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-12-04 19:10:17.852 [localhost] [32minfo[39m: Course Database connected
+2024-12-04 19:10:17.981 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-04 19:10:17.995 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-04 19:10:18.277 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-04 19:10:42.576 [localhost] [32minfo[39m: Course Service is running on http://localhost:3003
+2024-12-04 19:10:42.601 [localhost] [32minfo[39m: Course Database connected
+2024-12-04 19:10:42.643 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-04 19:10:42.652 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-04 19:10:42.710 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-04 19:10:50.623 [localhost] [32minfo[39m: im here for fetching tutor dashboard datas
+2024-12-04 19:20:06.107 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 19:20:06.328 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:20:06.347 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 19:20:06.382 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:20:26.638 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 19:20:26.648 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 19:25:26.342 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 19:25:26.491 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 19:25:26.501 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 19:25:26.508 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 19:25:26.516 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 19:25:44.731 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 19:25:44.775 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 19:25:44.788 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 19:25:44.798 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 19:25:44.808 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 19:25:46.567 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 19:25:46.578 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 19:25:46.587 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 19:25:46.594 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 19:25:46.601 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 22:15:51.315 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 22:15:51.352 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 22:15:51.359 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 22:15:51.363 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 22:15:51.366 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 22:26:17.508 [localhost] [32minfo[39m: im here for fetching admin dashboard datas
+2024-12-04 22:26:17.545 [localhost] [33mwarn[39m: total courses count: 16
+2024-12-04 22:26:17.548 [localhost] [33mwarn[39m: total tutors count: 30
+2024-12-04 22:26:17.552 [localhost] [33mwarn[39m: total students count: 28
+2024-12-04 22:26:17.557 [localhost] [33mwarn[39m: total category count: 13
+2024-12-04 22:26:21.278 [localhost] [32minfo[39m: Im here for fetching home page datas.......
+2024-12-04 22:26:21.590 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-12-04 22:26:21.645 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.654 [localhost] [32minfo[39m: 2024-12-03T11:21:52.150Z-thumbnail.png
+2024-12-04 22:26:21.676 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.680 [localhost] [32minfo[39m: 2024-11-07T12:19:37.858Z-thumbnail.png
+2024-12-04 22:26:21.693 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.696 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-12-04 22:26:21.704 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.710 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 22:26:21.717 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.720 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-12-04 22:26:21.729 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.733 [localhost] [32minfo[39m: 2024-12-01T06:43:27.943Z-thumbnail.jpg
+2024-12-04 22:26:21.743 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:21.745 [localhost] [32minfo[39m: 2024-11-04T04:29:04.583Z-thumbnail.png
+2024-12-04 22:26:21.754 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:50.356 [localhost] [33mwarn[39m: Controller is fetch courses for store...
+2024-12-04 22:26:50.440 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-12-04 22:26:50.449 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:50.451 [localhost] [32minfo[39m: 2024-10-30T06:19:00.058Z-thumbnail.png
+2024-12-04 22:26:50.459 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:50.461 [localhost] [32minfo[39m: wallpaperflare.com_wallpaper (6).jpg
+2024-12-04 22:26:50.471 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:50.473 [localhost] [32minfo[39m: 2024-10-07T08:02:55.290Z-thumbnail.png
+2024-12-04 22:26:50.482 [localhost] [32minfo[39m: Generated presigned URL for retrieval
+2024-12-04 22:26:52.399 [localhost] [32minfo[39m: Fetching course with ID: 66d1c3f33585b4921f61c103
+2024-12-04 22:26:52.403 [localhost] [32minfo[39m: Fetching a course.....66d1c3f33585b4921f61c103
+2024-12-04 22:26:52.426 [localhost] [32minfo[39m: 2024-10-29T03:33:25.722Z-thumbnail.png
+2024-12-04 22:26:52.435 [localhost] [32minfo[39m: Generated presigned URL for retrieval

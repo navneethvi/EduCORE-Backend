@@ -12,39 +12,50 @@ import { ICourseService } from "../interfaces/course.service.interface";
 import { CourseDocument } from "../models/course.model";
 import { ICourseRepository } from "../interfaces/course.repository.interface";
 import { ITutorRepository } from "../interfaces/tutor.repository.interface";
+import { IReviewRepository } from "../interfaces/review.repository.interface";
+
+import { sendMessage } from "../events/kafkaClient";
+import { IReview } from "../models/review.model";
+import mongoose from "mongoose";
 
 class CourseService implements ICourseService {
   private courseRepository: ICourseRepository;
   private tutorRepository: ITutorRepository;
+  private reviewRepository: IReviewRepository;
 
   constructor(
     courseRepository: ICourseRepository,
-    tutorRepository: ITutorRepository
+    tutorRepository: ITutorRepository,
+    reviewRepository: IReviewRepository
   ) {
     this.courseRepository = courseRepository;
     this.tutorRepository = tutorRepository;
+    this.reviewRepository = reviewRepository;
   }
   public async createCourse(req: CreateCourseRequest): Promise<string> {
     console.log("Request in service:", req.body);
 
-    // Assuming `uploadedFiles` are filenames from `req.body` or another source
     const uploadedFiles = this.extractUploadedFiles(req.body);
 
     const courseData = this.prepareCourseData(req, uploadedFiles);
 
     console.log("Before saving in service");
 
-    await this.courseRepository.save(courseData);
+    const newCourse = await this.courseRepository.save(courseData);
+
+    const edited = newCourse;
+
+    await sendMessage("course-created", {
+      edited,
+    });
 
     return "Course created successfully";
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private extractUploadedFiles(body: any): { filename: string }[] {
-    // Extract filenames from the request body or elsewhere
-    // This needs to be implemented based on how `uploadedFiles` are determined
     return [
-      { filename: body.thumbnail }, // Example for thumbnail
+      { filename: body.thumbnail },
       ...body.lessons.map((lesson: Lesson) => ({
         video: lesson.video,
         materials: lesson.materials,
@@ -70,9 +81,9 @@ class CourseService implements ICourseService {
       lessons: req.body.lessons.map((lesson: Lesson) => ({
         title: lesson.title,
         goal: lesson.goal,
-        video: lesson.video || "", // Default to empty string if undefined
-        materials: lesson.materials || "", // Default to empty string if undefined
-        homework: lesson.homework || "", // Default to empty string if undefined
+        video: lesson.video || "",
+        materials: lesson.materials || "",
+        homework: lesson.homework || "",
       })),
     };
   }
@@ -325,14 +336,14 @@ class CourseService implements ICourseService {
 
   public async getNewlyAddedCourses(): Promise<Course[]> {
     try {
-      const newlyAddedCourses = await this.courseRepository.getNewlyAddedCourses();
-  
+      const newlyAddedCourses =
+        await this.courseRepository.getNewlyAddedCourses();
+
       if (!newlyAddedCourses) {
         throw new Error("No newly added courses found.");
       }
 
       console.log(newlyAddedCourses);
-      
 
       const processedCourses = await Promise.all(
         newlyAddedCourses.map(async (course) => {
@@ -346,55 +357,72 @@ class CourseService implements ICourseService {
           };
         })
       );
-  
-      return processedCourses; 
-      
+
+      return processedCourses;
     } catch (error) {
       logger.error(`Error fetching newly added courses: ${error}`);
       throw new Error("Error fetching newly added courses");
     }
   }
 
-  public async updateCourse(courseId: string, editedCourse: Course): Promise<Course | null> {
+  public async updateCourse(
+    courseId: string,
+    editedCourse: Course
+  ): Promise<Course | null> {
     logger.info("Updating course...");
 
     console.log(editedCourse);
-    
 
-    const existingCourse = await this.courseRepository.findById(courseId)
+    const existingCourse = await this.courseRepository.findById(courseId);
 
     if (!existingCourse) {
       throw new Error("Course not found");
     }
 
     existingCourse.title = editedCourse.title || existingCourse.title;
-    existingCourse.description = editedCourse.description || existingCourse.description;
+    existingCourse.description =
+      editedCourse.description || existingCourse.description;
     existingCourse.category = editedCourse.category || existingCourse.category;
     existingCourse.level = editedCourse.level || existingCourse.level;
     existingCourse.price = editedCourse.price || existingCourse.price;
-
+    existingCourse.createdAt =
+      editedCourse.createdAt || existingCourse.createdAt;
     if (editedCourse.lessons && Array.isArray(editedCourse.lessons)) {
-      existingCourse.lessons = editedCourse.lessons.map((editedLesson: Lesson) => ({
+      existingCourse.lessons = editedCourse.lessons.map(
+        (editedLesson: Lesson) => ({
           title: editedLesson.title,
           goal: editedLesson.goal,
-          video: editedLesson.video || "", 
-          materials: editedLesson.materials || "", 
-          homework: editedLesson.homework || "", 
-      }));
+          video: editedLesson.video || "",
+          materials: editedLesson.materials || "",
+          homework: editedLesson.homework || "",
+        })
+      );
     }
 
     if (editedCourse.thumbnail) {
       existingCourse.thumbnail = editedCourse.thumbnail;
     }
+    const edited = await existingCourse.save();
 
-    return await existingCourse.save()
+    await sendMessage("course-updated", { edited });
 
+    return edited;
   }
 
-  
-
-  async fetchCourses(limit: number, offset: number, searchTerm: string, categories: string[], sort: string): Promise<SimplifiedCourse[]> {
-    const courses = await this.courseRepository.fetchCourses(limit, offset, searchTerm, categories, sort);
+  async fetchCourses(
+    limit: number,
+    offset: number,
+    searchTerm: string,
+    categories: string[],
+    sort: string
+  ): Promise<SimplifiedCourse[]> {
+    const courses = await this.courseRepository.fetchCourses(
+      limit,
+      offset,
+      searchTerm,
+      categories,
+      sort
+    );
 
     if (!courses) {
       throw new Error("No courses found.");
@@ -402,8 +430,10 @@ class CourseService implements ICourseService {
 
     const simplifiedCourses = await Promise.all(
       courses.map(async (course) => {
-        const tutorData = await this.tutorRepository.findTutor(course.tutor_id as string);
-  
+        const tutorData = await this.tutorRepository.findTutor(
+          course.tutor_id as string
+        );
+
         return {
           _id: course._id,
           title: course.title,
@@ -415,20 +445,60 @@ class CourseService implements ICourseService {
           price: course.price,
           thumbnail: course.thumbnail,
           lessonsCount: course.lessons.length,
-          tutor: tutorData ? {
-            _id: tutorData._id,
-            image: tutorData.image,
-            name: tutorData.name,
-            email: tutorData.email,
-            phone: tutorData.phone,
-          } : null
+          tutor: tutorData
+            ? {
+                _id: tutorData._id,
+                image: tutorData.image,
+                name: tutorData.name,
+                email: tutorData.email,
+                phone: tutorData.phone,
+              }
+            : null,
         };
       })
     );
-  
+
     return simplifiedCourses;
   }
-  
+
+  async getCourseCount(): Promise<number> {
+    return await this.courseRepository.totalCourseCount();
+  }
+
+  async getCourseCountByTutor(tutorId: string): Promise<number> {
+    return await this.courseRepository.countCoursesByTutor(tutorId, true);
+  }
+
+  async createReview({
+    studentId,
+    courseId,
+    rating,
+    review,
+    tutorId,
+  }: {
+    studentId: string;
+    courseId: string;
+    rating: number;
+    review: string;
+    tutorId: string;
+  }): Promise<IReview | null> {
+    const newReview = await this.reviewRepository.createReview({
+      reviewBy: new mongoose.Types.ObjectId(studentId),
+      tutorId: new mongoose.Types.ObjectId(tutorId),
+      courseId: new mongoose.Types.ObjectId(courseId),
+      rating,
+      review,
+    });
+    return newReview;
+  }
+
+  async getReviewsByCourse(courseId: string): Promise<IReview[] | []> {
+      return await this.reviewRepository.getReviewsByCourse(courseId)
+  }
+
+ async  getReviewsForHome(): Promise<IReview[] | []> {
+      return await this.reviewRepository.getReviewsForHome()
+  }
 }
 
 export default CourseService;
