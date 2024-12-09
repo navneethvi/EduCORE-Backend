@@ -18,4 +18,5 @@ export interface ITutorService {
   }>;
   checkUserExists(tutorData: CreateTutorDto): Promise<void>;
   toggleBlockTutor(tutorId: string): Promise<void>;
+  fetchTutorInfo(tutorId:string): Promise<ITutor | null>;
 }

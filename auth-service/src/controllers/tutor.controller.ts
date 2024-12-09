@@ -6,7 +6,7 @@ import { ITutorService } from "../interfaces/tutor.service.interface";
 import { IOtpService } from "../interfaces/otp.service.interface";
 
 interface AdminRequest extends Request {
-  admin?: unknown; 
+  admin?: unknown;
 }
 
 class TutorController {
@@ -65,7 +65,7 @@ class TutorController {
 
         const { refreshToken, ...tutor } = newTutor;
 
-        res.cookie("refreshToken", refreshToken, {
+        res.cookie("tutorRefreshToken", refreshToken, {
           httpOnly: true,
           secure: process.env.NODE_ENV === "production",
           sameSite: "strict",
@@ -143,7 +143,7 @@ class TutorController {
 
       const { refreshToken, ...tutorData } = tutor;
 
-      res.cookie("refreshToken", refreshToken, {
+      res.cookie("tutorRefreshToken", refreshToken, {
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict",
@@ -170,9 +170,9 @@ class TutorController {
 
       const { refreshToken, ...tutorData } = tutor;
 
-      res.cookie("refreshToken", refreshToken, {
+      res.cookie("tutorRefreshToken", refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: false,
         sameSite: "strict",
         maxAge: 30 * 24 * 60 * 60 * 1000,
       });
@@ -333,6 +333,25 @@ class TutorController {
       res
         .status(HttpStatusCodes.OK)
         .json({ message: "Tutor block status updated successfully" });
+    } catch (error) {
+      next(error);
+    }
+  };
+
+  public fetchTutorInfo = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
+    try {
+      console.log(req.body);
+      
+      const { tutorId } = req.body;
+      console.log("tutorId to fetch===>", tutorId);
+
+      const response = await this.tutorService.fetchTutorInfo(tutorId);
+      console.log(response);
+      res.status(HttpStatusCodes.OK).json(response);
     } catch (error) {
       next(error);
     }

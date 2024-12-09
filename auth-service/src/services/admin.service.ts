@@ -1,11 +1,11 @@
 import bcryptjs from "bcryptjs";
-import { AdminDocument } from "../models/admin.model";
-import { generateAccessToken } from "../utils/jwt";
+import {AdminDocument} from "../models/admin.model";
+import { generateAccessToken, generateRefreshToken } from "../utils/jwt";
 import { IAdminService } from "../interfaces/admin.service.interface";
 import { IAdminRepository } from "../interfaces/admin.repository.interface";
 
 class AdminService implements IAdminService {
-  private adminRepository : IAdminRepository;
+  private adminRepository: IAdminRepository;
 
   constructor(adminRepository: IAdminRepository) {
     this.adminRepository = adminRepository;
@@ -27,13 +27,19 @@ class AdminService implements IAdminService {
       throw new Error("Invalid password.");
     }
 
-    const token = generateAccessToken({
+    const accessToken = generateAccessToken({
       id: admin._id,
       email: admin.email,
       role: "admin",
     });
 
-    const adminWithToken = { ...admin.toObject(), token };
+    const refreshToken = generateRefreshToken({
+      id: admin._id,
+      email: admin.email,
+      role: "admin",
+    });
+
+    const adminWithToken = { ...admin.toObject(), accessToken, refreshToken };
 
     return adminWithToken;
   }

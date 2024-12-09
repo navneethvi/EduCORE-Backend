@@ -18,7 +18,6 @@ const tutorSchema = new Schema<ITutor>({
     },
     password : {
         type : String,
-        required : true
     },
     bio : {
         type : String,

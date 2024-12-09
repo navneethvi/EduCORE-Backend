@@ -60,7 +60,17 @@ class StudentService implements IStudentService {
 
     const newStudent = await this.studentRepository.createStudent(studentInput);
 
-    await sendMessage("student-created", { email: newStudent.email });
+    await sendMessage("student-created", { 
+      _id: newStudent._id,
+      name: newStudent.name,
+      email: newStudent.email,
+      phone: newStudent.phone,
+      // password: newStudent.password,
+      is_blocked: newStudent.is_blocked,
+      interests: newStudent.interests,
+      image: newStudent.image,
+      following: newStudent.following
+     });
 
     const accessToken = generateAccessToken({
       id: newStudent._id,
@@ -238,6 +248,7 @@ class StudentService implements IStudentService {
 
     await this.studentRepository.updateStudentStatus(studentId, newStatus);
   }
+
 }
 
 export default StudentService;

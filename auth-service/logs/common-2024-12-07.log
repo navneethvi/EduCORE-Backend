@@ -1,0 +1,61 @@
+2024-12-07 12:10:16.031 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:10:42.160 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:16:02.728 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YjExMGYzMzI2YWRlOWUwMTlhOTFjZSIsImVtYWlsIjoibmF2YW5lZXRodmlub2QxOEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzQ3NzU5NywiZXhwIjoxNzMzNTYzOTk3fQ.66x64UuDt4LUaWa7JMH5qIERPObqqbJkRcaikr1kQMw
+2024-12-07 12:16:55.576 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNlZGU5YWRiNTM0Yjc4ODFiNWRmNyIsImVtYWlsIjoibG9jYWxob3N0QGdtYWlsLmNvbSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzMzNTUzNjQyLCJleHAiOjE3MzM2NDAwNDJ9.5CPRJZcv43BYOpsGdHlb_79ytZ9yfdUYujpDfy74VkY
+2024-12-07 12:19:19.006 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:19:38.929 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:22:57.618 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-12-07 12:22:57.625 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-12-07 12:22:57.686 [localhost] [32minfo[39m: Auth Database connected
+2024-12-07 12:22:57.701 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-07 12:22:57.805 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-07 12:24:05.038 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:24:19.229 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:29:12.113 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmMTFiZGIyNTFjYjkyZThmMGI1YyIsImVtYWlsIjoibG9jYWxob3N0QGdtYWlsLmNvbSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzMzNTU0NDU5LCJleHAiOjE3MzM2NDA4NTl9.F7wjmB7y7RDlfGe4cRLgLTTbnKG9zrsRGcxds9ia1l4
+2024-12-07 12:29:51.753 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:30:12.504 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:31:07.255 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmMjdjZGIyNTFjYjkyZThmMGI2MCIsImVtYWlsIjoibmF2YW5lZXRodmlub2QwMEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU1NDgxMiwiZXhwIjoxNzMzNjQxMjEyfQ.F-7dTnmd-qSX-QEmLn_bpI0qerMax9kXZmVdnhEMXcw
+2024-12-07 12:31:35.592 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:31:49.723 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:36:41.610 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmMmRkZGIyNTFjYjkyZThmMGI2NCIsImVtYWlsIjoic2V2ZXJ1c0BnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU1NDkwOSwiZXhwIjoxNzMzNjQxMzA5fQ._WK1iIt8z4JdjEryUw2AOYDKyKbDRSMT7vtqcp9Jwqs
+2024-12-07 12:37:14.962 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:37:28.304 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:38:19.596 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:38:26.700 [localhost] [32minfo[39m: Message sent to topic tutor-created
+2024-12-07 12:43:13.048 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmNDMwZGIyNTFjYjkyZThmMGI2OCIsImVtYWlsIjoibmF2ZWVuQGdtYWlsLmNvbSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzMzNTU1MjQ4LCJleHAiOjE3MzM2NDE2NDh9.xLc_ZB5pP_6IpmAEX6Mt6mCCqyDwMhWUwxmbmhjn5A8
+2024-12-07 12:44:06.736 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:44:29.279 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 12:45:31.808 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmNWQ1ZGIyNTFjYjkyZThmMGI2ZiIsImVtYWlsIjoiYmF0bWFuQGdtYWlsLmNvbSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzMzNTU1NjY5LCJleHAiOjE3MzM2NDIwNjl9.3_ihQ2knuKAZJqxXwYuP_m6NEQaNeY3222mz1t-V4qU
+2024-12-07 12:45:57.192 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 12:46:12.112 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 13:15:23.867 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 13:15:37.890 [localhost] [32minfo[39m: Message sent to topic student-created
+2024-12-07 13:48:57.205 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NTNmZDIxZGIyNTFjYjkyZThmMGI3OCIsImVtYWlsIjoicHJpbWVAZ21haWwuY29tIiwicm9sZSI6InN0dWRlbnQiLCJpYXQiOjE3MzM1NTc1MzcsImV4cCI6MTczMzY0MzkzN30.5eI1IWjLSOKWwVH8IJw6_lu_PFNnne1OLH-HGDx9BjY
+2024-12-07 13:51:36.960 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-12-07 13:51:36.964 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-12-07 13:51:36.990 [localhost] [32minfo[39m: Auth Database connected
+2024-12-07 13:51:37.193 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-07 13:51:38.007 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-07 13:53:02.446 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-12-07 13:53:02.451 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-12-07 13:53:02.493 [localhost] [32minfo[39m: Auth Database connected
+2024-12-07 13:53:02.568 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-07 13:53:02.876 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-07 13:53:08.862 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YjExMGYzMzI2YWRlOWUwMTlhOTFjZSIsImVtYWlsIjoibmF2YW5lZXRodmlub2QxOEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU1OTU3MywiZXhwIjoxNzMzNjQ1OTczfQ.ng_znMx_pNT2aD_QEd-jnWxinnmKt8jK_o0oULHcvNg
+2024-12-07 13:57:14.556 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YjExMGYzMzI2YWRlOWUwMTlhOTFjZSIsImVtYWlsIjoibmF2YW5lZXRodmlub2QxOEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU1OTgwOSwiZXhwIjoxNzMzNTU5ODE5fQ.XWje5XWiWw9kKUBlr6-kw7Ni1Oh6WKHvJA0G_u3_x_Q
+2024-12-07 13:59:59.205 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-12-07 13:59:59.208 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-12-07 13:59:59.243 [localhost] [32minfo[39m: Auth Database connected
+2024-12-07 13:59:59.332 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-07 13:59:59.591 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-07 14:02:29.261 [localhost] [32minfo[39m: Auth Service is running on http://localhost:3001
+2024-12-07 14:02:29.265 [localhost] [32minfo[39m: Swagger Auth running on http://localhost:3001/api-docs
+2024-12-07 14:02:29.295 [localhost] [32minfo[39m: Auth Database connected
+2024-12-07 14:02:29.378 [localhost] [32minfo[39m: Connected to Kafka producer
+2024-12-07 14:02:29.669 [localhost] [32minfo[39m: Message sent to topic test
+2024-12-07 16:29:02.725 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YjExMGYzMzI2YWRlOWUwMTlhOTFjZSIsImVtYWlsIjoibmF2YW5lZXRodmlub2QxOEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU2MDQ1MywiZXhwIjoxNzMzNjQ2ODUzfQ.xRHzcOUFhl_WVvDYP7LvjmG_h57ZzJsvXGizmASRVdA
+2024-12-07 16:57:31.976 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzYwNTA0NGJlM2FlYWE5MzYyNDZhMCIsImVtYWlsIjoibmFuZGFuYXByYXNhZDIwNEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU2OTE1MywiZXhwIjoxNzMzNjU1NTUzfQ.Aj75h2-1KzZccRtr7xFMLqZdQYfJ1_o8bNWHUjZpLOY
+2024-12-07 16:57:43.768 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YzYwNTA0NGJlM2FlYWE5MzYyNDZhMCIsImVtYWlsIjoibmFuZGFuYXByYXNhZDIwNEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU2OTE1MywiZXhwIjoxNzMzNjU1NTUzfQ.Aj75h2-1KzZccRtr7xFMLqZdQYfJ1_o8bNWHUjZpLOY
+2024-12-07 17:09:06.328 [localhost] [33mwarn[39m: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YjExMGYzMzI2YWRlOWUwMTlhOTFjZSIsImVtYWlsIjoibmF2YW5lZXRodmlub2QxOEBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTczMzU3MTUyNSwiZXhwIjoxNzMzNjU3OTI1fQ.Ib6p7iy7r-d6Nc7tGR8sR3t3Jbg31abUlgh13m3cew0
+2024-12-07 17:10:07.269 [localhost] [32minfo[39m: Message sent to topic email-verification
+2024-12-07 17:10:48.633 [localhost] [32minfo[39m: Message sent to topic student-created

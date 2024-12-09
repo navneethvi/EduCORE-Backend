@@ -62,7 +62,7 @@ class TutorService implements ITutorService {
       name: newTutor.name,
       email: newTutor.email,
       phone: newTutor.phone,
-      password: newTutor.password,
+      // password: newTutor.password,
       is_blocked: newTutor.is_blocked,
       is_verified: newTutor.is_verified,
       bio: "",
@@ -237,6 +237,10 @@ class TutorService implements ITutorService {
     const newStatus = !tutor.is_blocked;
 
     await this.tutorRepository.updateTutorStatus(tutorId, newStatus);
+  }
+
+  public async fetchTutorInfo(tutorId: string): Promise<ITutor | null> {
+      return await this.tutorRepository.getTutor(tutorId)
   }
 }
 

@@ -13,6 +13,12 @@ class TutorRepository implements ITutorRepository {
     return await this.tutorModel.findOne({ email }).exec();
   }
 
+  public async getTutor(tutorId: string): Promise<ITutor | null> {
+    console.log("tutorId in repo==>", tutorId);
+
+    return await this.tutorModel.findById(tutorId).exec();
+  }
+
   public async createTutor(tutorData: INewTutor): Promise<ITutor> {
     const tutor = new this.tutorModel(tutorData);
     return await tutor.save();

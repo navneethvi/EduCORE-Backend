@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { CreateStudentDto, VerifyOtpDto } from "../dtos/student.dto";
-import { HttpStatusCodes } from "@envy-core/common";
+import { HttpStatusCodes, logger } from "@envy-core/common";
 import { IStudentService } from "../interfaces/student.service.interface";
 import { IOtpService } from "../interfaces/otp.service.interface";
 
@@ -8,9 +8,9 @@ class StudentController {
   private studentService: IStudentService;
   private otpService: IOtpService;
 
-  constructor(studentService: IStudentService, otpService: IOtpService){
+  constructor(studentService: IStudentService, otpService: IOtpService) {
     this.studentService = studentService;
-    this.otpService = otpService
+    this.otpService = otpService;
   }
 
   public signup = async (req: Request, res: Response, next: NextFunction) => {
@@ -167,7 +167,7 @@ class StudentController {
 
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: false,
         sameSite: "strict",
         maxAge: 30 * 24 * 60 * 60 * 1000,
       });
@@ -200,9 +200,11 @@ class StudentController {
 
       const { refreshToken, ...studentData } = student;
 
+      console.log("Setting refreshToken cookie:", refreshToken);
+
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+        secure: false,
         sameSite: "strict",
         maxAge: 30 * 24 * 60 * 60 * 1000,
       });
@@ -291,9 +293,14 @@ class StudentController {
 
   public logout = async (req: Request, res: Response, next: NextFunction) => {
     try {
+      console.log(
+        "hiteddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      );
+
       const authHeader = req.headers.authorization;
-      console.log("token from logout ===>", authHeader);
-      console.log("cookieees ===>", req.cookies);
+      logger.warn(authHeader);
+
+      // console.log("cookie==>",req.cookie)
 
       if (!authHeader || !authHeader.startsWith("Bearer ")) {
         return res
@@ -358,6 +365,8 @@ class StudentController {
       next(error);
     }
   };
+
+
 }
 
 export default StudentController;

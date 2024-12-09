@@ -5,6 +5,8 @@ interface AdminDocument extends Document {
   email: string;
   name: string;
   password: string;
+  refreshToken?: string;
+  accessToken?: string;
 }
 
 const adminSchema: Schema<AdminDocument> = new Schema({
