@@ -15,16 +15,12 @@ configDotenv();
 
 app.use(cookieParser());
 
-app.use(
-  "/api/payment/webhook",
-  bodyParser.raw({ type: "application/json" }) 
-);
-
+app.use("/api/payment/webhook", bodyParser.raw({ type: "application/json" }));
 app.post(
   "/api/payment/webhook",
   async (req: Request, res: Response, next: NextFunction) => {
     const sig = req.headers["stripe-signature"] as string;
-    const rawBody = req.body; 
+    const rawBody = req.body;
 
     try {
       const event = stripe.webhooks.constructEvent(
@@ -34,7 +30,7 @@ app.post(
       );
 
       if (event.type === "checkout.session.completed") {
-        const session = event.data.object;
+        const session = event.data.object; // Stripe Checkout Session object
 
         const paymentData = {
           sessionId: session.id,
@@ -48,30 +44,57 @@ app.post(
 
         const enrollmentData = {
           studentId: paymentData.metadata?.userId
-            ? new mongoose.Types.ObjectId(
-                paymentData.metadata.userId as string
-              )
-            : null, 
+            ? new mongoose.Types.ObjectId(paymentData.metadata.userId as string)
+            : null,
           courseId: paymentData.metadata?.courseId
             ? new mongoose.Types.ObjectId(
                 paymentData.metadata.courseId as string
               )
-            : null, 
+            : null,
           status: paymentData.paymentStatus === "paid" ? "success" : "failed",
           amount: paymentData.amountTotal ? paymentData.amountTotal / 100 : 0,
           createdAt: new Date(),
+          paymentSessionId: paymentData.sessionId, // Include the sessionId
         };
 
-        if (enrollmentData.studentId && enrollmentData.courseId) {
-          await Enrollment.create(enrollmentData);
-          console.log("Enrollment saved to database:", enrollmentData);
-        } else {
+        if (!enrollmentData.studentId || !enrollmentData.courseId) {
           console.error(
             "Error: Missing studentId or courseId in payment metadata"
           );
+          return res.status(400).json({ error: "Invalid enrollment data" });
         }
 
-        return res.status(200).json({ received: true });
+        // Check for existing enrollment
+        const existingEnrollment = await Enrollment.findOne({
+          studentId: enrollmentData.studentId,
+          courseId: enrollmentData.courseId,
+        });
+
+        if (existingEnrollment) {
+          console.log("Enrollment already exists:", existingEnrollment);
+
+          // Optionally update the existing enrollment with the sessionId
+          await Enrollment.updateOne(
+            { _id: existingEnrollment._id },
+            { $set: { paymentSessionId: paymentData.sessionId, status: 'success' } }
+          );
+
+          return res.status(200).json({
+            received: true,
+            status: "already_enrolled",
+            message: "Enrollment already exists",
+          });
+        }
+
+        await Enrollment.create(enrollmentData);
+        console.log("Enrollment saved to database:", enrollmentData);
+
+
+        return res.status(200).json({
+          received: true,
+          status: "enrollment_created",
+          message: "Enrollment successfully created",
+        });
       }
 
       res.status(400).json({ error: "Event type not handled" });

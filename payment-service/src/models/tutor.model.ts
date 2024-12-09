@@ -1,8 +1,7 @@
 import { Schema, model } from "mongoose";
 
-import { IStudent } from "../interfaces/student.interface";
-
-const studentSchema = new Schema<IStudent>({
+import { ITutor } from "../interfaces/tutor.interface";
+const tutorSchema = new Schema<ITutor>({
     name : {
         type : String,
         required : true
@@ -16,23 +15,33 @@ const studentSchema = new Schema<IStudent>({
         type : Number,
         required : true
     },
-    interests : {
-        type : [String],
+    password : {
+        type : String,
+    },
+    bio : {
+        type : String,
+        default: ""
     },
     is_blocked : {
         type : Boolean,
         required : true,
         default : false
     },
+    is_verified : {
+        type : Boolean,
+        required: true,
+        default: false
+    },
     image : {
         type : String,
         default : 'https://freesvg.org/img/abstract-user-flat-4.png'
     },
-    following : {
-        type : [String]
+    followers : {
+        type : [String],
+        default: []
     }
 })
 
-const Student = model<IStudent>('Student', studentSchema)
+const Tutor = model<ITutor>('Tutor', tutorSchema)
 
-export default Student
+export default Tutor

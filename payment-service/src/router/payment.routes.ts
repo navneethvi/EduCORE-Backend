@@ -5,36 +5,45 @@ import PaymentController from "../controller/payment.controller";
 import StudentRepository from "../repositories/student.repository";
 import CourseRepository from "../repositories/course.repository";
 
-
-// import Tutor from "../models/tutor.model";
+import Tutor from "../models/tutor.model";
 import Student from "../models/student.model";
 import Enrollment from "../models/enrollment.model";
 // import Admin from "../models/admin.model";
 
 
-// import {
-//     validateRegisterUser,
-//     isTutorLogin,
-//     isStudentLogin,
-//     isAdminLogin,
-//   } from "@envy-core/common";
-
 import PaymentService from "../services/payment.service";
 import Course from "../models/course.model";
-
+import PaymentRepository from "../repositories/payment.repository";
+import { isTutorLogin } from "@envy-core/common";
 
 const router = Router();
 
-const studentRepository = new StudentRepository(Student)
+const studentRepository = new StudentRepository(Student);
 
-const courseRepository = new CourseRepository(Course, Enrollment)
+const courseRepository = new CourseRepository(Course, Enrollment);
 
-const paymentService = new PaymentService(studentRepository, courseRepository)
+export const paymentRepository = new PaymentRepository(Enrollment);
 
-const paymentController = new PaymentController(paymentService)
+const paymentService = new PaymentService(
+  studentRepository,
+  courseRepository,
+  paymentRepository
+);
 
-router.post('/create-payment-intent', paymentController.createPayment)
+const paymentController = new PaymentController(paymentService);
 
-router.post('/get-enrolled-courses', paymentController.getEnrolledCourses)
+router.post("/create-payment-intent", paymentController.createPayment);
 
-export default router
+router.post("/get-enrolled-courses", paymentController.getEnrolledCourses);
+
+router.post("/enrollment-status", paymentController.getEnrollmentStatus);
+
+router.get("/admin-stats", paymentController.getStatsForAdmin)
+
+router.get("/tutor-stats",isTutorLogin(Tutor), paymentController.getStatsForTutor)
+
+router.get("/tutor-dash",isTutorLogin(Tutor), paymentController.getTutorDashboardDatas)
+
+router.get("/tutor-enrollments", paymentController.getLast4WeeksStats)
+
+export default router;

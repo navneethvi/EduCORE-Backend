@@ -12,6 +12,7 @@ interface CourseDocument extends Document {
   tutor_id: Types.ObjectId | string;
   is_approved: boolean;
   enrollments: number;
+  createdAt: Date;
   price: number;
   lessons: {
     title: string;
@@ -31,6 +32,7 @@ const courseSchema: Schema<CourseDocument> = new Schema({
   tutor_id: { type: Schema.Types.ObjectId, ref: "Tutor"},
   is_approved: { type: Boolean, default: false },
   enrollments: { type: Number, default: 0 },
+  createdAt: {type: Date},
   price: { type: Number },
   lessons: [{
     title: { type: String },

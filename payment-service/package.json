@@ -19,7 +19,8 @@
     "mongoose": "^8.8.0",
     "nodemon": "^3.1.7",
     "stripe": "^17.3.1",
-    "tsconfig-paths": "^4.2.0"
+    "tsconfig-paths": "^4.2.0",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.14.0",

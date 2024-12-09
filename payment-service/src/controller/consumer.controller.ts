@@ -8,6 +8,9 @@ import ConsumerService from "../services/consumer.service";
 import { IConsumerService } from "../interfaces/consumer.service.interface";
 import CourseRepository from "../repositories/course.repository";
 import Enrollment from "../models/enrollment.model";
+import TutorRepository from "../repositories/tutor.repository";
+import Tutor from "../models/tutor.model";
+import { ITutor } from "../interfaces/tutor.interface";
 
 class consumerController {
   private consumerService: IConsumerService;
@@ -35,6 +38,27 @@ class consumerController {
         logger.error(
           `Unexpected error in handleTutorCreated: ${String(error)}`
         );
+      }
+    }
+  }
+
+  public async handleTutorCreated(message: Message): Promise<void> {
+    try {
+      const value = message.value ? message.value.toString() : null;
+      if (value) {
+        logger.info(`Received message: ${value}`);
+        const tutorData: ITutor = JSON.parse(value);
+
+        await this.consumerService.createTutor(tutorData);
+        logger.info(`Successfully processed tutor: ${tutorData.id}`); 
+      } else {
+        logger.error("Received empty message in 'tutor-created' topic.");
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        logger.error(`Error in handleTutorCreated: ${error.message}`);
+      } else {
+        logger.error(`Unexpected error in handleTutorCreated: ${String(error)}`);
       }
     }
   }
@@ -112,10 +136,12 @@ class consumerController {
 
 const studentRepository = new StudentRepository(Student);
 const courseRepository = new CourseRepository(Course, Enrollment);
+const tutorRepository = new TutorRepository(Tutor)
 
 const consumerService = new ConsumerService(
   studentRepository,
-  courseRepository
+  courseRepository,
+  tutorRepository
 );
 
 export default new consumerController(consumerService);

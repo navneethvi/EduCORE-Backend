@@ -28,6 +28,9 @@ export const paymentConsumer = async (): Promise<void> => {
             case "course-updated":
               await consumerController.handleCourseUpdated(message);
               break;
+              case "tutor-created":
+              await consumerController.handleTutorCreated(message);
+              break;
             default:
               logger.warn(`Unhandled topic: ${topic}`);
           }

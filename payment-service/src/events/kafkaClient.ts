@@ -16,5 +16,5 @@ export const connectConsumer = async () => {
   await consumer.subscribe({ topic: "student-created", fromBeginning: true });
   await consumer.subscribe({ topic: "course-created", fromBeginning: true });
   await consumer.subscribe({ topic: "course-updated", fromBeginning: true });
-
+  await consumer.subscribe({ topic: "tutor-created", fromBeginning: true });
 };
