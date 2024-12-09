@@ -34,4 +34,5 @@ const messageSchema = new Schema<IMessage>(
 
 const Message = model<IMessage>("Message", messageSchema);
 
+
 export default Message;

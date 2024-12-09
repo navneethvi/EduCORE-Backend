@@ -3,6 +3,8 @@ import { IChatRepository } from "../interfaces/chat.repository.interface";
 import { IChat } from "../interfaces/chat.interface";
 import { IChatService } from "../interfaces/chat.service.interface";
 import { Model } from "mongoose";
+import { IMessage } from "../interfaces/message.interface";
+// import { IMessage } from "../interfaces/message.interface";
 // import { IMessage } from "../interfaces/message.interface";
 
 class ChatService implements IChatService {
@@ -20,7 +22,7 @@ class ChatService implements IChatService {
   ): Promise<IChat[]> {
     try {
       const chats = await this.chatRepository.getChatsByUser(userId, userType);
-  
+
       return chats;
     } catch (error) {
       logger.error("Error in ChatService.getChatsByUser:", error);
@@ -49,39 +51,27 @@ class ChatService implements IChatService {
     }
   }
 
-  //   public async sendMessage(
-  //     chatRoomId: string,
-  //     messageBy: string,
-  //     messageByModel: "Student" | "Tutor",
-  //     content: string
-  //   ): Promise<IMessage> {
-  //     try {
-  //       // Create a new message
-  //     //   const newMessage = new this.chatRepository.messageModel({
-  //     //     chatRoom: chatRoomId,
-  //     //     messageBy,
-  //     //     messageByModel,
-  //     //     content,
-  //     //   });
+  public async getChatHistory(
+    studentId: string,
+    tutorId: string
+  ): Promise<{ chatRoom: IChat; messages: IMessage[] }> {
+    try {
+      const chatRoom = await this.chatRepository.getChatRoom(
+        studentId,
+        tutorId
+      );
 
-  //       // Save the message in the database
-  //     //   await newMessage.save();
+      if (!chatRoom) {
+        throw new Error("Chat room not found.");
+      }
 
-  //       // Optionally, update the chat room with the last message
-  //       const chat = await this.chatRepository.chatModel.findById(chatRoomId);
-  //       if (chat) {
-  //         chat.lastMessage = content;
-  //         chat.lastMessageAt = new Date();
-  //         await chat.save();
-  //       }
-
-  //       // Return the newly created message
-  //     //   return newMessage;
-  //     } catch (error) {
-  //       logger.error("Error sending message:", error);
-  //       throw error;
-  //     }
-  //   }
+      const messages = await this.chatRepository.getChatHistory(chatRoom._id);
+      return { chatRoom, messages };
+    } catch (error) {
+      console.error("Error in getChatHistory service:", error);
+      throw new Error("Could not retrieve chat history.");
+    }
+  }
 }
 
 export default ChatService;

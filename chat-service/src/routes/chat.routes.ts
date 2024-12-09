@@ -20,9 +20,9 @@ import Chat from "../models/chat.model";
 
 import Message from "../models/message.model";
 
-const chatRepository = new ChatRepository(Chat, Message)
+export const chatRepository = new ChatRepository(Chat, Message);
 
-const chatService = new ChatService(chatRepository, Chat)
+const chatService = new ChatService(chatRepository, Chat);
 
 const chatController = new ChatController(chatService);
 
@@ -30,6 +30,6 @@ const router = Router();
 
 router.post("/fetch-chats", chatController.fetchUsersWithExistingChats);
 router.post("/create-chat", chatController.createChatRoom);
+router.post("/messages", chatController.fetchChatHistory);
 
-
-export default router
+export default router;

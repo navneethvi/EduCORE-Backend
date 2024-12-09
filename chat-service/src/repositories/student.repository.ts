@@ -12,6 +12,7 @@ class StudentRepository implements IStudentRepository {
 
   public async findStudent(student_id: string): Promise<IStudent | null> {
     try {
+      
       return await this.studentModel.findOne({ _id: student_id }).exec();
     } catch (error) {
       logger.error(`Error finding Student: ${error}`);
@@ -28,6 +29,9 @@ class StudentRepository implements IStudentRepository {
       throw new Error("Error creating Student");
     }
   }
+  
 }
 
 export default StudentRepository;
+
+
