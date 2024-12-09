@@ -1,0 +1,29 @@
+2024-12-07 12:08:37.828 [localhost] [32minfo[39m: Notification Service is running on http://localhost:3002
+2024-12-07 12:08:37.867 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-07 12:08:39.276 [localhost] [32minfo[39m: Nodemailer is ready to send emails
+2024-12-07 12:10:22.732 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <78e0f911-4979-619b-3e32-1ad0241f14fe@gmail.com>
+2024-12-07 12:10:44.893 [localhost] [32minfo[39m: Welcome message sent successfully: <a05325e0-cd4a-67c2-5cec-d1b8f69b3dbc@gmail.com>
+2024-12-07 12:19:22.087 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <c85e69cf-4366-f341-1250-8363ab6fa568@gmail.com>
+2024-12-07 12:19:42.562 [localhost] [32minfo[39m: Welcome message sent successfully: <da21f9c0-ab55-9c84-05ec-069a341ff787@gmail.com>
+2024-12-07 12:23:03.564 [localhost] [32minfo[39m: Notification Service is running on http://localhost:3002
+2024-12-07 12:23:04.177 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-07 12:23:04.796 [localhost] [32minfo[39m: Nodemailer is ready to send emails
+2024-12-07 12:24:07.649 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <7d0b6b82-0322-b808-8e78-3886f6ab2b1f@gmail.com>
+2024-12-07 12:24:22.597 [localhost] [32minfo[39m: Welcome message sent successfully: <8d7b18cc-5c86-6d30-9537-a7a5b8026876@gmail.com>
+2024-12-07 12:29:54.636 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <65f3211d-44c6-3619-abfd-37fae5c06d2e@gmail.com>
+2024-12-07 12:30:16.401 [localhost] [32minfo[39m: Welcome message sent successfully: <356013cc-3f93-ba83-0150-c59883cda3ee@gmail.com>
+2024-12-07 12:31:38.261 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <18178d0a-55a8-e3fc-b497-d10fdf96fa0b@gmail.com>
+2024-12-07 12:31:52.354 [localhost] [32minfo[39m: Welcome message sent successfully: <602092f6-838f-a235-fa44-0c80b64100d3@gmail.com>
+2024-12-07 12:37:18.991 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <def2b734-13c7-0e11-db3a-6e9cb8ab4a7f@gmail.com>
+2024-12-07 12:37:32.018 [localhost] [32minfo[39m: Welcome message sent successfully: <ded44746-57e3-87d1-18e2-09d181d008a0@gmail.com>
+2024-12-07 12:38:22.616 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <3ecb829c-67b2-87fa-92e6-498b39d45ccc@gmail.com>
+2024-12-07 12:38:30.293 [localhost] [32minfo[39m: Welcome message sent successfully: <5c8dea18-8ba5-a10e-3546-6e8f9b1a8a16@gmail.com>
+2024-12-07 12:44:10.726 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <b4ada863-7705-5c79-bbea-1ba9ef948e0f@gmail.com>
+2024-12-07 12:44:32.175 [localhost] [32minfo[39m: Welcome message sent successfully: <78acd178-0eaa-9d47-6aa2-f4aa85aea3ff@gmail.com>
+2024-12-07 12:46:00.443 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <705da4d3-4075-26a6-443b-61ea685afd09@gmail.com>
+2024-12-07 12:46:14.938 [localhost] [32minfo[39m: Welcome message sent successfully: <eb885289-10f6-ec7f-3f2c-6010a73ceb04@gmail.com>
+2024-12-07 13:15:30.384 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <a39dc03b-69b2-af80-d11b-fc6dbd972202@gmail.com>
+2024-12-07 13:15:41.512 [localhost] [32minfo[39m: Welcome message sent successfully: <f41af3b0-f3dc-2548-130a-c52008a2f90c@gmail.com>
+2024-12-07 17:10:44.885 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <612f4615-7882-93ce-a721-5d7203af64c0@gmail.com>
+2024-12-07 17:10:48.089 [localhost] [32minfo[39m: Email verification OTP sent successfully:: <0a6297fe-9854-b390-cfdd-5a103b1a7c89@gmail.com>
+2024-12-07 17:10:54.632 [localhost] [32minfo[39m: Welcome message sent successfully: <7d064183-f4f3-dcdf-12f8-48f27169d86f@gmail.com>

@@ -1,0 +1,6 @@
+2024-12-02 19:26:14.980 [localhost] [32minfo[39m: Notification Service is running on http://localhost:3002
+2024-12-02 19:26:18.096 [localhost] [32minfo[39m: Nodemailer is ready to send emails
+2024-12-02 19:26:23.035 [localhost] [31merror[39m: Kafka consumer connection error:
+2024-12-02 19:50:54.990 [localhost] [32minfo[39m: Notification Service is running on http://localhost:3002
+2024-12-02 19:50:55.093 [localhost] [32minfo[39m: Connected to Kafka consumer
+2024-12-02 19:50:59.024 [localhost] [32minfo[39m: Nodemailer is ready to send emails

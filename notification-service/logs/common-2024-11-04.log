@@ -1,3 +1,0 @@
-2024-11-04 09:05:53.477 [localhost] [32minfo[39m: Notification Service is running on http://localhost:3002
-2024-11-04 09:05:53.560 [localhost] [32minfo[39m: Connected to Kafka consumer
-2024-11-04 09:05:55.044 [localhost] [32minfo[39m: Nodemailer is ready to send emails
